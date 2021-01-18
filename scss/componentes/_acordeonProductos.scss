@@ -1,0 +1,84 @@
+/***************************************************************/
+/***************** Acordeon Productos - Inicio  ****************/
+.accordion {
+	width: 90vw;
+	margin: auto;
+	.card-header {
+		background: {
+			image: url("../img/carretera.jpg");
+			repeat: no-repeat;
+			size: 90vw 160vw;
+		}
+		height: 32vw;
+		align-items: center;
+		h2 {
+			width: 40rem;
+			background-color: rgba(179,4,4,.3);
+			.btn {
+				color: white;
+				font: {
+					size: 4rem;
+					weight: 700;
+					style: italic;
+				}
+				padding: 1rem 3rem;
+				&.focus, &:focus {
+					@include sombraCaja(rgba(179,4,4,.5), 0, 0, 0, 0.2rem);
+				}
+			}
+		}
+	}
+	.card:nth-child(1) .card-header {
+		background-position: 0 0;
+	}
+
+	.card:nth-child(2) .card-header {
+		background-position: 0 -32vw;
+	}
+
+	.card:nth-child(3) .card-header {
+		background-position: 0 -64vw;
+	}
+
+	.card:nth-child(4) .card-header {
+		background-position: 0 -96vw;
+	}
+
+	.card:nth-child(5) .card-header {
+		background-position: 0 -128vw;
+	}
+	@include responsive(lg) {
+		.card-header {
+			h2 {
+				width: 35rem;
+				.btn {
+					font-size: 3rem;
+				}
+			}
+		}
+	}
+	@include responsive(md) {
+		.card-header {
+			h2 {
+				width: 28rem;
+				.btn {
+					font-size: 2.5rem;
+					padding: 1rem 2rem; 
+				}
+			}
+		}
+	}
+	@include responsive(500px) {
+		.card-header {
+			h2 {
+				width: 18rem;
+				.btn {
+					font-size: 1.6rem;
+					padding: .8rem 1rem; 
+				}
+			}
+		}
+	}    
+}
+/****************** Acordeon Productos - Fin  ******************/
+/***************************************************************/

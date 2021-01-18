@@ -26,10 +26,10 @@
 		border-radius: 50%;
 	}
 	.carousel-control-prev-icon {
-		background-image: url("../Img/chevron-izq.svg");
+		background-image: url("../img/chevron-izq.svg");
 	}
 	.carousel-control-next-icon {
-		background-image: url("../Img/chevron-der.svg");
+		background-image: url("../img/chevron-der.svg");
 	}
 	@include responsive(xl) {
 		ol.carousel-indicators {

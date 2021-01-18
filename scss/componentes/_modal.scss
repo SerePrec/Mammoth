@@ -11,8 +11,7 @@
 		.modal-body {
 			padding: 0;
 			.imagenTerminos {
-				background: url("../Img/terminos.jpg") no-repeat top/cover;
-				background-position: center;
+				@include cover(terminos, top);
 				height: 35vw;
 			}
 			article.terminos {

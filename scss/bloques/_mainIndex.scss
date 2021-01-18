@@ -27,7 +27,7 @@ main.inicio {
 	}
 	.imagenSecundaria {
 		@extend %imagenTodoAncho;
-		background: url("../Img/secundaria.jpg") no-repeat top/cover;
+		@include cover(secundaria, top);
 	}
 	.difusion {
 		@include flex($wrap: wrap, $justificado: between);
@@ -38,9 +38,8 @@ main.inicio {
 			font-size: 3.3rem;
 		}
 		.imagenSecundaria {
-			background-size: cover;
-			height: 550px;
 			background-position: 70% top;
+			height: 550px;
 		}
 		.difusion {
 			flex-direction: column;

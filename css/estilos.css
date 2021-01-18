@@ -6,10 +6,6 @@ main.inicio .destacados, .newsletter .newsletter__titulo, .social .social__titul
   background-color: #545454;
   color: white; }
 
-main.inicio .imagenSecundaria, main.noticias .imagenPremio {
-  width: 100%;
-  height: 52vw; }
-
 .tarjeta .tarjeta__titulo, .tituloBoxClaro {
   background-color: #b9b8b8;
   color: white;
@@ -27,6 +23,14 @@ main.inicio .imagenSecundaria, main.noticias .imagenPremio {
   font-weight: 500;
   text-transform: uppercase;
   margin: 0 auto 1rem auto; }
+
+main.inicio .imagenSecundaria, main.noticias .imagenPremio {
+  width: 100%;
+  height: 52vw; }
+
+main.inicio .imagenSecundaria, .tarjeta .tarjeta__imagen, .tarjeta .tarjeta__imagen--secundaria, .productos ul li div, .modal .modal-content .modal-body .imagenTerminos, .competencias .card-header, main.noticias .imagenPremio, .formulario {
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 main.inicio, main.productos, main.servicios, main.noticias, main.contacto {
   /**** Color general del MAIN *****/
@@ -117,7 +121,8 @@ main.inicio .destacados {
     animation-delay: 0.3s; }
 
 main.inicio .imagenSecundaria {
-  background: url("../Img/secundaria.jpg") no-repeat top/cover; }
+  background-image: url("../img/secundaria.jpg");
+  background-position: top; }
 
 main.inicio .difusion {
   display: flex;
@@ -130,9 +135,8 @@ main.inicio .difusion {
   main.inicio .destacados h2 {
     font-size: 3.3rem; }
   main.inicio .imagenSecundaria {
-    background-size: cover;
-    height: 550px;
-    background-position: 70% top; }
+    background-position: 70% top;
+    height: 550px; }
   main.inicio .difusion {
     flex-direction: column;
     align-items: center; } }
@@ -155,6 +159,13 @@ main.inicio .difusion {
     height: 250px; } }
 
 /******************** Main del index.html - Fin ****************/
+/***************************************************************/
+/***************************************************************/
+/***************** Main de productos.html - Inicio *************/
+main.productos {
+  overflow: hidden; }
+
+/******************* Main de productos.html - Fin **************/
 /***************************************************************/
 /***************************************************************/
 /************************ Footer - Inicio  *********************/
@@ -202,7 +213,7 @@ nav.navbar {
   nav.navbar .navbar-toggler {
     border-color: white; }
     nav.navbar .navbar-toggler .navbar-toggler-icon {
-      background-image: url("../Img/iconred.png");
+      background-image: url("../img/iconred.png");
       background-size: cover; }
   nav.navbar .navbar-nav .nav-link {
     border-left: 4px solid #b30404;
@@ -256,10 +267,10 @@ nav.navbar {
   border-radius: 50%; }
 
 #carouselPrincipal .carousel-control-prev-icon {
-  background-image: url("../Img/chevron-izq.svg"); }
+  background-image: url("../img/chevron-izq.svg"); }
 
 #carouselPrincipal .carousel-control-next-icon {
-  background-image: url("../Img/chevron-der.svg"); }
+  background-image: url("../img/chevron-der.svg"); }
 
 @media only screen and (max-width: 1399px) {
   #carouselPrincipal ol.carousel-indicators {
@@ -325,12 +336,10 @@ nav.navbar {
   .tarjeta .tarjeta__imagen, .tarjeta .tarjeta__imagen--secundaria {
     width: 100%;
     height: 20vw;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("../Img/destacado1.jpg"); }
+    background-image: url("../img/destacado1.jpg");
+    background-position: center; }
   .tarjeta .tarjeta__imagen--secundaria {
-    background-image: url("../Img/destacado2.jpg"); }
+    background-image: url("../img/destacado2.jpg"); }
   .tarjeta .tarjeta__texto, .tarjeta .tarjeta__titulo {
     padding: 0.625rem 1.25rem; }
   @media only screen and (max-width: 1300px) {
@@ -386,6 +395,234 @@ nav.navbar {
       max-width: initial; } }
 
 /****************** Tarjetas Verticales - Fin ******************/
+/***************************************************************/
+/***************************************************************/
+/***************** Acordeon Productos - Inicio  ****************/
+.accordion {
+  width: 90vw;
+  margin: auto; }
+  .accordion .card-header {
+    background-image: url("../img/carretera.jpg");
+    background-repeat: no-repeat;
+    background-size: 90vw 160vw;
+    height: 32vw;
+    align-items: center; }
+    .accordion .card-header h2 {
+      width: 40rem;
+      background-color: rgba(179, 4, 4, 0.3); }
+      .accordion .card-header h2 .btn {
+        color: white;
+        font-size: 4rem;
+        font-weight: 700;
+        font-style: italic;
+        padding: 1rem 3rem; }
+        .accordion .card-header h2 .btn.focus, .accordion .card-header h2 .btn:focus {
+          box-shadow: 0 0 0 0.2rem rgba(179, 4, 4, 0.5); }
+  .accordion .card:nth-child(1) .card-header {
+    background-position: 0 0; }
+  .accordion .card:nth-child(2) .card-header {
+    background-position: 0 -32vw; }
+  .accordion .card:nth-child(3) .card-header {
+    background-position: 0 -64vw; }
+  .accordion .card:nth-child(4) .card-header {
+    background-position: 0 -96vw; }
+  .accordion .card:nth-child(5) .card-header {
+    background-position: 0 -128vw; }
+  @media only screen and (max-width: 1220px) {
+    .accordion .card-header h2 {
+      width: 35rem; }
+      .accordion .card-header h2 .btn {
+        font-size: 3rem; } }
+  @media only screen and (max-width: 991px) {
+    .accordion .card-header h2 {
+      width: 28rem; }
+      .accordion .card-header h2 .btn {
+        font-size: 2.5rem;
+        padding: 1rem 2rem; } }
+  @media only screen and (max-width: 500px) {
+    .accordion .card-header h2 {
+      width: 18rem; }
+      .accordion .card-header h2 .btn {
+        font-size: 1.6rem;
+        padding: .8rem 1rem; } }
+
+/****************** Acordeon Productos - Fin  ******************/
+/***************************************************************/
+/***************************************************************/
+/************ Grids en Acordeon de Productos - Inicio  *********/
+.productos ul {
+  list-style-type: none;
+  display: grid;
+  align-items: stretch;
+  margin: 0;
+  border-bottom: 0.5rem solid #b30404; }
+  .productos ul li {
+    overflow: hidden;
+    display: flex;
+    align-items: stretch; }
+    .productos ul li div {
+      background-position: center;
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      filter: grayscale(100%);
+      transition: filter 1.5s, transform 2.5s;
+      /*transición de todas las propiedades*/
+      font-size: 2rem;
+      color: white;
+      text-shadow: 0px 0px 5px black; }
+    .productos ul li:hover div {
+      filter: initial;
+      transform: scale(1.1);
+      cursor: pointer; }
+  @media only screen and (max-width: 991px) {
+    .productos ul li div {
+      font-size: 1.5rem; } }
+  @media only screen and (max-width: 767px) {
+    .productos ul li div {
+      font-size: 1.25rem; } }
+  @media only screen and (max-width: 500px) {
+    .productos ul li div {
+      font-size: .8rem; } }
+
+/***************************************************/
+/******************** Galeria 4 ********************/
+.galeria4 {
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 25vw 20vw;
+  grid-template-areas: "casco		casco		casco		casco		lente		lente		lente" "protector	protector	mochila		mochila		mochila		mochila		mochila"; }
+  .galeria4 li:nth-child(1) {
+    grid-area: casco; }
+  .galeria4 li:nth-child(2) {
+    grid-area: lente; }
+  .galeria4 li:nth-child(3) {
+    grid-area: mochila; }
+  .galeria4 li:nth-child(4) {
+    grid-area: protector; }
+
+/****** Imágenes de sección: Equipamiento ******/
+#equipamiento li:nth-child(1) div {
+  background-image: url("../img/equipamiento_cascos.jpg"); }
+
+#equipamiento li:nth-child(2) div {
+  background-image: url("../img/equipamiento_lentes.jpg"); }
+
+#equipamiento li:nth-child(3) div {
+  background-image: url("../img/equipamiento_mochilas.jpg"); }
+
+#equipamiento li:nth-child(4) div {
+  background-image: url("../img/equipamiento_protectores.jpg"); }
+
+/***************************************************/
+/******************** Galeria 5 ********************/
+.galeria5 {
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 25vw repeat(2, 20vw);
+  grid-template-areas: "anchoG5-1	anchoG5-1	anchoG5-1	anchoG5-1	medioG5-1	medioG5-1	medioG5-1" "plenoG5	plenoG5		plenoG5		plenoG5		plenoG5		plenoG5		plenoG5" "medioG5-2	medioG5-2	medioG5-2	anchoG5-2	anchoG5-2	anchoG5-2	anchoG5-2"; }
+  .galeria5 li:nth-child(1) {
+    grid-area: anchoG5-1; }
+  .galeria5 li:nth-child(2) {
+    grid-area: medioG5-1; }
+  .galeria5 li:nth-child(3) {
+    grid-area: plenoG5; }
+  .galeria5 li:nth-child(4) {
+    grid-area: medioG5-2; }
+  .galeria5 li:nth-child(5) {
+    grid-area: anchoG5-2; }
+
+/****** Imágenes de sección: Bicicletas ******/
+#bicicletas li:nth-child(1) div {
+  background-image: url("../img/bicicletas_mtb.jpg"); }
+
+#bicicletas li:nth-child(2) div {
+  background-image: url("../img/bicicletas_ruta.jpg"); }
+
+#bicicletas li:nth-child(3) div {
+  background-image: url("../img/bicicletas_eBike.jpg"); }
+
+#bicicletas li:nth-child(4) div {
+  background-image: url("../img/bicicletas_urbana.jpg"); }
+
+#bicicletas li:nth-child(5) div {
+  background-image: url("../img/bicicletas_infantil.jpg"); }
+
+/****** Imágenes de sección: Accesorios ******/
+#accesorios li:nth-child(1) div {
+  background-image: url("../img/accesorios_electronica.jpg"); }
+
+#accesorios li:nth-child(2) div {
+  background-image: url("../img/accesorios_rodillos.jpg"); }
+
+#accesorios li:nth-child(3) div {
+  background-image: url("../img/accesorios_portabicis.jpg"); }
+
+#accesorios li:nth-child(4) div {
+  background-image: url("../img/accesorios_mantenimiento.jpg"); }
+
+#accesorios li:nth-child(5) div {
+  background-image: url("../img/accesorios_complementos.jpg"); }
+
+/***************************************************/
+/******************** Galeria 6 ********************/
+.galeria6 {
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(2, 25vw) 20vw;
+  grid-template-areas: "anchoG6-1	anchoG6-1	anchoG6-1	anchoG6-1	medioG6-1	medioG6-1	medioG6-1" "medioG6-2	medioG6-2	medioG6-2	anchoG6-2	anchoG6-2	anchoG6-2	anchoG6-2" "anchoG6-3	anchoG6-3	anchoG6-3	anchoG6-3	anchoG6-3	chicoG6		chicoG6"; }
+  .galeria6 li:nth-child(1) {
+    grid-area: anchoG6-1; }
+  .galeria6 li:nth-child(2) {
+    grid-area: medioG6-1; }
+  .galeria6 li:nth-child(3) {
+    grid-area: medioG6-2; }
+  .galeria6 li:nth-child(4) {
+    grid-area: anchoG6-2; }
+  .galeria6 li:nth-child(5) {
+    grid-area: anchoG6-3; }
+  .galeria6 li:nth-child(6) {
+    grid-area: chicoG6; }
+
+/****** Imágenes de sección: Componentes ******/
+#componentes li:nth-child(1) div {
+  background-image: url("../img/componentes_cuadros.jpg"); }
+
+#componentes li:nth-child(2) div {
+  background-image: url("../img/componentes_transmision.jpg"); }
+
+#componentes li:nth-child(3) div {
+  background-image: url("../img/componentes_frenos.jpg"); }
+
+#componentes li:nth-child(4) div {
+  background-image: url("../img/componentes_ruedas.jpg"); }
+
+#componentes li:nth-child(5) div {
+  background-image: url("../img/componentes_cubiertas.jpg"); }
+
+#componentes li:nth-child(6) div {
+  background-image: url("../img/componentes_otros.jpg"); }
+
+/****** Imágenes de sección: Indumentaria ******/
+#indumentaria li:nth-child(1) div {
+  background-image: url("../img/indumentaria_calzado.jpg"); }
+
+#indumentaria li:nth-child(2) div {
+  background-image: url("../img/indumentaria_remeras.jpg"); }
+
+#indumentaria li:nth-child(3) div {
+  background-image: url("../img/indumentaria_calzas.jpg"); }
+
+#indumentaria li:nth-child(4) div {
+  background-image: url("../img/indumentaria_maillots.jpg"); }
+
+#indumentaria li:nth-child(5) div {
+  background-image: url("../img/indumentaria_camperas.jpg"); }
+
+#indumentaria li:nth-child(6) div {
+  background-image: url("../img/indumentaria_complementos.jpg"); }
+
+/************** Grids en Acordeon de Productos - Fin  **********/
 /***************************************************************/
 /************************ Newsletter ***************************/
 /*************** Incluye Formulario Bootstrap ******************/
@@ -458,8 +695,8 @@ nav.navbar {
   .modal .modal-content .modal-body {
     padding: 0; }
     .modal .modal-content .modal-body .imagenTerminos {
-      background: url("../Img/terminos.jpg") no-repeat top/cover;
-      background-position: center;
+      background-image: url("../img/terminos.jpg");
+      background-position: top;
       height: 35vw; }
     .modal .modal-content .modal-body article.terminos {
       width: 75%;
@@ -481,232 +718,6 @@ nav.navbar {
 
 /************************* Modal - Fin *************************/
 /***************************************************************/
-/***********************************************************************************/
-/************************** Main de productos.html - Inicio ************************/
-/*********************** Pagina con Grid en los desplegables ***********************/
-/******************** Acordeón de productos - Inicio ********************/
-main.productos {
-  overflow: hidden;
-  padding: 0 5vw; }
-
-.card-header {
-  background-image: url("../Img/carretera.jpg");
-  background-repeat: no-repeat;
-  background-size: 90vw 160vw;
-  height: 32vw;
-  align-items: center; }
-
-.card:nth-child(1) .card-header {
-  background-position: 0 0; }
-
-.card:nth-child(2) .card-header {
-  background-position: 0 -32vw; }
-
-.card:nth-child(3) .card-header {
-  background-position: 0 -64vw; }
-
-.card:nth-child(4) .card-header {
-  background-position: 0 -96vw; }
-
-.card:nth-child(5) .card-header {
-  background-position: 0 -128vw; }
-
-.accordion .card-header h2 {
-  width: 40rem;
-  background-color: rgba(179, 4, 4, 0.3); }
-
-.accordion .card-header button {
-  color: white;
-  font-size: 4rem;
-  padding: 1rem 3rem;
-  font-weight: 700;
-  font-style: italic; }
-
-.btn.focus, .btn:focus {
-  box-shadow: 0 0 0 0.2rem rgba(179, 4, 4, 0.5); }
-
-/*********************** Acordeón de productos - Fin ***********************/
-/******** grids para agrupar los sub-productos (dentro de acordeón) ********/
-.productos ul {
-  list-style-type: none;
-  display: grid;
-  align-items: stretch;
-  margin: 0;
-  border-bottom: 0.5rem solid #b30404; }
-
-.productos li {
-  overflow: hidden;
-  display: flex;
-  align-items: stretch; }
-
-.productos li div {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  filter: grayscale(100%);
-  transition: filter 1.5s, transform 2.5s;
-  /*transición de todas las propiedades*/
-  font-size: 2rem;
-  color: white;
-  text-shadow: 0px 0px 5px black; }
-
-.productos li:hover div {
-  filter: initial;
-  transform: scale(1.1);
-  cursor: pointer; }
-
-/************************ Galeria 4 ************************/
-.galeria4 {
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: 25vw 20vw;
-  grid-template-areas: "casco		casco		casco		casco		lente		lente		lente" "protector	protector	mochila		mochila		mochila		mochila		mochila"; }
-
-.galeria4 li:nth-child(1) {
-  grid-area: casco; }
-
-.galeria4 li:nth-child(2) {
-  grid-area: lente; }
-
-.galeria4 li:nth-child(3) {
-  grid-area: mochila; }
-
-.galeria4 li:nth-child(4) {
-  grid-area: protector; }
-
-/****** Imágenes de sección: Equipamineto ******/
-#equipamiento li:nth-child(1) div {
-  background-image: url("../Img/equipamiento_cascos.jpg"); }
-
-#equipamiento li:nth-child(2) div {
-  background-image: url("../Img/equipamiento_lentes.jpg"); }
-
-#equipamiento li:nth-child(3) div {
-  background-image: url("../Img/equipamiento_mochilas.jpg"); }
-
-#equipamiento li:nth-child(4) div {
-  background-image: url("../Img/equipamiento_protectores.jpg"); }
-
-/************************ Galeria 5 ************************/
-.galeria5 {
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: 25vw repeat(2, 20vw);
-  grid-template-areas: "anchoG5-1	anchoG5-1	anchoG5-1	anchoG5-1	medioG5-1	medioG5-1	medioG5-1" "plenoG5	plenoG5		plenoG5		plenoG5		plenoG5		plenoG5		plenoG5" "medioG5-2	medioG5-2	medioG5-2	anchoG5-2	anchoG5-2	anchoG5-2	anchoG5-2"; }
-
-.galeria5 li:nth-child(1) {
-  grid-area: anchoG5-1; }
-
-.galeria5 li:nth-child(2) {
-  grid-area: medioG5-1; }
-
-.galeria5 li:nth-child(3) {
-  grid-area: plenoG5; }
-
-.galeria5 li:nth-child(4) {
-  grid-area: medioG5-2; }
-
-.galeria5 li:nth-child(5) {
-  grid-area: anchoG5-2; }
-
-/****** Imágenes de sección: Bicicletas ******/
-#bicicletas li:nth-child(1) div {
-  background-image: url("../Img/bicicletas_mtb.jpg"); }
-
-#bicicletas li:nth-child(2) div {
-  background-image: url("../Img/bicicletas_ruta.jpg"); }
-
-#bicicletas li:nth-child(3) div {
-  background-image: url("../Img/bicicletas_eBike.jpg"); }
-
-#bicicletas li:nth-child(4) div {
-  background-image: url("../Img/bicicletas_urbana.jpg"); }
-
-#bicicletas li:nth-child(5) div {
-  background-image: url("../Img/bicicletas_infantil.jpg"); }
-
-/****** Imágenes de sección: Accesorios ******/
-#accesorios li:nth-child(1) div {
-  background-image: url("../Img/accesorios_electronica.jpg"); }
-
-#accesorios li:nth-child(2) div {
-  background-image: url("../Img/accesorios_rodillos.jpg"); }
-
-#accesorios li:nth-child(3) div {
-  background-image: url("../Img/accesorios_portabicis.jpg"); }
-
-#accesorios li:nth-child(4) div {
-  background-image: url("../Img/accesorios_mantenimiento.jpg"); }
-
-#accesorios li:nth-child(5) div {
-  background-image: url("../Img/accesorios_complementos.jpg"); }
-
-/************************ Galeria 6 ************************/
-.galeria6 {
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(2, 25vw) 20vw;
-  grid-template-areas: "anchoG6-1	anchoG6-1	anchoG6-1	anchoG6-1	medioG6-1	medioG6-1	medioG6-1" "medioG6-2	medioG6-2	medioG6-2	anchoG6-2	anchoG6-2	anchoG6-2	anchoG6-2" "anchoG6-3	anchoG6-3	anchoG6-3	anchoG6-3	anchoG6-3	chicoG6		chicoG6"; }
-
-.galeria6 li:nth-child(1) {
-  grid-area: anchoG6-1; }
-
-.galeria6 li:nth-child(2) {
-  grid-area: medioG6-1; }
-
-.galeria6 li:nth-child(3) {
-  grid-area: medioG6-2; }
-
-.galeria6 li:nth-child(4) {
-  grid-area: anchoG6-2; }
-
-.galeria6 li:nth-child(5) {
-  grid-area: anchoG6-3; }
-
-.galeria6 li:nth-child(6) {
-  grid-area: chicoG6; }
-
-/****** Imágenes de sección: Componentes ******/
-#componentes li:nth-child(1) div {
-  background-image: url("../Img/componentes_cuadros.jpg"); }
-
-#componentes li:nth-child(2) div {
-  background-image: url("../Img/componentes_transmision.jpg"); }
-
-#componentes li:nth-child(3) div {
-  background-image: url("../Img/componentes_frenos.jpg"); }
-
-#componentes li:nth-child(4) div {
-  background-image: url("../Img/componentes_ruedas.jpg"); }
-
-#componentes li:nth-child(5) div {
-  background-image: url("../Img/componentes_cubiertas.jpg"); }
-
-#componentes li:nth-child(6) div {
-  background-image: url("../Img/componentes_otros.jpg"); }
-
-/****** Imágenes de sección: Indumentaria ******/
-#indumentaria li:nth-child(1) div {
-  background-image: url("../Img/indumentaria_calzado.jpg"); }
-
-#indumentaria li:nth-child(2) div {
-  background-image: url("../Img/indumentaria_remeras.jpg"); }
-
-#indumentaria li:nth-child(3) div {
-  background-image: url("../Img/indumentaria_calzas.jpg"); }
-
-#indumentaria li:nth-child(4) div {
-  background-image: url("../Img/indumentaria_maillots.jpg"); }
-
-#indumentaria li:nth-child(5) div {
-  background-image: url("../Img/indumentaria_camperas.jpg"); }
-
-#indumentaria li:nth-child(6) div {
-  background-image: url("../Img/indumentaria_complementos.jpg"); }
-
-/************************** Main de productos.html - Fin **************************/
-/**********************************************************************************/
 /**********************************************************************************/
 /************************ Main de servicios.html - Inicio *************************/
 /******************************* Diseño usando Grid *******************************/
@@ -825,17 +836,16 @@ main .videos h4 {
 
 /**************** Sección Competencias ***************/
 .competencias .card-header {
-  background-size: cover;
   height: 12rem; }
 
 .competencias .card-header.ruta {
-  background-image: url("../Img/competencias_tarjeta_ruta.jpg"); }
+  background-image: url("../img/competencias_tarjeta_ruta.jpg"); }
 
 .competencias .card-header.mtb {
-  background-image: url("../Img/competencias_tarjeta_mtb.jpg"); }
+  background-image: url("../img/competencias_tarjeta_mtb.jpg"); }
 
 .competencias .card-header.bmx {
-  background-image: url("../Img/competencias_tarjeta_bmx.jpg"); }
+  background-image: url("../img/competencias_tarjeta_bmx.jpg"); }
 
 .competencias .card-body {
   background: linear-gradient(135deg, #b30404 0%, #545454 100%);
@@ -863,7 +873,8 @@ main.noticias aside h2, main.noticias aside h3 {
 /******************************** Seccion Premio ******************************/
 /*** imagen de todo el ancho con texto interior centrado por flexbox ***/
 main.noticias .imagenPremio {
-  background: url("../Img/tour.jpg") no-repeat top/cover;
+  background-image: url("../img/tour.jpg");
+  background-position: top;
   width: 100vw;
   margin-left: -5vw;
   display: flex;
@@ -919,8 +930,7 @@ main.noticias .imagenPremio h2 {
   /* para pisar a Bootstrap */ }
 
 .formulario {
-  background-image: url("../Img/contacto.jpg");
-  background-size: cover;
+  background-image: url("../img/contacto.jpg");
   background-position: 32%;
   color: white;
   padding: 0.625rem;
@@ -1051,25 +1061,12 @@ section.sucursales {
     font-size: 3rem; } }
 
 @media only screen and (max-width: 1220px) {
-  .accordion .card-header h2 {
-    width: 35rem; }
-  .accordion .card-header button {
-    font-size: 3rem; }
   .servicios article h2 {
     font-size: 1.5rem; }
   .sucursales div h3 {
     font-size: 1rem; } }
 
 @media only screen and (max-width: 991px) {
-  main.noticias .tituloBoxClaro, main.contacto .tituloBoxClaro {
-    font-size: 1.3rem; }
-  .accordion .card-header h2 {
-    width: 28rem; }
-  .accordion .card-header button {
-    font-size: 2.5rem;
-    padding: 1rem 2rem; }
-  .productos li div {
-    font-size: 1.5rem; }
   article.reparaciones, article.cursos, article.bodyGeometry {
     /*grids de 2 filas*/
     grid-template-columns: 1fr;
@@ -1083,6 +1080,8 @@ section.sucursales {
     order: 0;
     border: none;
     border-bottom: 1rem solid #b30404; }
+  main.noticias .tituloBoxClaro, main.contacto .tituloBoxClaro {
+    font-size: 1.3rem; }
   main.noticias h2 {
     font-size: 3.5rem; }
   .noticias aside div.dias4 {
@@ -1114,8 +1113,6 @@ section.sucursales {
     width: 100%; } }
 
 @media only screen and (max-width: 767px) {
-  .productos li div {
-    font-size: 1.25rem; }
   main.noticias h2 {
     font-size: 2.5rem; }
   main.noticias .imagenPremio h2 {
@@ -1136,17 +1133,10 @@ section.sucursales {
     min-width: unset;
     background-color: rgba(155, 155, 155, 0.4); }
   .formulario {
-    background-image: url("../Img/contacto_vert.jpg");
+    background-image: url("../img/contacto_vert.jpg");
     padding: 0; } }
 
 @media only screen and (max-width: 500px) {
-  .accordion .card-header h2 {
-    width: 18rem; }
-  .accordion .card-header button {
-    font-size: 1.6rem;
-    padding: .8rem 1rem; }
-  .productos li div {
-    font-size: .8rem; }
   .noticias aside div.dias2 {
     display: block; }
   .noticias aside div.dias7, .noticias aside div.dias4 {

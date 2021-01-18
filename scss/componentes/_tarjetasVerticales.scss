@@ -20,14 +20,11 @@
 	.tarjeta__imagen {
 		width: 100%;
 		height: 20vw;
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-image: url("../Img/destacado1.jpg");
+		@include cover(destacado1);
 	}
 	.tarjeta__imagen--secundaria {
 		@extend .tarjeta__imagen; 
-		background-image: url("../Img/destacado2.jpg");
+		background-image: url("../img/destacado2.jpg");
 	}
 	.tarjeta__titulo {
 		@extend %tituloBoxClaro;

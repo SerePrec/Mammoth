@@ -14,6 +14,16 @@
 	}
 }
 
+// Imágen Cover
+@mixin cover($nombre: ninguno, $posicion: center) {
+	@if $nombre==ninguno {
+	} @else {
+		background-image: url("../img/#{$nombre}.jpg");
+	}
+	@extend %imagenCover;
+	background-position: $posicion;
+}
+
 // Display Flex
 @mixin flex($direccion: row, $wrap: nowrap, $justificado: ninguno) {
 	display: flex;
