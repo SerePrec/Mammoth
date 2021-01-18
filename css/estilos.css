@@ -2,7 +2,7 @@
 /***************************************************************/
 /******************** Place Holders - Inicio  ******************/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;0,800;1,500;1,700;1,800&family=Roboto+Condensed:wght@300;400;700&display=swap");
-main.inicio .destacados, .newsletter .newsletter__titulo, .social .social__titulo, .bodyGeometry, #eventos, #app {
+main.inicio .destacados, main.servicios .bodyGeometry, .newsletter .newsletter__titulo, .social .social__titulo, #eventos, #app {
   background-color: #545454;
   color: white; }
 
@@ -166,6 +166,29 @@ main.productos {
   overflow: hidden; }
 
 /******************* Main de productos.html - Fin **************/
+/***************************************************************/
+/***************************************************************/
+/*************** Main de servicios.html - Inicio ***************/
+/************* Grid principal *************/
+main.servicios {
+  /*grid principal de 4 fila. Las 3 finales con altura mínima*/
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, minmax(250px, auto));
+  grid-template-areas: "reparaciones" "bodyGeometry" "cursos";
+  grid-row-gap: 4vw;
+  padding: 3vw 5vw 3vw 5vw; }
+  main.servicios .reparaciones {
+    grid-area: reparaciones; }
+  main.servicios .bodyGeometry {
+    grid-area: bodyGeometry; }
+  main.servicios .cursos {
+    grid-area: cursos; }
+  @media only screen and (max-width: 1220px) {
+    main.servicios h2 {
+      font-size: 1.5rem; } }
+
+/************** Main de servicios.html - Fin *******************/
 /***************************************************************/
 /***************************************************************/
 /************************ Footer - Inicio  *********************/
@@ -624,6 +647,53 @@ nav.navbar {
 
 /************** Grids en Acordeon de Productos - Fin  **********/
 /***************************************************************/
+/***************************************************************/
+/************** Grid articulos servicios - Inicio **************/
+article.reparaciones, article.cursos {
+  /*grids de 2 columnas 2/3 1/3*/
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center; }
+  article.reparaciones img, article.cursos img {
+    width: 100%;
+    border-right: 1rem solid #b30404; }
+  article.reparaciones div, article.cursos div {
+    padding-left: 0.625rem; }
+    article.reparaciones div p, article.cursos div p {
+      padding: 0.3rem 0; }
+
+article.bodyGeometry {
+  /*grids de 2 columnas 1/3 2/3*/
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  margin: 0 -5vw 0 -5vw;
+  padding: 3vw 5vw 3vw 5vw; }
+  article.bodyGeometry img {
+    width: 100%;
+    order: 1;
+    /*para que aparezca después del texto sin cambiar orden html*/
+    border-left: 1rem solid #b30404; }
+  article.bodyGeometry div {
+    padding: 0 0.625rem; }
+    article.bodyGeometry div p {
+      padding: 0.3rem 0; }
+
+@media only screen and (max-width: 991px) {
+  article.reparaciones, article.cursos, article.bodyGeometry {
+    /*grids de 2 filas*/
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    text-align: center;
+    grid-row-gap: 1rem; }
+    article.reparaciones img, article.cursos img, article.bodyGeometry img {
+      border: none;
+      border-bottom: 1rem solid #b30404; }
+  article.bodyGeometry img {
+    order: 0; } }
+
+/*************** Grid articulos servicios - Fin ****************/
+/***************************************************************/
 /************************ Newsletter ***************************/
 /*************** Incluye Formulario Bootstrap ******************/
 .newsletter {
@@ -718,64 +788,6 @@ nav.navbar {
 
 /************************* Modal - Fin *************************/
 /***************************************************************/
-/**********************************************************************************/
-/************************ Main de servicios.html - Inicio *************************/
-/******************************* Diseño usando Grid *******************************/
-/************* Grid principal *************/
-main.servicios {
-  /*grid principal de 4 fila. Las 3 finales con altura mínima*/
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: repeat(3, minmax(250px, auto));
-  grid-template-areas: "reparaciones" "bodyGeometry" "cursos";
-  grid-row-gap: 4vw;
-  padding: 3vw 5vw 3vw 5vw; }
-
-.reparaciones {
-  grid-area: reparaciones; }
-
-.bodyGeometry {
-  grid-area: bodyGeometry; }
-
-.cursos {
-  grid-area: cursos; }
-
-/************* Grid de articulos *************/
-article.reparaciones, article.cursos {
-  /*grids de 2 columnas 2/3 1/3*/
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-items: center; }
-
-article.bodyGeometry {
-  /*grids de 2 columnas 1/3 2/3*/
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-items: center;
-  margin: 0 -5vw 0 -5vw;
-  padding: 3vw 5vw 3vw 5vw; }
-
-.servicios article img {
-  width: 100%;
-  border-right: 1rem solid #b30404; }
-
-.servicios .bodyGeometry img {
-  order: 1;
-  /*para que aparezca después del texto sin cambiar orden html*/
-  border-left: 1rem solid #b30404;
-  border-right: none; }
-
-.servicios article div {
-  padding-left: 0.625rem; }
-
-.servicios .bodyGeometry div {
-  padding-right: 0.625rem; }
-
-.servicios article p {
-  padding: 0.3rem 0; }
-
-/************************ Main de servicios.html - Fin *****************************/
-/***********************************************************************************/
 /************************************************************************************/
 /************************** Main de noticias.html - Inicio *************************/
 /****************************** Se uso grid y flexbox ******************************/
@@ -1061,25 +1073,10 @@ section.sucursales {
     font-size: 3rem; } }
 
 @media only screen and (max-width: 1220px) {
-  .servicios article h2 {
-    font-size: 1.5rem; }
   .sucursales div h3 {
     font-size: 1rem; } }
 
 @media only screen and (max-width: 991px) {
-  article.reparaciones, article.cursos, article.bodyGeometry {
-    /*grids de 2 filas*/
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
-    text-align: center;
-    grid-row-gap: 1rem; }
-  .servicios article img {
-    border: none;
-    border-bottom: 1rem solid #b30404; }
-  .servicios .bodyGeometry img {
-    order: 0;
-    border: none;
-    border-bottom: 1rem solid #b30404; }
   main.noticias .tituloBoxClaro, main.contacto .tituloBoxClaro {
     font-size: 1.3rem; }
   main.noticias h2 {

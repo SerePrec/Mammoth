@@ -1,0 +1,56 @@
+/***************************************************************/
+/************** Grid articulos servicios - Inicio **************/
+article {
+	&.reparaciones, &.cursos { /*grids de 2 columnas 2/3 1/3*/
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		align-items: center;
+		img {
+			width: 100%;
+			border-right: 1rem solid $rojoMarca;
+		}
+		div {
+			padding-left: 0.625rem;
+			p {
+				padding: 0.3rem 0;
+			}
+		}
+	}
+	&.bodyGeometry { /*grids de 2 columnas 1/3 2/3*/
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		align-items: center;
+		margin: 0 -5vw 0 -5vw;
+		padding: 3vw 5vw 3vw 5vw;
+		img {
+			width: 100%;
+			order: 1; /*para que aparezca después del texto sin cambiar orden html*/
+			border-left: 1rem solid $rojoMarca;
+		}
+		div {
+			padding: 0 0.625rem;
+			p {
+				padding: 0.3rem 0;
+			}
+		}
+	}
+	@include responsive(md) {
+		&.reparaciones, &.cursos, &.bodyGeometry { /*grids de 2 filas*/
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr auto;
+			text-align: center;
+			grid-row-gap: 1rem;
+			img {
+				border: none;
+				border-bottom: 1rem solid $rojoMarca;
+			}
+		}
+		&.bodyGeometry {
+			img {
+				order: 0; 
+			}
+		} 
+	}
+}
+/*************** Grid articulos servicios - Fin ****************/
+/***************************************************************/
