@@ -1,0 +1,76 @@
+/***************************************************************/
+/***************** Main del index.html - Inicio ****************/
+main.inicio {
+	@extend %mainComun;
+	.destacados {
+		/********** Seccion destacados ***********/
+		@extend %fondoOscuro;
+		/*********** Titulo destacados ***********/
+		h2 {
+			font-size: 4rem;
+			font-weight: 800;
+			padding-top: 2vw;
+			background-color: $tonoMedio;
+			color: white;
+			font-style: italic;
+			text-align: center;
+			letter-spacing: 0.2em;
+			span {
+				font-weight: 500;
+				font-style: normal;
+				white-space: nowrap;
+			}
+		}
+		.animate__fadeInRightBig {
+			animation-delay: 0.3s;
+		}
+	}
+	.imagenSecundaria {
+		@extend %imagenTodoAncho;
+		background: url("../Img/secundaria.jpg") no-repeat top/cover;
+	}
+	.difusion {
+		@include flex($wrap: wrap, $justificado: between);
+		padding: 0 5vw;
+	}
+	@include responsive(md) {
+		.destacados h2 {
+			font-size: 3.3rem;
+		}
+		.imagenSecundaria {
+			background-size: cover;
+			height: 550px;
+			background-position: 70% top;
+		}
+		.difusion {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	@include responsive(sm) {
+		.destacados {
+			h2 {
+				font-size: 3.2rem;
+			}
+			.animate__fadeInRightBig {
+				animation: fadeInLeftBig; 
+				animation-delay: 0s; 
+			}
+			.tarjeta {
+				margin: 1vw 0; 
+				height: auto;
+				min-height: initial;
+			}
+		}
+	}
+	@include responsive(xs) {
+		.destacados h2 {
+			font-size: 2.2rem;
+		}
+		.imagenSecundaria {
+			height: 250px;
+		}
+	}
+}
+/******************** Main del index.html - Fin ****************/
+/***************************************************************/

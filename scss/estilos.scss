@@ -1,0 +1,933 @@
+@import "utilidades/variables.scss";
+@import "utilidades/mixins.scss";
+@import "utilidades/placeholders.scss";
+
+@import "base/reset.scss";
+@import "base/fuentes.scss";
+
+@import "bloques/header.scss";
+@import "bloques/mainIndex.scss";
+@import "bloques/footer.scss";
+
+@import "componentes/navbar.scss";
+@import "componentes/carousel.scss";
+@import "componentes/bannerMarcas.scss";
+@import "componentes/tarjetasVerticales.scss";
+@import "componentes/newsletter.scss";
+@import "componentes/social.scss";
+@import "componentes/modal.scss";
+
+
+
+// ************************************************************
+// PARTES EN PROCESO DE CONVERSION (AUN SIN SASS)
+// ************************************************************
+
+
+/***********************************************************************************/
+/************************** Main de productos.html - Inicio ************************/
+/*********************** Pagina con Grid en los desplegables ***********************/
+
+/******************** Acordeón de productos - Inicio ********************/
+
+main.productos {
+	@extend %mainComun;
+	overflow: hidden;
+	padding: 0 5vw;
+}
+
+.card-header {
+	background-image: url("../Img/carretera.jpg");
+	background-repeat: no-repeat;
+	background-size: 90vw 160vw;
+	height: 32vw;
+	align-items: center;
+}
+
+.card:nth-child(1) .card-header {
+	background-position: 0 0;
+}
+
+.card:nth-child(2) .card-header {
+	background-position: 0 -32vw;
+}
+
+.card:nth-child(3) .card-header {
+	background-position: 0 -64vw;
+}
+
+.card:nth-child(4) .card-header {
+	background-position: 0 -96vw;
+}
+
+.card:nth-child(5) .card-header {
+	background-position: 0 -128vw;
+}
+
+.accordion .card-header h2 {
+	width: 40rem;
+	background-color: rgba(179,4,4,.3);
+}
+
+.accordion .card-header button {
+	color: white;
+	font-size: 4rem;
+	padding: 1rem 3rem;
+	font-weight: 700;
+	font-style: italic;
+}
+
+.btn.focus, .btn:focus {
+    @include sombraCaja(rgba(179,4,4,.5), 0, 0, 0, 0.2rem);
+}
+
+/*********************** Acordeón de productos - Fin ***********************/
+
+/******** grids para agrupar los sub-productos (dentro de acordeón) ********/
+
+.productos ul {
+	list-style-type: none;
+	display: grid;
+	align-items: stretch;
+	margin: 0;
+	border-bottom: .5rem solid $rojoMarca
+}
+
+.productos li {
+	overflow: hidden;
+	display: flex;
+	align-items: stretch;
+}
+
+.productos li div {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	filter: grayscale(100%);
+	transition: filter 1.5s, transform 2.5s; /*transición de todas las propiedades*/
+	font-size: 2rem;
+	color: white;
+	text-shadow: 0px 0px 5px black;
+}
+
+.productos li:hover div {
+	filter: initial;
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+/************************ Galeria 4 ************************/
+.galeria4 {
+	grid-template-columns: repeat(7,1fr);
+	grid-template-rows: 25vw 20vw;
+	grid-template-areas:
+	"casco		casco		casco		casco		lente		lente		lente"
+	"protector	protector	mochila		mochila		mochila		mochila		mochila"
+}
+
+.galeria4 li:nth-child(1) {
+	grid-area: casco;
+}
+.galeria4 li:nth-child(2) {
+	grid-area: lente;
+}
+.galeria4 li:nth-child(3) {
+	grid-area: mochila;
+}
+.galeria4 li:nth-child(4) {
+	grid-area: protector
+}
+
+/****** Imágenes de sección: Equipamineto ******/
+#equipamiento li:nth-child(1) div {
+	background-image: url("../Img/equipamiento_cascos.jpg");
+}
+#equipamiento li:nth-child(2) div {
+	background-image: url("../Img/equipamiento_lentes.jpg");
+}
+#equipamiento li:nth-child(3) div {
+	background-image: url("../Img/equipamiento_mochilas.jpg");
+}
+#equipamiento li:nth-child(4) div {
+	background-image: url("../Img/equipamiento_protectores.jpg");
+}
+
+/************************ Galeria 5 ************************/
+.galeria5 {
+	grid-template-columns: repeat(7,1fr);
+	grid-template-rows: 25vw repeat(2,20vw);
+	grid-template-areas: /*nombres genericos porque la uso en más de un caso*/
+	"anchoG5-1	anchoG5-1	anchoG5-1	anchoG5-1	medioG5-1	medioG5-1	medioG5-1"
+	"plenoG5	plenoG5		plenoG5		plenoG5		plenoG5		plenoG5		plenoG5"
+	"medioG5-2	medioG5-2	medioG5-2	anchoG5-2	anchoG5-2	anchoG5-2	anchoG5-2";
+}
+
+.galeria5 li:nth-child(1) {
+	grid-area: anchoG5-1;
+}
+.galeria5 li:nth-child(2) {
+	grid-area: medioG5-1;
+}
+.galeria5 li:nth-child(3) {
+	grid-area: plenoG5;
+}
+.galeria5 li:nth-child(4) {
+	grid-area: medioG5-2;
+}
+.galeria5 li:nth-child(5) {
+	grid-area: anchoG5-2;
+}
+
+/****** Imágenes de sección: Bicicletas ******/
+#bicicletas li:nth-child(1) div {
+	background-image: url("../Img/bicicletas_mtb.jpg");
+}
+#bicicletas li:nth-child(2) div {
+	background-image: url("../Img/bicicletas_ruta.jpg");
+}
+#bicicletas li:nth-child(3) div {
+	background-image: url("../Img/bicicletas_eBike.jpg");
+}
+#bicicletas li:nth-child(4) div {
+	background-image: url("../Img/bicicletas_urbana.jpg");
+}
+#bicicletas li:nth-child(5) div {
+	background-image: url("../Img/bicicletas_infantil.jpg");
+}
+
+/****** Imágenes de sección: Accesorios ******/
+#accesorios li:nth-child(1) div {
+	background-image: url("../Img/accesorios_electronica.jpg");
+}
+#accesorios li:nth-child(2) div {
+	background-image: url("../Img/accesorios_rodillos.jpg");
+}
+#accesorios li:nth-child(3) div {
+	background-image: url("../Img/accesorios_portabicis.jpg");
+}
+#accesorios li:nth-child(4) div {
+	background-image: url("../Img/accesorios_mantenimiento.jpg");
+}
+#accesorios li:nth-child(5) div {
+	background-image: url("../Img/accesorios_complementos.jpg");
+}
+
+
+/************************ Galeria 6 ************************/
+.galeria6 {
+	grid-template-columns: repeat(7,1fr);
+	grid-template-rows: repeat(2,25vw) 20vw;
+	grid-template-areas: /*acá usé nombres genericos (diferentes) porque la uso en más de un caso*/
+	"anchoG6-1	anchoG6-1	anchoG6-1	anchoG6-1	medioG6-1	medioG6-1	medioG6-1"
+	"medioG6-2	medioG6-2	medioG6-2	anchoG6-2	anchoG6-2	anchoG6-2	anchoG6-2"
+	"anchoG6-3	anchoG6-3	anchoG6-3	anchoG6-3	anchoG6-3	chicoG6		chicoG6";
+}
+
+.galeria6 li:nth-child(1) {
+	grid-area: anchoG6-1;
+}
+.galeria6 li:nth-child(2) {
+	grid-area: medioG6-1;
+}
+.galeria6 li:nth-child(3) {
+	grid-area: medioG6-2;
+}
+.galeria6 li:nth-child(4) {
+	grid-area: anchoG6-2;
+}
+.galeria6 li:nth-child(5) {
+	grid-area: anchoG6-3;
+}
+.galeria6 li:nth-child(6) {
+	grid-area: chicoG6;
+}
+
+/****** Imágenes de sección: Componentes ******/
+#componentes li:nth-child(1) div {
+	background-image: url("../Img/componentes_cuadros.jpg");
+}
+#componentes li:nth-child(2) div {
+	background-image: url("../Img/componentes_transmision.jpg");
+}
+#componentes li:nth-child(3) div {
+	background-image: url("../Img/componentes_frenos.jpg");
+}
+#componentes li:nth-child(4) div {
+	background-image: url("../Img/componentes_ruedas.jpg");
+}
+#componentes li:nth-child(5) div {
+	background-image: url("../Img/componentes_cubiertas.jpg");
+}
+#componentes li:nth-child(6) div {
+	background-image: url("../Img/componentes_otros.jpg");
+}
+
+/****** Imágenes de sección: Indumentaria ******/
+#indumentaria li:nth-child(1) div {
+	background-image: url("../Img/indumentaria_calzado.jpg");
+}
+#indumentaria li:nth-child(2) div {
+	background-image: url("../Img/indumentaria_remeras.jpg");
+}
+#indumentaria li:nth-child(3) div {
+	background-image: url("../Img/indumentaria_calzas.jpg");
+}
+#indumentaria li:nth-child(4) div {
+	background-image: url("../Img/indumentaria_maillots.jpg");
+}
+#indumentaria li:nth-child(5) div {
+	background-image: url("../Img/indumentaria_camperas.jpg");
+}
+#indumentaria li:nth-child(6) div {
+	background-image: url("../Img/indumentaria_complementos.jpg");
+}
+
+/************************** Main de productos.html - Fin **************************/
+/**********************************************************************************/
+
+
+/**********************************************************************************/
+/************************ Main de servicios.html - Inicio *************************/
+/******************************* Diseño usando Grid *******************************/
+
+/************* Grid principal *************/
+main.servicios { /*grid principal de 4 fila. Las 3 finales con altura mínima*/
+	@extend %mainComun;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: repeat(3, minmax(250px,auto)); 
+	grid-template-areas: "reparaciones" "bodyGeometry" "cursos";
+	grid-row-gap: 4vw;
+	padding: 3vw 5vw 3vw 5vw;
+}
+
+.reparaciones {
+	grid-area: reparaciones;	
+}
+
+.bodyGeometry {
+	@extend %fondoOscuro;
+	grid-area: bodyGeometry;	
+}
+
+.cursos {
+	grid-area: cursos;	
+}
+
+/************* Grid de articulos *************/
+
+article.reparaciones, article.cursos { /*grids de 2 columnas 2/3 1/3*/
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	align-items: center;
+}
+
+article.bodyGeometry { /*grids de 2 columnas 1/3 2/3*/
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	align-items: center;
+	margin: 0 -5vw 0 -5vw;
+	padding: 3vw 5vw 3vw 5vw;
+}
+
+.servicios article img {
+	width: 100%;
+	border-right: 1rem solid $rojoMarca;
+}
+
+.servicios .bodyGeometry img {
+	order: 1; /*para que aparezca después del texto sin cambiar orden html*/
+	border-left: 1rem solid $rojoMarca;
+	border-right: none;
+}
+
+.servicios article div {
+	padding-left: 0.625rem;
+}
+
+.servicios .bodyGeometry div {
+	padding-right: 0.625rem;
+}
+
+.servicios article p {
+	padding: 0.3rem 0;
+}
+
+/************************ Main de servicios.html - Fin *****************************/
+/***********************************************************************************/
+
+
+/************************************************************************************/
+/************************** Main de noticias.html - Inicio *************************/
+/****************************** Se uso grid y flexbox ******************************/
+.tituloBoxClaro {
+	@extend %tituloBoxClaro;
+}
+
+main.noticias {
+	@extend %mainComun;
+	overflow: hidden;
+	padding: 0 5vw;
+}
+
+
+
+main.noticias h2 {
+	font-size: 4rem;
+	font-weight: 800;
+	margin-top: 2rem;
+	font-style: italic;
+	border-bottom: 3px solid $rojoMarca;
+}
+
+/***** Sección Videos tutoriales ****/
+main .videos h4 {
+	font-size: 1.5rem;
+	font-weight: 800;
+}
+
+.videos a.btn {
+	background-color: $rojoMarca;
+	border-color: $rojoMarca;
+}
+
+/**************** Sección Eventos ***************/
+
+#eventos {
+	@extend %fondoOscuro;
+}
+
+#eventos, #app { /*grids de 2 columnas 1/3 2/3*/
+	margin: 0 -5vw 0 -5vw;
+	padding: 3vw 5vw 4vw 5vw;
+}
+
+.eventos, .app { 
+	text-align: right;
+	overflow: hidden;
+}
+
+.eventos p, .competencias p, .app p {
+	margin: 1rem 0 1rem auto;
+	text-align: justify;
+}
+
+.eventos h3 {
+	text-align: center;
+	font-weight: 500;
+}
+
+.noticias .card, .noticias .card-footer {
+	background-color: transparent;
+	border-radius: unset;
+}
+
+.eventos .card-body {
+	border: .5rem solid $rojoMarca;
+	background: rgb(179,4,4);
+	background: linear-gradient(135deg, rgba(179,4,4,1) 0%, rgba(84,84,84,1) 100%);
+}
+
+.eventos .card-body h4 {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.eventos p span img, .competencias p span img {
+	margin-right: .3rem;
+	vertical-align: bottom;
+}
+
+/**************** Sección Competencias ***************/
+
+.competencias .card-header {
+	background-size: cover;
+	height: 12rem;
+}
+
+.competencias .card-header.ruta {
+	background-image: url("../Img/competencias_tarjeta_ruta.jpg");
+}
+
+.competencias .card-header.mtb {
+	background-image: url("../Img/competencias_tarjeta_mtb.jpg");
+}
+
+.competencias .card-header.bmx {
+	background-image: url("../Img/competencias_tarjeta_bmx.jpg");
+}
+
+.competencias .card-body {
+	background: linear-gradient(135deg, rgba(179,4,4,1) 0%, rgba(84,84,84,1) 100%);
+	color: White;
+}
+
+/********************** Seccion App *********************/
+
+#app {
+	@extend %fondoOscuro;
+}
+
+.app div img {
+	width: 100%;
+	object-fit: cover;
+}
+
+/********** Aside con informacion del tiempo ***********/
+
+main.noticias aside h2, main.noticias aside h3 {
+	text-align: center;
+	border: none;
+}
+
+.noticias aside div {
+	margin:auto;
+}
+
+.noticias aside div.dias7 {
+	display: block;
+}
+
+.noticias aside div.dias4, .noticias aside div.dias2 {
+	display: none;
+}
+
+/******************************** Seccion Premio ******************************/
+
+/*** imagen de todo el ancho con texto interior centrado por flexbox ***/
+main.noticias .imagenPremio {
+	@extend %imagenTodoAncho;
+	background: url("../Img/tour.jpg") no-repeat top/cover;
+	width: 100vw;
+	margin-left: -5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main.noticias .imagenPremio h2 {
+	color: white;
+	text-shadow: 5px 5px 10px black;
+	animation-name: latido; /*** Animación "latido" ***/
+	animation-duration: 1.2s;
+	animation-timing-function: ease-out;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+/*** Fotogramas de animación latido ***/
+@keyframes latido {
+	0% {transform: scale(0.8,0.8); color:white;}
+	40% {color: white;}
+	100% {transform: scale(1.3,1.3); color:#fcd806;}
+}
+
+.premio {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.premio h2 span {
+	font-weight: 500;
+	font-size: 0.75em;
+	font-style: normal;
+	text-transform: lowercase;
+}
+
+.premio h2 {
+	border: none; 
+}
+
+.premio div img {
+	width: 100%;
+	object-fit: cover;
+}
+
+/************************** Main de noticias.html - Fin ****************************/
+/***********************************************************************************/
+
+/***********************************************************************************/
+/************************** Main de contacto.html - Inicio ************************/
+/***********************************************************************************/
+
+main.contacto {
+	@extend %mainComun;
+}
+
+/************** formulario contacto ************/
+
+.form-control {
+	display: inline-block; /* para pisar a Bootstrap */
+}
+
+.formulario {
+	background-image: url("../Img/contacto.jpg");
+	background-size: cover;
+	background-position: 32%;
+	color: white;
+	padding: 0.625rem;
+	text-shadow: 2px 2px 2px black;
+	font-size: 1.2rem;
+}
+
+.formulario form {
+	width: 45%;
+	min-width: 39rem;
+}
+
+.formulario fieldset {
+	padding: 0.625rem;
+}
+
+.formulario fieldset fieldset {
+	margin: 1rem 0;
+	border: 2px solid $rojoMarca;
+	font-style: italic;
+}
+
+
+input, textarea, select {
+	font-style: italic;
+}
+
+.formulario .input-group-text {
+	text-shadow: none;
+	font-weight: 500;
+	background-color: $rojoMarca;
+	color: white;
+	border: none;
+	padding: 0 1rem;
+}
+
+input[type="submit"], input[type="reset"] {
+	width: 8vw;
+	min-width: 7rem;
+	height: 2rem;
+	background-color: $rojoMarca;
+	color: white;
+	border: none;
+	border-radius: .25rem;
+	font-weight: 500;
+	letter-spacing: .07rem;
+	font-style: normal;
+	font-size: 1rem;
+}
+
+select.form-control, input[type=date] {
+	width: 15rem;
+}
+
+.form-control:focus {
+    @include sombraCaja(rgba(179,4,4,.3), 0, 0, 0, 0.2rem);
+    border-color: $rojoMarca;
+}
+
+/****************** Sucursales ****************/
+/************* Diseño usando Grid*************/
+
+section.sucursales { /*grid de 3 columnas y 3 filas*/
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto repeat(2, 1fr);
+	grid-template-areas: 
+	"tituloSuc tituloSuc tituloSuc"
+	"palermo laPlata marDelPlata"
+	"mapa mapa localizacion";
+	grid-gap: 1.5rem;
+	padding: 0 5vw 5vh 5vw;
+}
+
+.sucursales h2 {
+	grid-area: tituloSuc;
+	text-align: center;
+	padding-top: 1.5rem;
+}
+
+
+.palermo {
+	grid-area: palermo;
+}
+
+.laPlata {
+	grid-area: laPlata;
+}
+
+.marDelPlata {
+	grid-area: marDelPlata;
+}
+
+.mapa {
+	grid-area: mapa;
+}
+
+.sucursales .localizacion {
+	grid-area: localizacion;
+	align-self: center; /*este se alinea al centro a diferencia del resto*/
+	background-color: transparent;
+}
+
+#carouselSucursales {
+	display: none;
+}
+
+.sucursales div {
+	text-align: center;
+	position: relative;
+}
+
+.sucursales div h3 {
+	background-color: rgba(33,33,33,.75);
+	font-weight: 500;
+	margin: 0;
+	padding: .75rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.sucursales img {
+	width: 100%;
+}
+
+.sucursales iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.localizacion * {
+	text-align: left;
+	padding: 0.3rem 0;
+}
+
+.localizacion p span img {
+	width: 1rem;
+	margin-right: .3rem;
+	vertical-align: bottom;
+}
+
+.localizacion p span {
+	display: inline-block;
+	margin-right: .5rem;
+}
+
+
+
+/************************** Main de contacto.html - Fin ****************************/
+/***********************************************************************************/
+
+
+/********************************************************************************/
+/********************************* Media querys**********************************/
+/********************************************************************************/
+@media only screen and (max-width: 1300px) {
+
+	main.noticias .imagenPremio h2 {
+		font-size: 3rem;
+	}
+}
+
+@media only screen and (max-width: 1220px) {
+	.accordion .card-header h2 {
+		width: 35rem;
+	}
+
+	.accordion .card-header button {
+		font-size: 3rem;
+	}
+
+	.servicios article h2 {
+		font-size: 1.5rem;
+	}
+
+	.sucursales div h3 {
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+		
+	main.noticias .tituloBoxClaro, main.contacto .tituloBoxClaro  { // ojo que esta clase capaz no se usa
+		font-size: 1.3rem;
+	}
+
+	
+
+	.accordion .card-header h2 {
+		width: 28rem;
+	}
+
+	.accordion .card-header button {
+		font-size: 2.5rem;
+		padding: 1rem 2rem;
+	}
+
+	.productos li div {
+		font-size: 1.5rem;
+	}
+
+	article.reparaciones, article.cursos, article.bodyGeometry { /*grids de 2 filas*/
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr auto;
+		text-align: center;
+		grid-row-gap: 1rem;
+	}
+
+	.servicios article img {
+		border: none;
+		border-bottom: 1rem solid $rojoMarca;
+	}
+
+	.servicios .bodyGeometry img {
+		order: 0; 
+		border: none;
+		border-bottom: 1rem solid $rojoMarca;
+	}
+
+	main.noticias h2 {
+		font-size: 3.5rem;
+	}
+
+	.noticias aside div.dias4 { 
+		display: block;
+	}
+
+	.noticias aside div.dias7, .noticias aside div.dias2 {
+		display: none;
+	}
+
+	main.noticias .imagenPremio h2 {
+		font-size: 2.5rem;
+	}
+
+	section.sucursales {
+		grid-template-columns: 2fr 1fr;
+		grid-template-areas: 
+		"tituloSuc			tituloSuc"
+		"carouselSucursales	carouselSucursales"
+		"mapa				localizacion";
+	}
+
+	.sucursales>.palermo, .sucursales>.laPlata, .sucursales>.marDelPlata {
+		display: none;
+	}
+
+	#carouselSucursales {
+		grid-area: carouselSucursales;
+		display: initial;
+		width: 75%;
+		margin: auto;
+		margin-bottom: 2rem;
+	}
+
+	#carouselSucursales .carousel-indicators li {
+		width: 1rem;
+		height: 1rem;
+		border-radius: 50%;
+		margin: 0 .5rem;
+	}
+
+	.sucursales div h3 {
+		font-size: 2rem;
+		padding: 1rem; 
+	}
+
+	.localizacion p span {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	
+	.productos li div {
+		font-size: 1.25rem;
+	}
+
+	main.noticias h2 {
+		font-size: 2.5rem;
+	}
+
+	main.noticias .imagenPremio h2 {
+		font-size: 2rem;
+	}
+
+	#carouselSucursales {
+		width: 100%;
+		margin-bottom: 0;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+
+	main.noticias .imagenPremio {
+		height: 250px;
+	}
+
+	main.noticias h2 {
+		font-size: 2rem;
+	}
+
+	main.noticias h4 {
+		font-size: 1.2rem;
+	}
+
+	.formulario form {
+		width: 100%;
+		min-width: unset;
+		background-color: rgba(155,155,155,0.4);
+	}
+	
+	.formulario {
+		background-image: url("../Img/contacto_vert.jpg");
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+
+	.accordion .card-header h2 {
+		width: 18rem;
+	}
+
+	.accordion .card-header button {
+		font-size: 1.6rem;
+		padding: .8rem 1rem;
+	}
+
+	.productos li div {
+		font-size: .8rem;
+	}
+
+	.noticias aside div.dias2 { 
+		display: block;
+	}
+
+	.noticias aside div.dias7, .noticias aside div.dias4 {
+		display: none;
+	}
+
+	main.noticias .imagenPremio h2 {
+		font-size: 1.25rem;
+	}
+
+	.custom-control-label {
+		width: 85%;
+	}
+
+	section.sucursales {
+		grid-template-rows: auto 1fr 1.5fr;
+	}
+
+	.sucursales .localizacion h4 {
+		font-size: 1.1rem;
+	}
+
+	.sucursales .localizacion p {
+		font-size: .8rem;
+	}
+}

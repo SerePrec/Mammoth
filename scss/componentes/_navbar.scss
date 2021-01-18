@@ -1,0 +1,51 @@
+/*********** Menu de navegacion horizontal con Bootstrap *******/
+/************* para pisar a Bootstrap y personalizar ***********/
+nav.navbar {
+	padding: 0 0.5rem;
+	.navbar-toggler {
+		border-color: white;
+		.navbar-toggler-icon {
+			background-image: url("../Img/iconred.png");
+			background-size: cover;
+		}
+	}
+	.navbar-nav {
+		.nav-link {
+			@include borde(izquierda, 4px, $rojoMarca);
+			margin: 0 1.25vw 0 0;
+			padding: 0 0.5rem; 
+			&.activo { 
+				color: white;
+				font-style: italic;
+			}
+		}
+		.dropdown-menu {
+			background-color: rgba(84,84,84,.6);
+			a {
+				color: white;
+				&:hover {
+					background-color: rgba(179,4,4,0.5);
+					color:white;
+				}
+			}
+		}
+	}
+	@include responsive(md) {
+		a img {
+			height: 60px;
+		}
+	}
+	@include responsive(700px) {
+		@media (orientation: landscape) {
+			a img {
+				height: 35px;
+			}
+			.navbar-toggler {
+				padding: 2px;
+				width: 35px;
+			}
+		}
+	}  
+}
+/************************** Navbar - Fin ***********************/
+/***************************************************************/

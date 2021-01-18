@@ -1,0 +1,105 @@
+/***************************************************************/
+/**************** Tarjetas Verticales - Inicio *****************/
+
+/********************* Tarjetas destacados *********************/
+.tarjeta {
+	position: relative;
+	overflow: hidden;
+	background-color: white;
+	text-align: center;
+	color: black;
+	box-shadow: 2px 2px 20px 10px rgba(0,0,0,0.5);
+	margin: 2vw;
+	height: 35vw;
+	max-height: 500px;
+	transition: all 0.5s; /*transicion de todas las propiedades*/
+	&:hover {
+		transform: scale(1.03, 1.03);
+		box-shadow: 2px 2px 20px 10px rgba(0,0,0,0.8);
+	}
+	.tarjeta__imagen {
+		width: 100%;
+		height: 20vw;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url("../Img/destacado1.jpg");
+	}
+	.tarjeta__imagen--secundaria {
+		@extend .tarjeta__imagen; 
+		background-image: url("../Img/destacado2.jpg");
+	}
+	.tarjeta__titulo {
+		@extend %tituloBoxClaro;
+	}
+	.tarjeta__texto, .tarjeta__titulo {
+		padding: 0.625rem 1.25rem;
+	}
+	@include responsive(1300px) {
+		min-height: 380px;
+	}
+	@include responsive(sm) {
+		.tarjeta__imagen {
+			height: 30vw;
+		}
+		.tarjeta__imagen--secundaria {
+			height: 45vw;
+		}
+	}
+}
+
+/********************** Tarjetas difusion **********************/
+.tarjeta.tarjeta--tercios {
+	width: 400px;
+	height: 450px;
+	margin: 2vw 0;
+	img {
+		width: 100%;
+		height: auto;
+	}
+	h2 {
+		font-size: 1.5rem;
+	}
+	p {
+		padding: 1rem 1.25rem 1rem 1.25rem;
+	}
+	@include responsive(xl) {
+		width: 350px;
+		height: 400px;
+	}
+	@include responsive(lg) {
+		width: 420px;
+		height: 400px;
+		&:nth-child(2) {
+			order:2;
+			width: 700px;
+			height: auto;
+			margin: 2vw auto;
+			*:not(img) {
+				display:none;
+				margin: 0;
+			}
+		}
+	}
+	@include responsive(md) {
+		&:nth-child(2) {
+			max-width: 420px;
+			min-height: initial;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	@include responsive(xs) {
+		&, &:nth-child(2) {
+			width: 100%;
+			height: auto;
+			min-height: initial;
+			margin: 2vw 0;
+			max-width: initial;
+		}
+	}
+}
+/****************** Tarjetas Verticales - Fin ******************/
+/***************************************************************/
