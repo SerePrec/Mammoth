@@ -9,6 +9,7 @@
 @import "bloques/mainIndex.scss";
 @import "bloques/mainProductos.scss";
 @import "bloques/mainServicios.scss";
+@import "bloques/mainNoticias.scss";
 @import "bloques/footer.scss";
 
 @import "componentes/navbar.scss";
@@ -18,6 +19,7 @@
 @import "componentes/acordeonProductos.scss";
 @import "componentes/gridsAcordeonProductos.scss";
 @import "componentes/gridArticulosServicios.scss";
+@import "componentes/imagenPremio.scss";
 @import "componentes/newsletter.scss";
 @import "componentes/social.scss";
 @import "componentes/modal.scss";
@@ -29,197 +31,12 @@
 // ************************************************************
 
 
-/************************************************************************************/
-/************************** Main de noticias.html - Inicio *************************/
-/****************************** Se uso grid y flexbox ******************************/
-.tituloBoxClaro {
-	@extend %tituloBoxClaro;
-}
-
-main.noticias {
-	@extend %mainComun;
-	overflow: hidden;
-	padding: 0 5vw;
-}
-
-
-
-main.noticias h2 {
-	font-size: 4rem;
-	font-weight: 800;
-	margin-top: 2rem;
-	font-style: italic;
-	border-bottom: 3px solid $rojoMarca;
-}
-
-/***** Sección Videos tutoriales ****/
-main .videos h4 {
-	font-size: 1.5rem;
-	font-weight: 800;
-}
-
-.videos a.btn {
-	background-color: $rojoMarca;
-	border-color: $rojoMarca;
-}
-
-/**************** Sección Eventos ***************/
-
-#eventos {
-	@extend %fondoOscuro;
-}
-
-#eventos, #app { /*grids de 2 columnas 1/3 2/3*/
-	margin: 0 -5vw 0 -5vw;
-	padding: 3vw 5vw 4vw 5vw;
-}
-
-.eventos, .app { 
-	text-align: right;
-	overflow: hidden;
-}
-
-.eventos p, .competencias p, .app p {
-	margin: 1rem 0 1rem auto;
-	text-align: justify;
-}
-
-.eventos h3 {
-	text-align: center;
-	font-weight: 500;
-}
-
-.noticias .card, .noticias .card-footer {
-	background-color: transparent;
-	border-radius: unset;
-}
-
-.eventos .card-body {
-	border: .5rem solid $rojoMarca;
-	background: rgb(179,4,4);
-	background: linear-gradient(135deg, rgba(179,4,4,1) 0%, rgba(84,84,84,1) 100%);
-}
-
-.eventos .card-body h4 {
-	font-size: 1.5rem;
-	font-weight: 700;
-}
-
-.eventos p span img, .competencias p span img {
-	margin-right: .3rem;
-	vertical-align: bottom;
-}
-
-/**************** Sección Competencias ***************/
-
-.competencias .card-header {
-	@extend %imagenCover;
-	height: 12rem;
-}
-
-.competencias .card-header.ruta {
-	background-image: url("../img/competencias_tarjeta_ruta.jpg");
-}
-
-.competencias .card-header.mtb {
-	background-image: url("../img/competencias_tarjeta_mtb.jpg");
-}
-
-.competencias .card-header.bmx {
-	background-image: url("../img/competencias_tarjeta_bmx.jpg");
-}
-
-.competencias .card-body {
-	background: linear-gradient(135deg, rgba(179,4,4,1) 0%, rgba(84,84,84,1) 100%);
-	color: White;
-}
-
-/********************** Seccion App *********************/
-
-#app {
-	@extend %fondoOscuro;
-}
-
-.app div img {
-	width: 100%;
-	object-fit: cover;
-}
-
-/********** Aside con informacion del tiempo ***********/
-
-main.noticias aside h2, main.noticias aside h3 {
-	text-align: center;
-	border: none;
-}
-
-.noticias aside div {
-	margin:auto;
-}
-
-.noticias aside div.dias7 {
-	display: block;
-}
-
-.noticias aside div.dias4, .noticias aside div.dias2 {
-	display: none;
-}
-
-/******************************** Seccion Premio ******************************/
-
-/*** imagen de todo el ancho con texto interior centrado por flexbox ***/
-main.noticias .imagenPremio {
-	@extend %imagenTodoAncho;
-	@include cover(tour, top);
-	width: 100vw;
-	margin-left: -5vw;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-main.noticias .imagenPremio h2 {
-	color: white;
-	text-shadow: 5px 5px 10px black;
-	animation-name: latido; /*** Animación "latido" ***/
-	animation-duration: 1.2s;
-	animation-timing-function: ease-out;
-	animation-direction: alternate;
-	animation-iteration-count: infinite;
-}
-/*** Fotogramas de animación latido ***/
-@keyframes latido {
-	0% {transform: scale(0.8,0.8); color:white;}
-	40% {color: white;}
-	100% {transform: scale(1.3,1.3); color:#fcd806;}
-}
-
-.premio {
-	text-align: center;
-	margin-bottom: 3rem;
-}
-
-.premio h2 span {
-	font-weight: 500;
-	font-size: 0.75em;
-	font-style: normal;
-	text-transform: lowercase;
-}
-
-.premio h2 {
-	border: none; 
-}
-
-.premio div img {
-	width: 100%;
-	object-fit: cover;
-}
-
-/************************** Main de noticias.html - Fin ****************************/
-/***********************************************************************************/
-
 /***********************************************************************************/
 /************************** Main de contacto.html - Inicio ************************/
 /***********************************************************************************/
+.tituloBoxClaro {
+	@extend %tituloBoxClaro;
+}
 
 main.contacto {
 	@extend %mainComun;
@@ -380,8 +197,6 @@ section.sucursales { /*grid de 3 columnas y 3 filas*/
 	margin-right: .5rem;
 }
 
-
-
 /************************** Main de contacto.html - Fin ****************************/
 /***********************************************************************************/
 
@@ -389,12 +204,6 @@ section.sucursales { /*grid de 3 columnas y 3 filas*/
 /********************************************************************************/
 /********************************* Media querys**********************************/
 /********************************************************************************/
-@media only screen and (max-width: 1300px) {
-
-	main.noticias .imagenPremio h2 {
-		font-size: 3rem;
-	}
-}
 
 @media only screen and (max-width: 1220px) {
 	
@@ -404,27 +213,11 @@ section.sucursales { /*grid de 3 columnas y 3 filas*/
 }
 
 @media only screen and (max-width: 991px) {
-		
-	
-	main.noticias .tituloBoxClaro, main.contacto .tituloBoxClaro  { // ojo que esta clase capaz no se usa
+
+	main.contacto .tituloBoxClaro  { // ojo que esta clase capaz no se usa
 		font-size: 1.3rem;
 	}
-	main.noticias h2 {
-		font-size: 3.5rem;
-	}
-
-	.noticias aside div.dias4 { 
-		display: block;
-	}
-
-	.noticias aside div.dias7, .noticias aside div.dias2 {
-		display: none;
-	}
-
-	main.noticias .imagenPremio h2 {
-		font-size: 2.5rem;
-	}
-
+	
 	section.sucursales {
 		grid-template-columns: 2fr 1fr;
 		grid-template-areas: 
@@ -464,15 +257,6 @@ section.sucursales { /*grid de 3 columnas y 3 filas*/
 
 @media only screen and (max-width: 767px) {
 	
-	
-	main.noticias h2 {
-		font-size: 2.5rem;
-	}
-
-	main.noticias .imagenPremio h2 {
-		font-size: 2rem;
-	}
-
 	#carouselSucursales {
 		width: 100%;
 		margin-bottom: 0;
@@ -480,19 +264,7 @@ section.sucursales { /*grid de 3 columnas y 3 filas*/
 }
 
 @media only screen and (max-width: 575px) {
-
-	main.noticias .imagenPremio {
-		height: 250px;
-	}
-
-	main.noticias h2 {
-		font-size: 2rem;
-	}
-
-	main.noticias h4 {
-		font-size: 1.2rem;
-	}
-
+	
 	.formulario form {
 		width: 100%;
 		min-width: unset;
@@ -506,19 +278,6 @@ section.sucursales { /*grid de 3 columnas y 3 filas*/
 }
 
 @media only screen and (max-width: 500px) {
-
-	
-	.noticias aside div.dias2 { 
-		display: block;
-	}
-
-	.noticias aside div.dias7, .noticias aside div.dias4 {
-		display: none;
-	}
-
-	main.noticias .imagenPremio h2 {
-		font-size: 1.25rem;
-	}
 
 	.custom-control-label {
 		width: 85%;

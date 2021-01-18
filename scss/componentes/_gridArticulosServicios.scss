@@ -7,7 +7,7 @@ article {
 		align-items: center;
 		img {
 			width: 100%;
-			border-right: 1rem solid $rojoMarca;
+			@include borde(derecha, 1rem, $rojoMarca);
 		}
 		div {
 			padding-left: 0.625rem;
@@ -25,7 +25,7 @@ article {
 		img {
 			width: 100%;
 			order: 1; /*para que aparezca después del texto sin cambiar orden html*/
-			border-left: 1rem solid $rojoMarca;
+			@include borde(izquierda, 1rem, $rojoMarca);
 		}
 		div {
 			padding: 0 0.625rem;
@@ -42,7 +42,7 @@ article {
 			grid-row-gap: 1rem;
 			img {
 				border: none;
-				border-bottom: 1rem solid $rojoMarca;
+				@include borde(abajo, 1rem, $rojoMarca);
 			}
 		}
 		&.bodyGeometry {
