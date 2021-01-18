@@ -6,12 +6,12 @@ main.inicio .destacados, main.servicios .bodyGeometry, main.noticias #eventos, m
   background-color: #545454;
   color: white; }
 
-main.noticias .eventos h3, .tarjeta .tarjeta__titulo, .tituloBoxClaro {
+main.noticias .eventos h3, .tarjeta .tarjeta__titulo {
   background-color: #b9b8b8;
   color: white;
   font-weight: 700; }
   @media only screen and (max-width: 991px) {
-    main.noticias .eventos h3, .tarjeta .tarjeta__titulo, .tituloBoxClaro {
+    main.noticias .eventos h3, .tarjeta .tarjeta__titulo {
       font-size: 1.3rem; } }
 
 .newsletter .newsletter__titulo, .social .social__titulo {
@@ -24,11 +24,24 @@ main.noticias .eventos h3, .tarjeta .tarjeta__titulo, .tituloBoxClaro {
   text-transform: uppercase;
   margin: 0 auto 1rem auto; }
 
+.formulario form fieldset input[type="submit"], .formulario form fieldset input[type="reset"], .newsletter form .input-group input[type="submit"] {
+  width: 8vw;
+  min-width: 7rem;
+  height: 2rem;
+  background-color: #b30404;
+  color: white;
+  border: none;
+  border-radius: .25rem;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  letter-spacing: .07rem; }
+
 main.inicio .imagenSecundaria, #sorteo.imagenPremio {
   width: 100%;
   height: 52vw; }
 
-main.inicio .imagenSecundaria, main.noticias .competencias .card-header, .tarjeta .tarjeta__imagen, .tarjeta .tarjeta__imagen--secundaria, .productos ul li div, #sorteo.imagenPremio, .modal .modal-content .modal-body .imagenTerminos, .formulario {
+main.inicio .imagenSecundaria, main.noticias .competencias .card-header, .formulario, .tarjeta .tarjeta__imagen, .tarjeta .tarjeta__imagen--secundaria, .productos ul li div, #sorteo.imagenPremio, .modal .modal-content .modal-body .imagenTerminos {
   background-size: cover;
   background-repeat: no-repeat; }
 
@@ -291,6 +304,130 @@ main.noticias {
 
 /*************** Main de noticias.html - Fin ******************/
 /**************************************************************/
+/**************************************************************/
+/**************** Main de contacto.html - Inicio **************/
+main.contacto .sucursales {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto repeat(2, 1fr);
+  grid-template-areas: "tituloSuc tituloSuc tituloSuc" "palermo laPlata marDelPlata" "mapa mapa localizacion";
+  grid-gap: 1.5rem;
+  padding: 0 5vw 5vh 5vw; }
+  main.contacto .sucursales h2 {
+    grid-area: tituloSuc;
+    text-align: center;
+    padding-top: 1.5rem; }
+  main.contacto .sucursales .palermo {
+    grid-area: palermo; }
+  main.contacto .sucursales .laPlata {
+    grid-area: laPlata; }
+  main.contacto .sucursales .marDelPlata {
+    grid-area: marDelPlata; }
+  main.contacto .sucursales .mapa {
+    grid-area: mapa; }
+  main.contacto .sucursales .localizacion {
+    grid-area: localizacion;
+    align-self: center;
+    background-color: transparent; }
+    main.contacto .sucursales .localizacion * {
+      text-align: left;
+      padding: 0.3rem 0; }
+    main.contacto .sucursales .localizacion p span {
+      display: inline-block;
+      margin-right: .5rem; }
+      main.contacto .sucursales .localizacion p span img {
+        width: 1rem;
+        margin-right: .3rem;
+        vertical-align: bottom; }
+  main.contacto .sucursales div {
+    text-align: center;
+    position: relative; }
+  main.contacto .sucursales .sucursales__titulo {
+    background-color: rgba(33, 33, 33, 0.75);
+    font-weight: 500;
+    color: white;
+    margin: 0;
+    padding: .75rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  main.contacto .sucursales img {
+    width: 100%; }
+  main.contacto .sucursales iframe {
+    width: 100%;
+    height: 100%; }
+  @media only screen and (max-width: 1220px) {
+    main.contacto .sucursales .sucursales__titulo {
+      font-size: 1rem; } }
+  @media only screen and (max-width: 991px) {
+    main.contacto .sucursales {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas: "tituloSuc			tituloSuc" "carouselSucursales	carouselSucursales" "mapa				localizacion"; }
+      main.contacto .sucursales > .palermo, main.contacto .sucursales > .laPlata, main.contacto .sucursales > .marDelPlata {
+        display: none; }
+      main.contacto .sucursales .sucursales__titulo {
+        font-size: 2rem;
+        padding: 1rem; }
+      main.contacto .sucursales .localizacion p span {
+        width: 100%; } }
+  @media only screen and (max-width: 500px) {
+    main.contacto .sucursales {
+      grid-template-rows: auto 1fr 1.5fr; }
+      main.contacto .sucursales .localizacion h4 {
+        font-size: 1.1rem; }
+      main.contacto .sucursales .localizacion p {
+        font-size: .8rem; } }
+
+/**************** Main de contacto.html - Fin *****************/
+/**************************************************************/
+/**************************************************************/
+/**************** Formulario de contacto - Inicio *************/
+.formulario {
+  background-image: url("../img/contacto.jpg");
+  background-position: 32%;
+  color: white;
+  padding: 0.625rem;
+  text-shadow: 2px 2px 2px black;
+  font-size: 1.2rem; }
+  .formulario form {
+    width: 45%;
+    min-width: 39rem; }
+    .formulario form fieldset {
+      padding: 0.625rem; }
+      .formulario form fieldset input, .formulario form fieldset textarea, .formulario form fieldset select {
+        font-style: italic; }
+        .formulario form fieldset input .form-control, .formulario form fieldset textarea .form-control, .formulario form fieldset select .form-control {
+          display: inline-block; }
+          .formulario form fieldset input .form-control:focus, .formulario form fieldset textarea .form-control:focus, .formulario form fieldset select .form-control:focus {
+            box-shadow: 0 0 0 0.2rem rgba(179, 4, 4, 0.3);
+            border-color: #b30404; }
+      .formulario form fieldset input[type=date] {
+        width: 15rem; }
+      .formulario form fieldset .input-group-text {
+        text-shadow: none;
+        font-weight: 500;
+        background-color: #b30404;
+        color: white;
+        border: none;
+        padding: 0 1rem; }
+      .formulario form fieldset select.form-control {
+        width: 15rem; }
+      .formulario form fieldset fieldset {
+        margin: 1rem 0;
+        border: 2px solid #b30404;
+        font-style: italic; }
+  @media only screen and (max-width: 575px) {
+    .formulario {
+      background-image: url("../img/contacto_vert.jpg");
+      padding: 0; }
+      .formulario form {
+        width: 100%;
+        min-width: unset;
+        background-color: rgba(155, 155, 155, 0.4); } }
+
+/****************** Formulario de contacto - Fin **************/
+/**************************************************************/
 /***************************************************************/
 /************************ Footer - Inicio  *********************/
 /********************* Flexbox anidados row ********************/
@@ -367,7 +504,7 @@ nav.navbar {
 /************************** Navbar - Fin ***********************/
 /***************************************************************/
 /***************************************************************/
-/****************** Carousel Bootstrap - Inicio  ***************/
+/************* Carousel Principal Bootstrap - Inicio  **********/
 #carouselPrincipal ol.carousel-indicators {
   margin-bottom: 3.5vw; }
   #carouselPrincipal ol.carousel-indicators li {
@@ -410,7 +547,30 @@ nav.navbar {
     height: 250px;
     object-fit: cover; } }
 
-/*********************** Carousel - Fin  ***********************/
+/************** Carousel Principal Bootstrap - Fin *************/
+/***************************************************************/
+/***************************************************************/
+/*********** Carousel Sucursales Bootstrap - Inicio ************/
+#carouselSucursales {
+  display: none; }
+  @media only screen and (max-width: 991px) {
+    #carouselSucursales {
+      grid-area: carouselSucursales;
+      display: initial;
+      width: 75%;
+      margin: auto;
+      margin-bottom: 2rem; }
+      #carouselSucursales .carousel-indicators li {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        margin: 0 .5rem; } }
+  @media only screen and (max-width: 767px) {
+    #carouselSucursales {
+      width: 100%;
+      margin-bottom: 0; } }
+
+/********** Carousel sucursales Bootstrap - Fin ****************/
 /***************************************************************/
 /***************************************************************/
 /******************** Banner marcas - Inicio  ******************/
@@ -868,6 +1028,9 @@ article.bodyGeometry {
   @media only screen and (max-width: 575px) {
     .newsletter form .input-group {
       width: 80%; } }
+  @media only screen and (max-width: 500px) {
+    .newsletter form .custom-control-label {
+      width: 85%; } }
 
 /********************** Newsletter - Fin ***********************/
 /***************************************************************/
@@ -938,190 +1101,3 @@ article.bodyGeometry {
 
 /************************* Modal - Fin *************************/
 /***************************************************************/
-/***********************************************************************************/
-/************************** Main de contacto.html - Inicio ************************/
-/***********************************************************************************/
-/************** formulario contacto ************/
-.form-control {
-  display: inline-block;
-  /* para pisar a Bootstrap */ }
-
-.formulario {
-  background-image: url("../img/contacto.jpg");
-  background-position: 32%;
-  color: white;
-  padding: 0.625rem;
-  text-shadow: 2px 2px 2px black;
-  font-size: 1.2rem; }
-
-.formulario form {
-  width: 45%;
-  min-width: 39rem; }
-
-.formulario fieldset {
-  padding: 0.625rem; }
-
-.formulario fieldset fieldset {
-  margin: 1rem 0;
-  border: 2px solid #b30404;
-  font-style: italic; }
-
-input, textarea, select {
-  font-style: italic; }
-
-.formulario .input-group-text {
-  text-shadow: none;
-  font-weight: 500;
-  background-color: #b30404;
-  color: white;
-  border: none;
-  padding: 0 1rem; }
-
-input[type="submit"], input[type="reset"] {
-  width: 8vw;
-  min-width: 7rem;
-  height: 2rem;
-  background-color: #b30404;
-  color: white;
-  border: none;
-  border-radius: .25rem;
-  font-weight: 500;
-  letter-spacing: .07rem;
-  font-style: normal;
-  font-size: 1rem; }
-
-select.form-control, input[type=date] {
-  width: 15rem; }
-
-.form-control:focus {
-  box-shadow: 0 0 0 0.2rem rgba(179, 4, 4, 0.3);
-  border-color: #b30404; }
-
-/****************** Sucursales ****************/
-/************* Diseño usando Grid*************/
-section.sucursales {
-  /*grid de 3 columnas y 3 filas*/
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto repeat(2, 1fr);
-  grid-template-areas: "tituloSuc tituloSuc tituloSuc" "palermo laPlata marDelPlata" "mapa mapa localizacion";
-  grid-gap: 1.5rem;
-  padding: 0 5vw 5vh 5vw; }
-
-.sucursales h2 {
-  grid-area: tituloSuc;
-  text-align: center;
-  padding-top: 1.5rem; }
-
-.palermo {
-  grid-area: palermo; }
-
-.laPlata {
-  grid-area: laPlata; }
-
-.marDelPlata {
-  grid-area: marDelPlata; }
-
-.mapa {
-  grid-area: mapa; }
-
-.sucursales .localizacion {
-  grid-area: localizacion;
-  align-self: center;
-  /*este se alinea al centro a diferencia del resto*/
-  background-color: transparent; }
-
-#carouselSucursales {
-  display: none; }
-
-.sucursales div {
-  text-align: center;
-  position: relative; }
-
-.sucursales div h3 {
-  background-color: rgba(33, 33, 33, 0.75);
-  font-weight: 500;
-  margin: 0;
-  padding: .75rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-
-.sucursales img {
-  width: 100%; }
-
-.sucursales iframe {
-  width: 100%;
-  height: 100%; }
-
-.localizacion * {
-  text-align: left;
-  padding: 0.3rem 0; }
-
-.localizacion p span img {
-  width: 1rem;
-  margin-right: .3rem;
-  vertical-align: bottom; }
-
-.localizacion p span {
-  display: inline-block;
-  margin-right: .5rem; }
-
-/************************** Main de contacto.html - Fin ****************************/
-/***********************************************************************************/
-/********************************************************************************/
-/********************************* Media querys**********************************/
-/********************************************************************************/
-@media only screen and (max-width: 1220px) {
-  .sucursales div h3 {
-    font-size: 1rem; } }
-
-@media only screen and (max-width: 991px) {
-  main.contacto .tituloBoxClaro {
-    font-size: 1.3rem; }
-  section.sucursales {
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: "tituloSuc			tituloSuc" "carouselSucursales	carouselSucursales" "mapa				localizacion"; }
-  .sucursales > .palermo, .sucursales > .laPlata, .sucursales > .marDelPlata {
-    display: none; }
-  #carouselSucursales {
-    grid-area: carouselSucursales;
-    display: initial;
-    width: 75%;
-    margin: auto;
-    margin-bottom: 2rem; }
-  #carouselSucursales .carousel-indicators li {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    margin: 0 .5rem; }
-  .sucursales div h3 {
-    font-size: 2rem;
-    padding: 1rem; }
-  .localizacion p span {
-    width: 100%; } }
-
-@media only screen and (max-width: 767px) {
-  #carouselSucursales {
-    width: 100%;
-    margin-bottom: 0; } }
-
-@media only screen and (max-width: 575px) {
-  .formulario form {
-    width: 100%;
-    min-width: unset;
-    background-color: rgba(155, 155, 155, 0.4); }
-  .formulario {
-    background-image: url("../img/contacto_vert.jpg");
-    padding: 0; } }
-
-@media only screen and (max-width: 500px) {
-  .custom-control-label {
-    width: 85%; }
-  section.sucursales {
-    grid-template-rows: auto 1fr 1.5fr; }
-  .sucursales .localizacion h4 {
-    font-size: 1.1rem; }
-  .sucursales .localizacion p {
-    font-size: .8rem; } }

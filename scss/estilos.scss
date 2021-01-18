@@ -1,19 +1,26 @@
+// importación de utilidades
 @import "utilidades/variables.scss";
 @import "utilidades/mixins.scss";
 @import "utilidades/placeholders.scss";
 
+// importación de bases
 @import "base/reset.scss";
 @import "base/fuentes.scss";
 
+// importación de bloques
 @import "bloques/header.scss";
 @import "bloques/mainIndex.scss";
 @import "bloques/mainProductos.scss";
 @import "bloques/mainServicios.scss";
 @import "bloques/mainNoticias.scss";
+@import "bloques/mainContacto.scss";
+@import "bloques/formulariocontacto.scss";
 @import "bloques/footer.scss";
 
+// importación de componentes
 @import "componentes/navbar.scss";
-@import "componentes/carousel.scss";
+@import "componentes/carouselPrincipal.scss";
+@import "componentes/carouselSucursales.scss";
 @import "componentes/bannerMarcas.scss";
 @import "componentes/tarjetasVerticales.scss";
 @import "componentes/acordeonProductos.scss";
@@ -23,275 +30,3 @@
 @import "componentes/newsletter.scss";
 @import "componentes/social.scss";
 @import "componentes/modal.scss";
-
-
-
-// ************************************************************
-// PARTES EN PROCESO DE CONVERSION (AUN SIN SASS)
-// ************************************************************
-
-
-/***********************************************************************************/
-/************************** Main de contacto.html - Inicio ************************/
-/***********************************************************************************/
-.tituloBoxClaro {
-	@extend %tituloBoxClaro;
-}
-
-main.contacto {
-	@extend %mainComun;
-}
-
-/************** formulario contacto ************/
-
-.form-control {
-	display: inline-block; /* para pisar a Bootstrap */
-}
-
-.formulario {
-	@include cover(contacto, 32%);
-	color: white;
-	padding: 0.625rem;
-	text-shadow: 2px 2px 2px black;
-	font-size: 1.2rem;
-}
-
-.formulario form {
-	width: 45%;
-	min-width: 39rem;
-}
-
-.formulario fieldset {
-	padding: 0.625rem;
-}
-
-.formulario fieldset fieldset {
-	margin: 1rem 0;
-	border: 2px solid $rojoMarca;
-	font-style: italic;
-}
-
-
-input, textarea, select {
-	font-style: italic;
-}
-
-.formulario .input-group-text {
-	text-shadow: none;
-	font-weight: 500;
-	background-color: $rojoMarca;
-	color: white;
-	border: none;
-	padding: 0 1rem;
-}
-
-input[type="submit"], input[type="reset"] {
-	width: 8vw;
-	min-width: 7rem;
-	height: 2rem;
-	background-color: $rojoMarca;
-	color: white;
-	border: none;
-	border-radius: .25rem;
-	font-weight: 500;
-	letter-spacing: .07rem;
-	font-style: normal;
-	font-size: 1rem;
-}
-
-select.form-control, input[type=date] {
-	width: 15rem;
-}
-
-.form-control:focus {
-    @include sombraCaja(rgba(179,4,4,.3), 0, 0, 0, 0.2rem);
-    border-color: $rojoMarca;
-}
-
-/****************** Sucursales ****************/
-/************* Diseño usando Grid*************/
-
-section.sucursales { /*grid de 3 columnas y 3 filas*/
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: auto repeat(2, 1fr);
-	grid-template-areas: 
-	"tituloSuc tituloSuc tituloSuc"
-	"palermo laPlata marDelPlata"
-	"mapa mapa localizacion";
-	grid-gap: 1.5rem;
-	padding: 0 5vw 5vh 5vw;
-}
-
-.sucursales h2 {
-	grid-area: tituloSuc;
-	text-align: center;
-	padding-top: 1.5rem;
-}
-
-
-.palermo {
-	grid-area: palermo;
-}
-
-.laPlata {
-	grid-area: laPlata;
-}
-
-.marDelPlata {
-	grid-area: marDelPlata;
-}
-
-.mapa {
-	grid-area: mapa;
-}
-
-.sucursales .localizacion {
-	grid-area: localizacion;
-	align-self: center; /*este se alinea al centro a diferencia del resto*/
-	background-color: transparent;
-}
-
-#carouselSucursales {
-	display: none;
-}
-
-.sucursales div {
-	text-align: center;
-	position: relative;
-}
-
-.sucursales div h3 {
-	background-color: rgba(33,33,33,.75);
-	font-weight: 500;
-	margin: 0;
-	padding: .75rem;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-}
-
-.sucursales img {
-	width: 100%;
-}
-
-.sucursales iframe {
-	width: 100%;
-	height: 100%;
-}
-
-.localizacion * {
-	text-align: left;
-	padding: 0.3rem 0;
-}
-
-.localizacion p span img {
-	width: 1rem;
-	margin-right: .3rem;
-	vertical-align: bottom;
-}
-
-.localizacion p span {
-	display: inline-block;
-	margin-right: .5rem;
-}
-
-/************************** Main de contacto.html - Fin ****************************/
-/***********************************************************************************/
-
-
-/********************************************************************************/
-/********************************* Media querys**********************************/
-/********************************************************************************/
-
-@media only screen and (max-width: 1220px) {
-	
-	.sucursales div h3 {
-		font-size: 1rem;
-	}
-}
-
-@media only screen and (max-width: 991px) {
-
-	main.contacto .tituloBoxClaro  { // ojo que esta clase capaz no se usa
-		font-size: 1.3rem;
-	}
-	
-	section.sucursales {
-		grid-template-columns: 2fr 1fr;
-		grid-template-areas: 
-		"tituloSuc			tituloSuc"
-		"carouselSucursales	carouselSucursales"
-		"mapa				localizacion";
-	}
-
-	.sucursales>.palermo, .sucursales>.laPlata, .sucursales>.marDelPlata {
-		display: none;
-	}
-
-	#carouselSucursales {
-		grid-area: carouselSucursales;
-		display: initial;
-		width: 75%;
-		margin: auto;
-		margin-bottom: 2rem;
-	}
-
-	#carouselSucursales .carousel-indicators li {
-		width: 1rem;
-		height: 1rem;
-		border-radius: 50%;
-		margin: 0 .5rem;
-	}
-
-	.sucursales div h3 {
-		font-size: 2rem;
-		padding: 1rem; 
-	}
-
-	.localizacion p span {
-		width: 100%;
-	}
-}
-
-@media only screen and (max-width: 767px) {
-	
-	#carouselSucursales {
-		width: 100%;
-		margin-bottom: 0;
-	}
-}
-
-@media only screen and (max-width: 575px) {
-	
-	.formulario form {
-		width: 100%;
-		min-width: unset;
-		background-color: rgba(155,155,155,0.4);
-	}
-	
-	.formulario {
-		background-image: url("../img/contacto_vert.jpg");
-		padding: 0;
-	}
-}
-
-@media only screen and (max-width: 500px) {
-
-	.custom-control-label {
-		width: 85%;
-	}
-
-	section.sucursales {
-		grid-template-rows: auto 1fr 1.5fr;
-	}
-
-	.sucursales .localizacion h4 {
-		font-size: 1.1rem;
-	}
-
-	.sucursales .localizacion p {
-		font-size: .8rem;
-	}
-}

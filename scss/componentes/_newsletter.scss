@@ -12,8 +12,13 @@
 			width: 70%;
 			margin: auto;
 			margin-bottom: 1rem;
-			input[type="email"] {
-				height: 2rem;
+			input {
+				&[type="email"] {
+					height: 2rem;
+				}
+				&[type="submit"] {
+					@extend %botonFormulario;
+				}
 			}
 		}
 	}
@@ -34,6 +39,13 @@
 		form {
 			.input-group {
 				width: 80%;
+			}
+		}
+	}
+	@include responsive(500px) {
+		form {
+			.custom-control-label {
+				width: 85%;
 			}
 		}
 	}
