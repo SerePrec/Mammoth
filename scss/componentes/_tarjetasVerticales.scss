@@ -8,14 +8,14 @@
 	background-color: white;
 	text-align: center;
 	color: black;
-	box-shadow: 2px 2px 20px 10px rgba(0,0,0,0.5);
+	box-shadow: 2px 2px 20px 10px rgba($tonoMuyOscuro, 0.5);
 	margin: 2vw;
 	height: 35vw;
 	max-height: 500px;
 	transition: all 0.5s; /*transicion de todas las propiedades*/
 	&:hover {
 		transform: scale(1.03, 1.03);
-		box-shadow: 2px 2px 20px 10px rgba(0,0,0,0.8);
+		box-shadow: 2px 2px 20px 10px rgba($tonoMuyOscuro, 0.8);
 	}
 	.tarjeta__imagen {
 		width: 100%;

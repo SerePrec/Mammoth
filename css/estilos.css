@@ -103,7 +103,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1020;
-  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 20px 10px rgba(6, 6, 6, 0.4);
   background: linear-gradient(90deg, #212121 0%, #545454 75%, #b9b8b8 100%);
   font-size: 1.4rem; }
 
@@ -503,12 +503,18 @@ nav.navbar {
 /***************************************************************/
 /************* Carousel Principal Bootstrap - Inicio  **********/
 #carouselPrincipal ol.carousel-indicators {
-  margin-bottom: 3.5vw; }
+  margin-bottom: 3.75vw; }
   #carouselPrincipal ol.carousel-indicators li {
-    width: 5vw;
-    opacity: .8; }
+    width: .6rem;
+    height: .6rem;
+    border-radius: 50%;
+    margin: 0 .5rem;
+    opacity: .6;
+    background-color: transparent;
+    border: 0.3rem solid white; }
     #carouselPrincipal ol.carousel-indicators li.active {
-      background-color: #b30404; }
+      background-color: #b30404;
+      border-color: #b30404; }
 
 #carouselPrincipal .carousel-caption {
   width: 25%;
@@ -605,7 +611,7 @@ nav.navbar {
   background-color: white;
   text-align: center;
   color: black;
-  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 20px 10px rgba(6, 6, 6, 0.5);
   margin: 2vw;
   height: 35vw;
   max-height: 500px;
@@ -613,7 +619,7 @@ nav.navbar {
   /*transicion de todas las propiedades*/ }
   .tarjeta:hover {
     transform: scale(1.03, 1.03);
-    box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.8); }
+    box-shadow: 2px 2px 20px 10px rgba(6, 6, 6, 0.8); }
   .tarjeta .tarjeta__imagen, .tarjeta .tarjeta__imagen--secundaria {
     width: 100%;
     height: 20vw;
@@ -1077,7 +1083,7 @@ article.bodyGeometry {
     height: 2.5rem;
     border-radius: .75rem;
     background-color: #b30404;
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 5px 5px rgba(6, 6, 6, 0.4);
     color: white;
     text-align: center;
     line-height: 2.7rem;
@@ -1087,7 +1093,7 @@ article.bodyGeometry {
       font-size: 1.3em;
       transition: transform .2s; }
     .botonMenu .botonMenu__link:active {
-      box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.6); }
+      box-shadow: 0 0 5px 5px rgba(6, 6, 6, 0.6); }
   .botonMenu .botonMenu__desplegable {
     padding: 0;
     margin: 0; }
@@ -1105,10 +1111,10 @@ article.bodyGeometry {
       border-radius: .75rem;
       text-align: center;
       line-height: 2.2rem;
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba(6, 6, 6, 0.2);
       transition: transform .3s ease, background .2s ease; }
       .botonMenu .botonMenu__desplegable .botonMenu__item:hover {
-        background-color: rgba(0, 0, 0, 0.3); }
+        background-color: rgba(6, 6, 6, 0.3); }
   .botonMenu.active .botonMenu__link {
     box-shadow: none; }
     .botonMenu.active .botonMenu__link i {
@@ -1122,7 +1128,7 @@ article.bodyGeometry {
   .botonMenu.active:after {
     height: 9.5rem;
     transition-timing-function: cubic-bezier(0.68, 1.55, 0.265, 1);
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4); }
+    box-shadow: 0 0 5px 5px rgba(6, 6, 6, 0.4); }
   .botonMenu:after {
     display: block;
     content: ' ';

@@ -13,7 +13,7 @@
 		align-items: center;
 		h2 {
 			width: 40rem;
-			background-color: rgba(179,4,4,.3);
+			background-color: rgba($rojoMarca, .3);
 			.btn {
 				color: white;
 				font: {
@@ -23,7 +23,7 @@
 				}
 				padding: 1rem 3rem;
 				&.focus, &:focus {
-					@include sombraCaja(rgba(179,4,4,.5), 0, 0, 0, 0.2rem);
+					@include sombraCaja(rgba($rojoMarca, .5), 0, 0, 0, 0.2rem);
 				}
 			}
 		}

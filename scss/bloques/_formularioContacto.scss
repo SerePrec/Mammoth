@@ -16,7 +16,7 @@
 				.form-control {
 					display: inline-block; //para pisar a Bootstrap
 					&:focus {
-						@include sombraCaja(rgba(179,4,4,.3), 0, 0, 0, 0.2rem);
+						@include sombraCaja(rgba($rojoMarca, .3), 0, 0, 0, 0.2rem);
 						border-color: $rojoMarca;
 					}
 				}

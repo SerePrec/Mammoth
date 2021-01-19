@@ -2,12 +2,18 @@
 /************* Carousel Principal Bootstrap - Inicio  **********/
 #carouselPrincipal {
 	ol.carousel-indicators {
-		margin-bottom: 3.5vw;
+		margin-bottom: 3.75vw;
 		li {
-			width: 5vw;
-			opacity: .8;
+			width: .6rem;
+			height: .6rem;
+			border-radius: 50%;
+			margin: 0 .5rem;
+			opacity: .6;
+			background-color: transparent;
+			@include borde(todo, .3rem, white);
 			&.active {
 				background-color: $rojoMarca;
+				border-color: $rojoMarca;
 			}
 		}
 	}

@@ -55,7 +55,7 @@
 %mainComun {
 	// Color general del MAIN 
 	background-color: $tonoClaro;
-	background: linear-gradient(180deg, rgba(185,184,184,1) 0%, rgba(84,84,84,0.75) 100%);
+	background: linear-gradient(180deg, rgba($tonoClaro, 1) 0%, rgba($tonoMedio, .75) 100%);
 	// Títulos general 
 	h2 {
 		font-size: 2rem;
