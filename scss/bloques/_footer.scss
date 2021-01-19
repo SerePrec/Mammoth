@@ -19,7 +19,7 @@ footer {
 		background-color: $tonoMuyOscuro;
 		text-align: center;
 		color: white;
-		padding: 0.625rem;
+		padding: 1.5rem 0.625rem;
 		margin-bottom: 0; /* para pisar a Bootstrap */
 	}
 	@include responsive(md) {
