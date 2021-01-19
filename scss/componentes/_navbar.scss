@@ -17,6 +17,8 @@ nav.navbar {
 			&.activo { 
 				color: white;
 				font-style: italic;
+				border-radius: 2%;
+				border-width: 10px;
 			}
 		}
 		.dropdown-menu {
