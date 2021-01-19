@@ -1001,88 +1001,6 @@ article.bodyGeometry {
 
 /********************* Imagen Premio - Fin *********************/
 /***************************************************************/
-.botonMenu {
-  position: fixed;
-  bottom: 1rem;
-  right: 1.5rem;
-  z-index: 1030; }
-
-.botonMenu .botonMenu__link {
-  display: block;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: .75rem;
-  background-color: #b30404;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  color: white;
-  text-align: center;
-  line-height: 2.7rem;
-  cursor: pointer;
-  outline: 0; }
-
-.botonMenu.active .botonMenu__link {
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3); }
-
-.botonMenu .botonMenu__link:active {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); }
-
-.botonMenu .botonMenu__link i {
-  font-size: 1.3em;
-  transition: transform .2s; }
-
-.botonMenu.active .botonMenu__link i {
-  transform: rotate(-45deg); }
-
-.botonMenu:after {
-  display: block;
-  content: ' ';
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 15px;
-  position: absolute;
-  bottom: 0;
-  right: 0px;
-  z-index: -2;
-  background-color: rgba(179, 4, 4, 0.4);
-  transition: all .3s ease; }
-
-.botonMenu.active:after {
-  height: 7.5rem;
-  transition-timing-function: cubic-bezier(0.68, 1.55, 0.265, 1); }
-
-.botonMenu .botonMenu__desplegable {
-  padding: 0;
-  margin: 0; }
-
-.botonMenu .botonMenu__item {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
-  display: block;
-  text-decoration: none;
-  color: white;
-  font-size: 1em;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: .75rem;
-  text-align: center;
-  line-height: 2.2rem;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: transform .3s ease, background .2s ease; }
-
-.botonMenu .botonMenu__item:hover {
-  background-color: rgba(0, 0, 0, 0.3); }
-
-.botonMenu.active .botonMenu__item {
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-
-.botonMenu.active .botonMenu__item:nth-child(1) {
-  transform: translate(0, -5rem); }
-
-.botonMenu.active .botonMenu__item:nth-child(2) {
-  transform: translate(0, -2.5rem); }
-
 /************************ Newsletter ***************************/
 /*************** Incluye Formulario Bootstrap ******************/
 .newsletter {
@@ -1148,6 +1066,76 @@ article.bodyGeometry {
 
 /************************* Redes - Fin *************************/
 /***************************************************************/
+.botonMenu {
+  position: fixed;
+  bottom: 1rem;
+  right: 1.5rem;
+  z-index: 1030; }
+  .botonMenu .botonMenu__link {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: .75rem;
+    background-color: #b30404;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+    line-height: 2.7rem;
+    cursor: pointer;
+    outline: 0; }
+    .botonMenu .botonMenu__link i {
+      font-size: 1.3em;
+      transition: transform .2s; }
+    .botonMenu .botonMenu__link:active {
+      box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.6); }
+  .botonMenu .botonMenu__desplegable {
+    padding: 0;
+    margin: 0; }
+    .botonMenu .botonMenu__desplegable .botonMenu__item {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      display: block;
+      text-decoration: none;
+      color: white;
+      font-size: 1em;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: .75rem;
+      text-align: center;
+      line-height: 2.2rem;
+      background-color: rgba(0, 0, 0, 0.2);
+      transition: transform .3s ease, background .2s ease; }
+      .botonMenu .botonMenu__desplegable .botonMenu__item:hover {
+        background-color: rgba(0, 0, 0, 0.3); }
+  .botonMenu.active .botonMenu__link {
+    box-shadow: none; }
+    .botonMenu.active .botonMenu__link i {
+      transform: rotate(-45deg); }
+  .botonMenu.active .botonMenu__item {
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    .botonMenu.active .botonMenu__item:nth-child(1) {
+      transform: translate(0, -7rem); }
+    .botonMenu.active .botonMenu__item:nth-child(2) {
+      transform: translate(0, -3.5rem); }
+  .botonMenu.active:after {
+    height: 9.5rem;
+    transition-timing-function: cubic-bezier(0.68, 1.55, 0.265, 1);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4); }
+  .botonMenu:after {
+    display: block;
+    content: ' ';
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: .75rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+    background-color: rgba(179, 4, 4, 0.4);
+    transition: all .3s ease; }
+
 /***************************************************************/
 /************************* Modal - Inicio **********************/
 .modal .modal-content {

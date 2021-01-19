@@ -182,16 +182,6 @@
             </section> 
         </main>
 
-        <!--------- Botón Fijo ----------->
-        <div id="botonMenu" class="botonMenu">
-            <a class="botonMenu__link" onclick="document.getElementById('botonMenu').classList.toggle('active');">
-                <i class="fa fa-plus"></i>
-            </a>
-            <menu class="botonMenu__desplegable">
-                <a href="#" class="botonMenu__item"> <i class="fa fa-chevron-up"></i></a>
-                <a href="#aceptar" class="botonMenu__item"> <i class="fa fa-chevron-down"></i></a>
-            </menu>
-        </div>
 
         <!--------- pie de pagina. ----------->
         <footer>
@@ -234,6 +224,18 @@
                 <p class="font-italic">Copyright &copy; 2020 SerE PreC </p>
             </address>
         </footer>
+
+        <!--------------- Botón Fijo - Inicio ----------------->
+        <div id="botonMenu" class="botonMenu">
+            <a class="botonMenu__link" onclick="document.getElementById('botonMenu').classList.toggle('active');">
+                <i class="fa fa-plus"></i>
+            </a>
+            <menu class="botonMenu__desplegable">
+                <a href="#" class="botonMenu__item"> <i class="fa fa-chevron-up"></i></a>
+                <a href="#aceptar" class="botonMenu__item"> <i class="fa fa-chevron-down"></i></a>
+            </menu>
+        </div>
+        <!--------------- Botón Fijo - Fin -------------------->
 
         <!------------------- Modal - Inicio ------------------->
         <div class="modal fade" id="modalTerminos" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modalTerminosLabel" aria-hidden="true">
