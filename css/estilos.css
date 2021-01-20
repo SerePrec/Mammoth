@@ -6,12 +6,12 @@ main.inicio .destacados, main.servicios .bodyGeometry, main.noticias #eventos, m
   background-color: #545454;
   color: white; }
 
-main.noticias .eventos h3, .tarjeta .tarjeta__titulo {
+main.noticias .eventos h3, .tarjeta .tarjeta__titulo, .card .card-info .card-title {
   background-color: #b9b8b8;
   color: white;
   font-weight: 700; }
   @media only screen and (max-width: 991px) {
-    main.noticias .eventos h3, .tarjeta .tarjeta__titulo {
+    main.noticias .eventos h3, .tarjeta .tarjeta__titulo, .card .card-info .card-title {
       font-size: 1.3rem; } }
 
 .newsletter .newsletter__titulo, .social .social__titulo {
@@ -480,7 +480,7 @@ nav.navbar {
     nav.navbar .navbar-nav .nav-link.activo {
       color: white;
       font-style: italic;
-      border-radius: 2%;
+      border-radius: 1rem 0 0 0;
       border-width: 10px; }
   nav.navbar .navbar-nav .dropdown-menu {
     background-color: rgba(84, 84, 84, 0.6); }
@@ -1176,3 +1176,105 @@ article.bodyGeometry {
 
 /************************* Modal - Fin *************************/
 /***************************************************************/
+/********borrrrrrrrrr***************/
+.card {
+  position: relative;
+  overflow: hidden;
+  margin: 2vw;
+  height: 38vw;
+  max-height: 550px;
+  background-color: white;
+  text-align: center;
+  color: black;
+  box-shadow: 2px 2px 20px 10px rgba(6, 6, 6, 0.5);
+  transition: all 300ms ease-in-out; }
+  .card .card-img {
+    visibility: hidden;
+    width: 100%;
+    height: 20vw;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
+  .card .card-img-hovered {
+    --card-img-hovered-overlay: linear-gradient(
+ 			to bottom,
+ 			rgba(0, 0, 0, 0),
+ 			rgba(0, 0, 0, 0)
+ 			);
+    transition: all 350ms ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+    height: 20vw;
+    top: 0; }
+  .card .card-info {
+    position: relative;
+    padding: 0 .75rem;
+    transition: all 200ms ease-in-out; }
+    .card .card-info .card-about {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.25rem 0;
+      transition: all 200ms ease-in-out; }
+      .card .card-info .card-about .card-tag {
+        padding: 0.2rem 0.5rem;
+        font-size: 12px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background: blue;
+        color: #fff; }
+        .card .card-info .card-about .card-tag.tag-news {
+          background: #36b37e; }
+    .card .card-info .card-title {
+      z-index: 10;
+      padding: 10px 0;
+      transition: all 350ms ease-in-out; }
+    .card .card-info .card-creator {
+      padding-bottom: 0.75rem;
+      transition: all 250ms ease-in-out; }
+  .card:hover {
+    cursor: pointer;
+    transform: scale(1.03, 1.03);
+    box-shadow: 2px 2px 20px 10px rgba(6, 6, 6, 0.8); }
+    .card:hover .card-img-hovered {
+      --card-img-hovered-overlay: linear-gradient(
+ 				to bottom,
+ 				rgba(0, 0, 0, 0),
+ 				rgba(0, 0, 0, 0.65)
+ 				);
+      height: 100%; }
+    .card:hover .card-about,
+    .card:hover .card-creator {
+      opacity: 0; }
+    .card:hover .card-info {
+      background-color: transparent; }
+    .card:hover .card-title {
+      color: white;
+      transform: translate(0, 40px);
+      background-color: transparent; }
+  @media only screen and (max-width: 1300px) {
+    .card {
+      min-height: 420px; } }
+
+@media only screen and (max-width: 767px) {
+  .card {
+    height: auto;
+    min-height: initial; }
+  .card-1 .card-img,
+  .card-1 .card-img-hovered {
+    height: 30vw; }
+  .card-2 .card-img,
+  .card-2 .card-img-hovered {
+    height: 42vw; } }
+
+.card-1 .card-img,
+.card-1 .card-img-hovered {
+  background-image: var(--card-img-hovered-overlay), url("../img/destacado1.jpg"); }
+
+.card-2 .card-img,
+.card-2 .card-img-hovered {
+  background-image: var(--card-img-hovered-overlay), url("../img/destacado2.jpg"); }
