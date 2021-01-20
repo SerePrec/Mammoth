@@ -136,111 +136,78 @@
             </div>
 
             <!--------- Sección de productos destacados -------->
-            <!-- <section class="destacados container-flow"> 
-                <h2>Destacados <span>del mes</span></h2>
-            	<article class="row m-0" >
-                    <div class="col-md-7 col-xl-8 wow animate__animated animate__fadeInLeftBig" data-wow-duration = ".7s">
-                        <div class="tarjeta">
-                            <div class="tarjeta__imagen"></div>
-                            <h3 class="tarjeta__titulo">SPECIALIZED VENGE S-WORKS</h3>
-                            <p class="tarjeta__texto">Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Nobis facere architecto, sequi sunt aut porro alias, soluta dignissimos et, sed reprehenderit repudiandae? Fugiat, modi provident, sunt quidem aspernatur, rerum debitis excepturi voluptas itaque libero at autem error assumenda, eveniet corrupti. Veritatis facere, aliquid hic minima officiis quo nesciunt soluta quasi. <a href="#" class="btn btn-secondary btn-sm">+ info</a></p>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-5 col-xl-4 wow animate__animated animate__fadeInRightBig" data-wow-duration = "0.9s">
-                        <div class="tarjeta">
-                            <div class="tarjeta__imagen--secundaria"></div>
-                            <h3 class="tarjeta__titulo">CASCO BIANCHI EVOL</h3>
-                            <p class="tarjeta__texto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, tenetur fugiat recusandae itaque hic minima officiis quod ipsa. <a href="#" class="btn btn-secondary btn-sm">+ info</a></p>
-                        </div>  
-                    </div>
-            	</article>
-            </section>  -->
-
-            <!--------------- BORRRR?????---------------->
-
+           
             <section class="destacados container-flow"> 
                 <h2>Destacados <span>del mes</span></h2>
-
                 <article class="row m-0" >
                     <div class="col-md-7 col-xl-8 wow animate__animated animate__fadeInLeftBig" data-wow-duration = ".7s">
-                        <div id="tarjetaDes1" class="card card-1">
-                            <div class="card-img"></div>
-                                <div class="card-img-hovered" onclick="document.getElementById('tarjetaDes1').classList.toggle('activa');"></div>
-                            <!-- <a href="" class="card-link">
-                            </a> -->
-                            <div class="card-info">
-                                <div class="card-about">
-                                    <a class="card-tag tag-news" href="productos.html">Bicicletas</a>
-                                    
+                        <div id="tarjetaDestacado1" class="tarjeta tarjeta--destacado1">
+                            <div class="tarjeta__imagen"></div>
+                            <div class="tarjeta__imagen--transformada" onclick="document.getElementById('tarjetaDestacado1').classList.toggle('activa');"></div>
+
+                            <div class="tarjeta__info">
+                                <div class="tarjeta__rubro">
+                                    <a class="btn btn-primary" href="productos.html">Bicicletas</a>
                                 </div>
-                                <h3 class="card-title">SPECIALIZED VENGE S-WORKS</h3>
-                                <div class="card-creator"><p class="tarjeta__texto">Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Nobis facere architecto, sequi sunt aut porro alias, soluta dignissimos et, sed reprehenderit repudiandae? Fugiat, modi provident, sunt quidem aspernatur, rerum debitis excepturi voluptas itaque libero at autem error assumenda, eveniet corrupti. Veritatis facere, aliquid hic minima officiis quo nesciunt soluta quasi. <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#infoDes1Modal">+info</button></p></div>
+                                <h3 class="tarjeta__titulo">SPECIALIZED VENGE S-WORKS</h3>
+                                <div class="tarjeta-creator"><p class="tarjeta__texto">Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Nobis facere architecto, sequi sunt aut porro alias, soluta dignissimos et, sed reprehenderit repudiandae? Fugiat, modi provident, sunt quidem aspernatur, rerum debitis excepturi voluptas itaque libero at autem error assumenda, eveniet corrupti. Veritatis facere, aliquid hic minima officiis quo nesciunt soluta quasi. <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#modalDestacado1">+info</button></p></div>
                             </div>
                         </div>
                     </div>
                     <!-- Modal infoDes1 -->
-<div class="modal fade" id="infoDes1Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">SPECIALIZED VENGE S-WORKS</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis hic alias quibusdam? Nobis quasi harum a ex voluptas beatae, voluptates ad obcaecati ullam quibusdam architecto illum, nesciunt, at laborum veritatis omnis quaerat assumenda fugit, laudantium iure! Est iure autem dolore maiores modi similique alias provident quo nemo sunt, nihil vero, repellendus veritatis. Quo aliquam corrupti laudantium id voluptate nostrum, consequuntur?</p><br>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Laudantium impedit quis, sed facilis molestiae. Laudantium delectus labore facilis minima vel modi dolor recusandae natus voluptatibus incidunt veritatis quam repellat reiciendis autem enim, iure ea repellendus ratione! Laborum rerum modi atque, recusandae asperiores laboriosam. Voluptas odit at eius minus ratione ipsam, necessitatibus eaque. Modi natus, veritatis iusto sequi inventore ex, asperiores.</p><br>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Consectetur, modi sit, cumque debitis perferendis necessitatibus, ducimus nam quidem deserunt veniam nesciunt explicabo similique quisquam expedita in dolorum praesentium ea? Assumenda ut velit illum incidunt consequuntur tempore officiis officia quasi tempora, perferendis voluptatibus necessitatibus hic delectus autem laboriosam obcaecati impedit blanditiis, reiciendis laborum explicabo voluptate, dolor repellat ex quae. Eaque, nostrum.</p><br>
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-                    <div class="col-md-5 col-xl-4 wow animate__animated animate__fadeInRightBig" data-wow-duration = "0.9s">
-                        <div id="tarjetaDes2" class="card card-2">
-                            <div class="card-img"></div>
-                                <div class="card-img-hovered" onclick="document.getElementById('tarjetaDes2').classList.toggle('activa');"></div>
-                            <!-- <a href="" class="card-link">
-                            </a> -->
-                            <div class="card-info">
-                                <div class="card-about">
-                                    <a class="card-tag" href="productos.html#linkEquip">Equipamiento</a>
-                                    
+                    <div class="modal fade" id="modalDestacado1" tabindex="-1" aria-labelledby="modalDestacado1Label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header justify-content-center">
+                                    <h3 class="modal-title" id="modalDestacado1Label">SPECIALIZED VENGE S&nbsp-&nbspWORKS</h3>
                                 </div>
-                                <h3 class="card-title">CASCO BIANCHI EVOL</h3>
-                                <div class="card-creator">
-                                    <p class="tarjeta__texto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, tenetur fugiat recusandae itaque hic minima officiis quod ipsa. <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#infoDes2Modal">+info</button></p>
+                                <div class="modal-body">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis hic alias quibusdam? Nobis quasi harum a ex voluptas beatae, voluptates ad obcaecati ullam quibusdam architecto illum, nesciunt, at laborum veritatis omnis quaerat assumenda fugit, laudantium iure! Est iure autem dolore maiores modi similique alias provident quo nemo sunt, nihil vero, repellendus veritatis. Quo aliquam corrupti laudantium id voluptate nostrum, consequuntur?</p><br>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Laudantium impedit quis, sed facilis molestiae. Laudantium delectus labore facilis minima vel modi dolor recusandae natus voluptatibus incidunt veritatis . Voluptas odit at eius minus ratione ipsam, necessitatibus eaque. Modi natus, veritatis iusto sequi inventore ex, asperiores.</p><br>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Consectetur, modi sit, cumque debitis perferendis necessitatibus, ducimus nam quidem deserunt veniam nesciunt explicabo similique quisquam expedita in dolorum praesentium ea? Assumenda ut velit illum incidunt consequuntur tempore officiis officia quasi tempora, perferendis , dolor repellat ex quae. Eaque, nostrum.</p><br>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                     <!-- Modal infoDes2 -->
-<div class="modal fade" id="infoDes2Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">CASCO BIANCHI EVOL</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis hic alias quibusdam? Nobis quasi harum a ex voluptas beatae, voluptates ad obcaecati ullam quibusdam architecto illum, nesciunt, at laborum veritatis omnis quaerat assumenda fugit, laudantium iure! Est iure autem dolore maiores modi similique alias provident quo nemo sunt, nihil vero, repellendus veritatis. Quo aliquam corrupti laudantium id voluptate nostrum, consequuntur?</p><br>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Laudantium impedit quis, sed facilis molestiae. Laudantium delectus labore facilis minima vel modi dolor recusandae natus voluptatibus incidunt veritatis quam repellat reiciendis autem enim, iure ea repellendus ratione! Laborum rerum modi atque, recusandae asperiores laboriosam. Voluptas odit at eius minus ratione ipsam, necessitatibus eaque. Modi natus, veritatis iusto sequi inventore ex, asperiores.</p><br>
-        
-      </div>
-      
-    </div>
-  </div>
-</div>
+
+                    <div class="col-md-5 col-xl-4 wow animate__animated animate__fadeInRightBig" data-wow-duration = "0.9s">
+                        <div id="tarjetaDestacado2" class="tarjeta tarjeta--destacado2">
+                            <div class="tarjeta__imagen"></div>
+                            <div class="tarjeta__imagen--transformada" onclick="document.getElementById('tarjetaDestacado2').classList.toggle('activa');"></div>
+
+                            <div class="tarjeta__info">
+                                <div class="tarjeta__rubro">
+                                    <a class="btn btn-success" href="productos.html#linkEquip">Equipamiento</a>
+                                </div>
+                                <h3 class="tarjeta__titulo">CASCO BIANCHI EVOL</h3>
+                                <div class="tarjeta-creator">
+                                    <p class="tarjeta__texto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, tenetur fugiat recusandae itaque hic minima officiis quod ipsa. <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#modalDestacado2">+info</button></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal infoDes2 -->
+                    <div class="modal fade" id="modalDestacado2" tabindex="-1" aria-labelledby="modalDestacado2Label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header justify-content-center">
+                                    <h3 class="modal-title" id="modalDestacado2Label">CASCO BIANCHI EVOL</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis hic alias quibusdam? Nobis quasi harum a ex voluptas beatae, voluptates ad obcaecati ullam quibusdam architecto illum, nesciunt, at laborum veritatis omnis quaerat assumenda fugit, laudantium iure! Est iure autem dolore maiores modi similique alias provident quo nemo sunt, nihil vero, repellendus veritatis. Quo aliquam corrupti laudantium id voluptate nostrum, consequuntur?</p><br>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Laudantium impedit quis, sed facilis molestiae. Laudantium delectus labore facilis minima vel modi dolor recusandae natus voluptatibus incidunt veritatis quam repellat reiciendis autem enim, iure ea repellendus ratione! Laborum rerum modi atque, recusandae asperiores laboriosam. Voluptas odit at eius minus ratione ipsam, necessitatibus eaque. Modi natus, veritatis iusto sequi inventore ex, asperiores.</p><br>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </section> 
-
-           
-        <!--------------- BORRRR?????---------------->
 
             <!--------------- Imagen secundaria ---------------->
             <div class="imagenSecundaria"></div>

@@ -6,12 +6,12 @@ main.inicio .destacados, main.servicios .bodyGeometry, main.noticias #eventos, m
   background-color: #545454;
   color: white; }
 
-main.noticias .eventos h3, .tarjeta .tarjeta__titulo, .card .card-info .card-title {
+main.noticias .eventos h3, .tarjeta .tarjeta__info .tarjeta__titulo, .tarjeta.tarjeta--tercios h2.tarjeta__titulo {
   background-color: #b9b8b8;
   color: white;
   font-weight: 700; }
   @media only screen and (max-width: 991px) {
-    main.noticias .eventos h3, .tarjeta .tarjeta__titulo, .card .card-info .card-title {
+    main.noticias .eventos h3, .tarjeta .tarjeta__info .tarjeta__titulo, .tarjeta.tarjeta--tercios h2.tarjeta__titulo {
       font-size: 1.3rem; } }
 
 .newsletter .newsletter__titulo, .social .social__titulo {
@@ -41,7 +41,7 @@ main.inicio .imagenSecundaria, #sorteo.imagenPremio {
   width: 100%;
   height: 52vw; }
 
-main.inicio .imagenSecundaria, main.noticias .competencias .card-header, .formulario, .tarjeta .tarjeta__imagen, .tarjeta .tarjeta__imagen--secundaria, .productos ul li div, #sorteo.imagenPremio, .modal .modal-content .modal-body .imagenTerminos {
+main.inicio .imagenSecundaria, main.noticias .competencias .card-header, .formulario, .tarjeta .tarjeta__imagen, .tarjeta .tarjeta__imagen--transformada, .productos ul li div, #sorteo.imagenPremio, #modalTerminos .modal-content .modal-body .imagenTerminos {
   background-size: cover;
   background-repeat: no-repeat; }
 
@@ -117,7 +117,7 @@ main.inicio .destacados {
   main.inicio .destacados h2 {
     font-size: 4rem;
     font-weight: 800;
-    padding-top: 2vw;
+    padding-top: 2rem;
     background-color: #545454;
     color: white;
     font-style: italic;
@@ -152,13 +152,16 @@ main.inicio .difusion {
     align-items: center; } }
 
 @media only screen and (max-width: 767px) {
+  main.inicio .destacados .col-md-7,
+  main.inicio .destacados .col-md-5 {
+    padding: 0 5vw; }
   main.inicio .destacados h2 {
     font-size: 3.2rem; }
   main.inicio .destacados .animate__fadeInRightBig {
     animation: fadeInLeftBig;
     animation-delay: 0s; }
   main.inicio .destacados .tarjeta {
-    margin: 1vw 0;
+    margin: 2rem 0;
     height: auto;
     min-height: initial; } }
 
@@ -473,25 +476,42 @@ nav.navbar {
     nav.navbar .navbar-toggler .navbar-toggler-icon {
       background-image: url("../img/iconred.png");
       background-size: cover; }
-  nav.navbar .navbar-nav .nav-link {
+  nav.navbar .navbar-nav .nav-item .nav-link {
     border-left: 4px solid #b30404;
     margin: 0 1.25vw 0 0;
-    padding: 0 0.5rem; }
-    nav.navbar .navbar-nav .nav-link.activo {
+    padding: 0 0.5rem;
+    transition: all 0.75s; }
+    nav.navbar .navbar-nav .nav-item .nav-link.activo {
       color: white;
       font-style: italic;
-      border-radius: 1rem 0 0 0;
+      border-radius: .625rem 0 0 0;
       border-width: 10px; }
-  nav.navbar .navbar-nav .dropdown-menu {
+  nav.navbar .navbar-nav .nav-item .dropdown-menu {
     background-color: rgba(84, 84, 84, 0.6); }
-    nav.navbar .navbar-nav .dropdown-menu a {
-      color: white; }
-      nav.navbar .navbar-nav .dropdown-menu a:hover {
+    nav.navbar .navbar-nav .nav-item .dropdown-menu a {
+      color: rgba(255, 255, 255, 0.6);
+      transition: color 1s; }
+      nav.navbar .navbar-nav .nav-item .dropdown-menu a:hover {
         background-color: rgba(179, 4, 4, 0.5);
         color: white; }
+  nav.navbar .navbar-nav .nav-item:hover .nav-link {
+    color: white;
+    border-color: rgba(179, 4, 4, 0); }
+  nav.navbar .navbar-nav .nav-item:hover:after {
+    width: 100%; }
+  nav.navbar .navbar-nav .nav-item:after {
+    display: block;
+    content: ' ';
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #b30404, rgba(179, 4, 4, 0));
+    transition: all .4s ease; }
   @media only screen and (max-width: 991px) {
     nav.navbar a img {
       height: 60px; } }
+  @media only screen and (max-width: 767px) {
+    nav.navbar .navbar-nav .nav-item:hover:after {
+      width: 15rem; } }
 
 @media only screen and (max-width: 700px) and (orientation: landscape) {
   nav.navbar a img {
@@ -610,46 +630,119 @@ nav.navbar {
 .tarjeta {
   position: relative;
   overflow: hidden;
+  margin: 2vw;
+  height: 38vw;
+  max-height: 550px;
   background-color: white;
   text-align: center;
   color: black;
   box-shadow: 2px 2px 20px 10px rgba(6, 6, 6, 0.5);
-  margin: 2vw;
-  height: 35vw;
-  max-height: 500px;
-  transition: all 0.5s;
-  /*transicion de todas las propiedades*/ }
+  transition: all 500ms ease-in-out; }
+  .tarjeta .tarjeta__imagen {
+    visibility: hidden;
+    width: 100%;
+    height: 20vw;
+    background-position: center; }
+  .tarjeta .tarjeta__imagen--transformada {
+    --card-img-hovered-overlay: linear-gradient(
+ 			to bottom,
+ 			rgba(0, 0, 0, 0),
+ 			rgba(0, 0, 0, 0)
+ 			);
+    transition: all 500ms ease-in-out;
+    background-position: center;
+    width: 100%;
+    position: absolute;
+    height: 20vw;
+    top: 0;
+    cursor: pointer; }
+  .tarjeta .tarjeta__info {
+    padding: 0 .75rem;
+    transition: all 200ms ease-in-out; }
+    .tarjeta .tarjeta__info .tarjeta__rubro {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.25rem 0;
+      transition: all 200ms ease-in-out; }
+      .tarjeta .tarjeta__info .tarjeta__rubro .btn {
+        padding: 0.2rem 0.5rem;
+        font-size: 12px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1px; }
+    .tarjeta .tarjeta__info .tarjeta__titulo {
+      z-index: 10;
+      padding: .625rem 0; }
+    .tarjeta .tarjeta__info .tarjeta__texto {
+      padding: 0.625rem 1.25rem; }
+    .tarjeta .tarjeta__info .tarjeta-creator {
+      padding-bottom: 0.75rem;
+      transition: all 250ms ease-in-out; }
   .tarjeta:hover {
     transform: scale(1.03, 1.03);
     box-shadow: 2px 2px 20px 10px rgba(6, 6, 6, 0.8); }
-  .tarjeta .tarjeta__imagen, .tarjeta .tarjeta__imagen--secundaria {
-    width: 100%;
-    height: 20vw;
-    background-image: url("../img/destacado1.jpg");
-    background-position: center; }
-  .tarjeta .tarjeta__imagen--secundaria {
-    background-image: url("../img/destacado2.jpg"); }
-  .tarjeta .tarjeta__texto, .tarjeta .tarjeta__titulo {
-    padding: 0.625rem 1.25rem; }
+  .tarjeta.activa {
+    cursor: pointer; }
+    .tarjeta.activa .tarjeta__imagen--transformada {
+      --card-img-hovered-overlay: linear-gradient(
+ 				to bottom,
+ 				rgba(0, 0, 0, 0),
+ 				rgba(0, 0, 0, 0.65)
+ 				);
+      height: 100%; }
+    .tarjeta.activa .tarjeta__rubro {
+      position: absolute;
+      top: 1rem; }
+    .tarjeta.activa .tarjeta-creator .tarjeta__texto {
+      color: transparent; }
+    .tarjeta.activa .tarjeta-creator button.btn {
+      position: absolute;
+      bottom: 1rem;
+      right: .75rem;
+      opacity: 1; }
+    .tarjeta.activa .tarjeta__info {
+      background-color: transparent; }
+    .tarjeta.activa .tarjeta__titulo {
+      color: white;
+      transform: translate(0, 40px);
+      background-color: transparent;
+      letter-spacing: 2px;
+      font-size: 2rem;
+      transition: all 1s ease-in-out; }
   @media only screen and (max-width: 1300px) {
     .tarjeta {
-      min-height: 380px; } }
+      min-height: 420px; } }
   @media only screen and (max-width: 767px) {
-    .tarjeta .tarjeta__imagen, .tarjeta .tarjeta__imagen--secundaria {
-      height: 30vw; }
-    .tarjeta .tarjeta__imagen--secundaria {
-      height: 45vw; } }
+    .tarjeta {
+      height: auto;
+      min-height: initial; }
+      .tarjeta .tarjeta__imagen,
+      .tarjeta .tarjeta__imagen--transformada {
+        height: 42vw; } }
+
+.tarjeta--destacado1 .tarjeta__imagen,
+.tarjeta--destacado1 .tarjeta__imagen--transformada {
+  background-image: var(--card-img-hovered-overlay), url("../img/destacado1.jpg"); }
+
+.tarjeta--destacado2 .tarjeta__imagen,
+.tarjeta--destacado2 .tarjeta__imagen--transformada {
+  background-image: var(--card-img-hovered-overlay), url("../img/destacado2.jpg"); }
 
 /********************** Tarjetas difusion **********************/
 .tarjeta.tarjeta--tercios {
   width: 400px;
   height: 450px;
-  margin: 2vw 0; }
+  margin: 4vw 0;
+  background-color: white; }
   .tarjeta.tarjeta--tercios img {
     width: 100%;
     height: auto; }
   .tarjeta.tarjeta--tercios h2 {
     font-size: 1.5rem; }
+    .tarjeta.tarjeta--tercios h2.tarjeta__titulo {
+      padding: .625rem 0; }
   .tarjeta.tarjeta--tercios p {
     padding: 1rem 1.25rem 1rem 1.25rem; }
   @media only screen and (max-width: 1399px) {
@@ -663,15 +756,16 @@ nav.navbar {
       .tarjeta.tarjeta--tercios:nth-child(2) {
         order: 2;
         width: 700px;
-        height: auto;
-        margin: 2vw auto; }
+        min-height: initial;
+        height: 390px;
+        margin: 4vw auto; }
         .tarjeta.tarjeta--tercios:nth-child(2) *:not(img) {
           display: none;
           margin: 0; } }
   @media only screen and (max-width: 991px) {
     .tarjeta.tarjeta--tercios:nth-child(2) {
       max-width: 420px;
-      min-height: initial; }
+      height: auto; }
     .tarjeta.tarjeta--tercios img {
       width: 100%;
       height: auto; } }
@@ -680,7 +774,7 @@ nav.navbar {
       width: 100%;
       height: auto;
       min-height: initial;
-      margin: 2vw 0;
+      margin: 4vw 0;
       max-width: initial; } }
 
 /****************** Tarjetas Verticales - Fin ******************/
@@ -1146,140 +1240,46 @@ article.bodyGeometry {
 
 /***************************************************************/
 /************************* Modal - Inicio **********************/
-.modal .modal-content {
+#modalTerminos .modal-content {
   background-color: #b9b8b8; }
-  .modal .modal-content .modal-header h2 {
+  #modalTerminos .modal-content .modal-header h2 {
     font-size: 1.5rem; }
-  .modal .modal-content .modal-body {
+  #modalTerminos .modal-content .modal-body {
     padding: 0; }
-    .modal .modal-content .modal-body .imagenTerminos {
+    #modalTerminos .modal-content .modal-body .imagenTerminos {
       background-image: url("../img/terminos.jpg");
       background-position: top;
       height: 35vw; }
-    .modal .modal-content .modal-body article.terminos {
+    #modalTerminos .modal-content .modal-body article.terminos {
       width: 75%;
       margin: auto;
       background-color: #545454;
       text-align: center;
       padding: 1.5vh 3vw;
       color: white; }
-      .modal .modal-content .modal-body article.terminos ol {
+      #modalTerminos .modal-content .modal-body article.terminos ol {
         padding: 0 3rem; }
-      .modal .modal-content .modal-body article.terminos p {
+      #modalTerminos .modal-content .modal-body article.terminos p {
         padding: 1rem;
         text-align: justify; }
 
 @media only screen and (max-width: 991px) {
-  .modal .modal-content .modal-body article.terminos {
+  #modalTerminos .modal-content .modal-body article.terminos {
     width: 100%;
     padding: 0.5vh 1vw; } }
 
+#modalDestacado1 .modal-content,
+#modalDestacado2 .modal-content {
+  background-color: #b9b8b8; }
+  #modalDestacado1 .modal-content .modal-header h3,
+  #modalDestacado2 .modal-content .modal-header h3 {
+    font-size: 1.25rem; }
+  #modalDestacado1 .modal-content .modal-body,
+  #modalDestacado2 .modal-content .modal-body {
+    background-color: #545454;
+    text-align: justify;
+    padding: 1.5rem 3rem;
+    color: white; }
+
 /************************* Modal - Fin *************************/
 /***************************************************************/
-/********borrrrrrrrrr***************/
-.card {
-  position: relative;
-  overflow: hidden;
-  margin: 2vw;
-  height: 38vw;
-  max-height: 550px;
-  background-color: white;
-  text-align: center;
-  color: black;
-  box-shadow: 2px 2px 20px 10px rgba(6, 6, 6, 0.5);
-  transition: all 300ms ease-in-out; }
-  .card .card-img {
-    visibility: hidden;
-    width: 100%;
-    height: 20vw;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover; }
-  .card .card-img-hovered {
-    --card-img-hovered-overlay: linear-gradient(
- 			to bottom,
- 			rgba(0, 0, 0, 0),
- 			rgba(0, 0, 0, 0)
- 			);
-    transition: all 350ms ease-in-out;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    width: 100%;
-    position: absolute;
-    height: 20vw;
-    top: 0;
-    cursor: pointer; }
-  .card .card-info {
-    padding: 0 .75rem;
-    transition: all 200ms ease-in-out; }
-    .card .card-info .card-about {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.25rem 0;
-      transition: all 200ms ease-in-out; }
-      .card .card-info .card-about .card-tag {
-        padding: 0.2rem 0.5rem;
-        font-size: 12px;
-        text-align: center;
-        text-transform: uppercase;
-        text-decoration: none;
-        letter-spacing: 1px;
-        background: blue;
-        color: #fff; }
-        .card .card-info .card-about .card-tag.tag-news {
-          background: #36b37e; }
-    .card .card-info .card-title {
-      z-index: 10;
-      padding: 10px 0;
-      transition: all 350ms ease-in-out; }
-    .card .card-info .card-creator {
-      padding-bottom: 0.75rem;
-      transition: all 250ms ease-in-out; }
-  .card.activa {
-    cursor: pointer;
-    transform: scale(1.03, 1.03);
-    box-shadow: 2px 2px 20px 10px rgba(6, 6, 6, 0.8); }
-    .card.activa .card-img-hovered {
-      --card-img-hovered-overlay: linear-gradient(
- 				to bottom,
- 				rgba(0, 0, 0, 0),
- 				rgba(0, 0, 0, 0.65)
- 				);
-      height: 100%; }
-    .card.activa .card-about {
-      position: absolute;
-      top: 1rem; }
-    .card.activa .card-creator .tarjeta__texto {
-      color: transparent; }
-    .card.activa .card-creator button.btn {
-      position: absolute;
-      bottom: 1rem;
-      right: .75rem;
-      opacity: 1; }
-    .card.activa .card-info {
-      background-color: transparent; }
-    .card.activa .card-title {
-      color: white;
-      transform: translate(0, 40px);
-      background-color: transparent; }
-  @media only screen and (max-width: 1300px) {
-    .card {
-      min-height: 420px; } }
-
-@media only screen and (max-width: 767px) {
-  .card {
-    height: auto;
-    min-height: initial; }
-  .card .card-img,
-  .card .card-img-hovered {
-    height: 42vw; } }
-
-.card-1 .card-img,
-.card-1 .card-img-hovered {
-  background-image: var(--card-img-hovered-overlay), url("../img/destacado1.jpg"); }
-
-.card-2 .card-img,
-.card-2 .card-img-hovered {
-  background-image: var(--card-img-hovered-overlay), url("../img/destacado2.jpg"); }

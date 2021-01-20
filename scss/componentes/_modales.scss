@@ -1,6 +1,8 @@
 /***************************************************************/
 /************************* Modal - Inicio **********************/
-.modal {
+
+// Modal para Términos y condiciones
+#modalTerminos {
 	.modal-content {
 		background-color: $tonoClaro;
 		.modal-header {
@@ -39,6 +41,25 @@
 					padding: 0.5vh 1vw;
 				}
 			}
+		}
+	}
+}
+
+//Modal para Destacados 1 y 2
+#modalDestacado1,
+#modalDestacado2 {
+	.modal-content {
+		background-color: $tonoClaro;
+		.modal-header {
+			h3 {
+				font-size: 1.25rem;
+			}
+		} 
+		.modal-body {
+			background-color: $tonoMedio;
+			text-align: justify;
+			padding: 1.5rem 3rem;
+			color: white;
 		}
 	}
 }

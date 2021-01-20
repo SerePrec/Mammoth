@@ -2,39 +2,79 @@
 /************* para pisar a Bootstrap y personalizar ***********/
 nav.navbar {
 	padding: 0 0.5rem;
+
 	.navbar-toggler {
 		border-color: white;
+
 		.navbar-toggler-icon {
 			background-image: url("../img/iconred.png");
 			background-size: cover;
 		}
 	}
+
 	.navbar-nav {
-		.nav-link {
-			@include borde(izquierda, 4px, $rojoMarca);
-			margin: 0 1.25vw 0 0;
-			padding: 0 0.5rem; 
-			&.activo { 
-				color: white;
-				font-style: italic;
-				border-radius: 1rem 0 0 0;
-				border-width: 10px;
-			}
-		}
-		.dropdown-menu {
-			background-color: rgba($tonoMedio, .6);
-			a {
-				color: white;
-				&:hover {
-					background-color: rgba($rojoMarca, 0.5);
-					color:white;
+		.nav-item {
+
+			.nav-link {
+				@include borde(izquierda, 4px, $rojoMarca);
+				margin: 0 1.25vw 0 0;
+				padding: 0 0.5rem; 
+				transition: all 0.75s;
+				&.activo { 
+					color: white;
+					font-style: italic;
+					border-radius: .625rem 0 0 0;
+					border-width: 10px;
 				}
 			}
+
+			.dropdown-menu {
+				background-color: rgba($tonoMedio, .6);
+				a {
+					color: rgba(white, 0.6);
+					transition: color 1s;
+					&:hover {
+						background-color: rgba($rojoMarca, 0.5);
+						color:white;
+					}
+				}
+			}
+
+			&:hover {
+				.nav-link {
+					color: white;
+					border-color: rgba($rojoMarca, 0);
+				}
+				&:after {
+					width: 100%;
+				}
+			}
+
+			&:after {
+				display: block;
+				content: ' ';
+				width: 0;
+				height: 3px;
+				background: linear-gradient(90deg, rgba($rojoMarca, 1), rgba($rojoMarca, 0));
+				transition: all .4s ease;
+			} 
 		}
 	}
+
 	@include responsive(md) {
 		a img {
 			height: 60px;
+		}
+	}
+	@include responsive(sm) {
+		.navbar-nav {
+			.nav-item {
+				&:hover {
+					&:after {
+						width: 15rem;
+					}
+				}
+			}
 		}
 	}
 	@include responsive(700px) {

@@ -9,7 +9,7 @@ main.inicio {
 		h2 {
 			font-size: 4rem;
 			font-weight: 800;
-			padding-top: 2vw;
+			padding-top: 2rem;
 			background-color: $tonoMedio;
 			color: white;
 			font-style: italic;
@@ -48,6 +48,10 @@ main.inicio {
 	}
 	@include responsive(sm) {
 		.destacados {
+			.col-md-7,
+			.col-md-5 { // para pisar en este punto Bootstrap
+				padding: 0 5vw;
+			}
 			h2 {
 				font-size: 3.2rem;
 			}
@@ -56,7 +60,7 @@ main.inicio {
 				animation-delay: 0s; 
 			}
 			.tarjeta {
-				margin: 1vw 0; 
+				margin: 2rem 0; 
 				height: auto;
 				min-height: initial;
 			}
