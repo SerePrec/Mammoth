@@ -1208,9 +1208,9 @@ article.bodyGeometry {
     width: 100%;
     position: absolute;
     height: 20vw;
-    top: 0; }
+    top: 0;
+    cursor: pointer; }
   .card .card-info {
-    position: relative;
     padding: 0 .75rem;
     transition: all 200ms ease-in-out; }
     .card .card-info .card-about {
@@ -1224,6 +1224,7 @@ article.bodyGeometry {
         font-size: 12px;
         text-align: center;
         text-transform: uppercase;
+        text-decoration: none;
         letter-spacing: 1px;
         background: blue;
         color: #fff; }
@@ -1236,23 +1237,30 @@ article.bodyGeometry {
     .card .card-info .card-creator {
       padding-bottom: 0.75rem;
       transition: all 250ms ease-in-out; }
-  .card:hover {
+  .card.activa {
     cursor: pointer;
     transform: scale(1.03, 1.03);
     box-shadow: 2px 2px 20px 10px rgba(6, 6, 6, 0.8); }
-    .card:hover .card-img-hovered {
+    .card.activa .card-img-hovered {
       --card-img-hovered-overlay: linear-gradient(
  				to bottom,
  				rgba(0, 0, 0, 0),
  				rgba(0, 0, 0, 0.65)
  				);
       height: 100%; }
-    .card:hover .card-about,
-    .card:hover .card-creator {
-      opacity: 0; }
-    .card:hover .card-info {
+    .card.activa .card-about {
+      position: absolute;
+      top: 1rem; }
+    .card.activa .card-creator .tarjeta__texto {
+      color: transparent; }
+    .card.activa .card-creator button.btn {
+      position: absolute;
+      bottom: 1rem;
+      right: .75rem;
+      opacity: 1; }
+    .card.activa .card-info {
       background-color: transparent; }
-    .card:hover .card-title {
+    .card.activa .card-title {
       color: white;
       transform: translate(0, 40px);
       background-color: transparent; }
@@ -1264,11 +1272,8 @@ article.bodyGeometry {
   .card {
     height: auto;
     min-height: initial; }
-  .card-1 .card-img,
-  .card-1 .card-img-hovered {
-    height: 30vw; }
-  .card-2 .card-img,
-  .card-2 .card-img-hovered {
+  .card .card-img,
+  .card .card-img-hovered {
     height: 42vw; } }
 
 .card-1 .card-img,

@@ -37,10 +37,11 @@
  		position: absolute;
  		height: $card-img-height;
  		top: 0;
+ 		cursor: pointer;
  	}
 
  	.card-info {
- 		position: relative;
+ 		// position: relative;
  		padding: 0 .75rem;
  		transition: all 200ms ease-in-out;
 
@@ -56,6 +57,7 @@
  				font-size: 12px;
  				text-align: center;
  				text-transform: uppercase;
+ 				text-decoration: none;
  				letter-spacing: 1px;
  				background: blue;
  				color: #fff;
@@ -79,7 +81,7 @@
  		}
  	}
 
- 	&:hover {
+ 	&.activa {
  		cursor: pointer;
  		
  		transform: scale(1.03, 1.03);
@@ -94,9 +96,21 @@
  			height: 100%;
  		}
 
- 		.card-about,
+ 		.card-about {
+ 			position: absolute;
+ 			top: 1rem;
+ 		}
  		.card-creator {
- 			opacity: 0;
+ 			.tarjeta__texto {
+ 			color: transparent;
+
+ 			}
+ 			button.btn {
+ 				position: absolute;
+ 				bottom: 1rem;
+ 				right: .75rem;
+ 				opacity: 1;
+ 			}
  		}
 
  		.card-info {
@@ -121,14 +135,14 @@
 				min-height: initial;
 
 	}
-	.card-1 .card-img,
-	.card-1 .card-img-hovered {
-		height: 30vw;
-	}
-	.card-2 .card-img,
-	.card-2 .card-img-hovered {
+	.card .card-img,
+	.card .card-img-hovered {
 		height: 42vw;
 	}
+	// .card-2 .card-img,
+	// .card-2 .card-img-hovered {
+	// 	height: 42vw;
+	// }
 }
 
 

@@ -161,42 +161,81 @@
 
             <section class="destacados container-flow"> 
                 <h2>Destacados <span>del mes</span></h2>
+
                 <article class="row m-0" >
                     <div class="col-md-7 col-xl-8 wow animate__animated animate__fadeInLeftBig" data-wow-duration = ".7s">
-                        <div class="card card-1">
+                        <div id="tarjetaDes1" class="card card-1">
                             <div class="card-img"></div>
-                                <div class="card-img-hovered"></div>
+                                <div class="card-img-hovered" onclick="document.getElementById('tarjetaDes1').classList.toggle('activa');"></div>
                             <!-- <a href="" class="card-link">
                             </a> -->
                             <div class="card-info">
                                 <div class="card-about">
-                                    <a class="card-tag tag-news">Bicicletas</a>
+                                    <a class="card-tag tag-news" href="productos.html">Bicicletas</a>
                                     
                                 </div>
                                 <h3 class="card-title">SPECIALIZED VENGE S-WORKS</h3>
-                                <div class="card-creator"><p class="tarjeta__texto">Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Nobis facere architecto, sequi sunt aut porro alias, soluta dignissimos et, sed reprehenderit repudiandae? Fugiat, modi provident, sunt quidem aspernatur, rerum debitis excepturi voluptas itaque libero at autem error assumenda, eveniet corrupti. Veritatis facere, aliquid hic minima officiis quo nesciunt soluta quasi. <a href="#" class="btn btn-secondary btn-sm">+ info</a></p></div>
+                                <div class="card-creator"><p class="tarjeta__texto">Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Nobis facere architecto, sequi sunt aut porro alias, soluta dignissimos et, sed reprehenderit repudiandae? Fugiat, modi provident, sunt quidem aspernatur, rerum debitis excepturi voluptas itaque libero at autem error assumenda, eveniet corrupti. Veritatis facere, aliquid hic minima officiis quo nesciunt soluta quasi. <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#infoDes1Modal">+info</button></p></div>
                             </div>
                         </div>
                     </div>
+                    <!-- Modal infoDes1 -->
+<div class="modal fade" id="infoDes1Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">SPECIALIZED VENGE S-WORKS</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis hic alias quibusdam? Nobis quasi harum a ex voluptas beatae, voluptates ad obcaecati ullam quibusdam architecto illum, nesciunt, at laborum veritatis omnis quaerat assumenda fugit, laudantium iure! Est iure autem dolore maiores modi similique alias provident quo nemo sunt, nihil vero, repellendus veritatis. Quo aliquam corrupti laudantium id voluptate nostrum, consequuntur?</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Laudantium impedit quis, sed facilis molestiae. Laudantium delectus labore facilis minima vel modi dolor recusandae natus voluptatibus incidunt veritatis quam repellat reiciendis autem enim, iure ea repellendus ratione! Laborum rerum modi atque, recusandae asperiores laboriosam. Voluptas odit at eius minus ratione ipsam, necessitatibus eaque. Modi natus, veritatis iusto sequi inventore ex, asperiores.</p><br>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Consectetur, modi sit, cumque debitis perferendis necessitatibus, ducimus nam quidem deserunt veniam nesciunt explicabo similique quisquam expedita in dolorum praesentium ea? Assumenda ut velit illum incidunt consequuntur tempore officiis officia quasi tempora, perferendis voluptatibus necessitatibus hic delectus autem laboriosam obcaecati impedit blanditiis, reiciendis laborum explicabo voluptate, dolor repellat ex quae. Eaque, nostrum.</p><br>
+      </div>
+      
+    </div>
+  </div>
+</div>
 
                     <div class="col-md-5 col-xl-4 wow animate__animated animate__fadeInRightBig" data-wow-duration = "0.9s">
-                        <div class="card card-2">
+                        <div id="tarjetaDes2" class="card card-2">
                             <div class="card-img"></div>
-                                <div class="card-img-hovered"></div>
+                                <div class="card-img-hovered" onclick="document.getElementById('tarjetaDes2').classList.toggle('activa');"></div>
                             <!-- <a href="" class="card-link">
                             </a> -->
                             <div class="card-info">
                                 <div class="card-about">
-                                    <a class="card-tag">Equipamiento</a>
+                                    <a class="card-tag" href="productos.html#linkEquip">Equipamiento</a>
                                     
                                 </div>
                                 <h3 class="card-title">CASCO BIANCHI EVOL</h3>
                                 <div class="card-creator">
-                                    <p class="tarjeta__texto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, tenetur fugiat recusandae itaque hic minima officiis quod ipsa. <a href="#" class="btn btn-secondary btn-sm">+ info</a></p>
+                                    <p class="tarjeta__texto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, tenetur fugiat recusandae itaque hic minima officiis quod ipsa. <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#infoDes2Modal">+info</button></p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                     <!-- Modal infoDes2 -->
+<div class="modal fade" id="infoDes2Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">CASCO BIANCHI EVOL</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis hic alias quibusdam? Nobis quasi harum a ex voluptas beatae, voluptates ad obcaecati ullam quibusdam architecto illum, nesciunt, at laborum veritatis omnis quaerat assumenda fugit, laudantium iure! Est iure autem dolore maiores modi similique alias provident quo nemo sunt, nihil vero, repellendus veritatis. Quo aliquam corrupti laudantium id voluptate nostrum, consequuntur?</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Laudantium impedit quis, sed facilis molestiae. Laudantium delectus labore facilis minima vel modi dolor recusandae natus voluptatibus incidunt veritatis quam repellat reiciendis autem enim, iure ea repellendus ratione! Laborum rerum modi atque, recusandae asperiores laboriosam. Voluptas odit at eius minus ratione ipsam, necessitatibus eaque. Modi natus, veritatis iusto sequi inventore ex, asperiores.</p><br>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
                 </article>
             </section> 
 
