@@ -19,6 +19,7 @@
  		width: 100%;
  		height: $tarjeta__imagen-height;
  		@include cover();
+ 		z-index: -10;
  	}
 
  	.tarjeta__imagen--transformada {
@@ -136,16 +137,26 @@
 .tarjeta--destacado1 {
 	.tarjeta__imagen,
 	.tarjeta__imagen--transformada {
-		background-image: var(--card-img-hovered-overlay),
-		url("../img/destacado1.jpg");
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/destacado1.jpg");
+	}
+	&.activa {
+		.tarjeta__imagen,
+		.tarjeta__imagen--transformada {
+			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.65)), url("../img/destacado1.jpg");
+		}
 	}
 }
 
 .tarjeta--destacado2 {
 	.tarjeta__imagen,
 	.tarjeta__imagen--transformada {
-		background-image: var(--card-img-hovered-overlay),
-		url("../img/destacado2.jpg");
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/destacado2.jpg");
+	}
+	&.activa {
+		.tarjeta__imagen,
+		.tarjeta__imagen--transformada {
+			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.65)), url("../img/destacado2.jpg");
+		}
 	}
 }
 
