@@ -41,7 +41,7 @@ main.inicio .imagenSecundaria, #sorteo.imagenPremio {
   width: 100%;
   height: 52vw; }
 
-main.inicio .imagenSecundaria, main.noticias .competencias .card-header, .formulario, .tarjeta .tarjeta__imagen, .tarjeta .tarjeta__imagen--transformada, .productos ul li div, #sorteo.imagenPremio, #modalTerminos .modal-content .modal-body .imagenTerminos {
+main.inicio .imagenSecundaria, main.noticias .competencias .dosCaras .cara.caraFrontal .card-header, main.noticias .competencias .dosCaras .cara.caraTrasera .card-body.ruta, main.noticias .competencias .dosCaras .cara.caraTrasera .card-body.mtb, main.noticias .competencias .dosCaras .cara.caraTrasera .card-body.bmx, .formulario, .tarjeta .tarjeta__imagen, .tarjeta .tarjeta__imagen--transformada, .productos ul li div, #sorteo.imagenPremio, #modalTerminos .modal-content .modal-body .imagenTerminos {
   background-size: cover;
   background-repeat: no-repeat; }
 
@@ -234,28 +234,118 @@ main.noticias {
       vertical-align: bottom; }
   main.noticias .card, main.noticias .card-footer {
     background-color: transparent;
+    border-top-color: transparent;
     border-radius: unset; }
   main.noticias .eventos h3 {
     text-align: center;
     font-weight: 500; }
-  main.noticias .eventos .card-body {
+  main.noticias .eventos .dosCaras .card-body {
     border: 0.5rem solid #b30404;
+    position: relative;
     background: #b30404;
-    background: linear-gradient(135deg, #b30404 0%, #545454 100%); }
-    main.noticias .eventos .card-body h4 {
+    background-image: linear-gradient(135deg, #b30404 0%, #545454 100%); }
+    main.noticias .eventos .dosCaras .card-body.cara {
+      height: 250px;
+      -webkit-transition: all 0.8s ease;
+      transition: all 0.8s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      overflow: hidden; }
+      main.noticias .eventos .dosCaras .card-body.cara.caraTrasera {
+        -webkit-transform: rotateY(180deg);
+        background-image: linear-gradient(135deg, #545454 0%, #b30404 100%);
+        transform: rotateY(180deg); }
+        main.noticias .eventos .dosCaras .card-body.cara.caraTrasera .btn {
+          margin-top: 50px;
+          padding: 8px 16px;
+          font-size: 20px; }
+        main.noticias .eventos .dosCaras .card-body.cara.caraTrasera strong {
+          font-size: 1.5rem; }
+    main.noticias .eventos .dosCaras .card-body h4 {
       font-size: 1.5rem;
       font-weight: 700; }
-  main.noticias .competencias .card-header {
-    height: 12rem; }
-    main.noticias .competencias .card-header.ruta {
-      background-image: url("../img/competencias_tarjeta_ruta.jpg"); }
-    main.noticias .competencias .card-header.mtb {
-      background-image: url("../img/competencias_tarjeta_mtb.jpg"); }
-    main.noticias .competencias .card-header.bmx {
-      background-image: url("../img/competencias_tarjeta_bmx.jpg"); }
-  main.noticias .competencias .card-body {
-    background: linear-gradient(135deg, #b30404 0%, #545454 100%);
-    color: White; }
+    main.noticias .eventos .dosCaras .card-body strong {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem; }
+  main.noticias .eventos .dosCaras .card-footer {
+    margin-top: 250px; }
+  main.noticias .eventos .dosCaras:hover .card-body.cara.caraFrontal {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg); }
+  main.noticias .eventos .dosCaras:hover .card-body.cara.caraTrasera {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0); }
+  main.noticias .competencias .dosCaras .cara {
+    height: 470px;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden; }
+    main.noticias .competencias .dosCaras .cara.caraFrontal .card-header {
+      height: 40%; }
+      main.noticias .competencias .dosCaras .cara.caraFrontal .card-header.ruta {
+        background-image: url("../img/competencias_tarjeta_ruta.jpg"); }
+      main.noticias .competencias .dosCaras .cara.caraFrontal .card-header.mtb {
+        background-image: url("../img/competencias_tarjeta_mtb.jpg"); }
+      main.noticias .competencias .dosCaras .cara.caraFrontal .card-header.bmx {
+        background-image: url("../img/competencias_tarjeta_bmx.jpg"); }
+    main.noticias .competencias .dosCaras .cara.caraFrontal .card-body {
+      height: 60%;
+      background-image: linear-gradient(135deg, #b30404 0%, #545454 100%);
+      color: white; }
+    main.noticias .competencias .dosCaras .cara strong {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem; }
+    main.noticias .competencias .dosCaras .cara.caraTrasera {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg); }
+      main.noticias .competencias .dosCaras .cara.caraTrasera .card-body {
+        height: 100%;
+        color: white;
+        font-weight: 900;
+        letter-spacing: 0.1rem;
+        text-shadow: 3px 3px black; }
+        main.noticias .competencias .dosCaras .cara.caraTrasera .card-body.ruta {
+          background-image: url("../img/competencias_tarjeta_ruta.jpg");
+          background-position: center; }
+        main.noticias .competencias .dosCaras .cara.caraTrasera .card-body.mtb {
+          background-image: url("../img/competencias_tarjeta_mtb.jpg");
+          background-position: center; }
+        main.noticias .competencias .dosCaras .cara.caraTrasera .card-body.bmx {
+          background-image: url("../img/competencias_tarjeta_bmx.jpg");
+          background-position: center; }
+        main.noticias .competencias .dosCaras .cara.caraTrasera .card-body h4 {
+          font-size: 1.5rem;
+          font-weight: 900; }
+        main.noticias .competencias .dosCaras .cara.caraTrasera .card-body .btn {
+          margin-top: 180px;
+          background-color: #b30404;
+          padding: 8px 16px;
+          font-size: 20px;
+          text-shadow: none; }
+          main.noticias .competencias .dosCaras .cara.caraTrasera .card-body .btn:hover {
+            background-color: #810303; }
+        main.noticias .competencias .dosCaras .cara.caraTrasera .card-body strong {
+          font-size: 1.5rem; }
+  main.noticias .competencias .dosCaras .card-footer {
+    margin-top: 470px; }
+  main.noticias .competencias .dosCaras:hover .cara.caraFrontal {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg); }
+  main.noticias .competencias .dosCaras:hover .cara.caraTrasera {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0); }
   main.noticias .app img {
     width: 100%;
     object-fit: cover; }
@@ -295,7 +385,21 @@ main.noticias {
     main.noticias h2 {
       font-size: 2rem; }
     main.noticias h4 {
-      font-size: 1.2rem; } }
+      font-size: 1.2rem; }
+    main.noticias .eventos .dosCaras .card-body.cara {
+      height: 210px; }
+      main.noticias .eventos .dosCaras .card-body.cara.caraTrasera .btn {
+        margin-top: 40px;
+        font-size: 16px; }
+      main.noticias .eventos .dosCaras .card-body.cara .card-footer {
+        margin-top: 210px; }
+    main.noticias .competencias .dosCaras .cara {
+      height: 400px; }
+      main.noticias .competencias .dosCaras .cara.caraTrasera .card-body .btn {
+        margin-top: 130px;
+        font-size: 16px; }
+    main.noticias .competencias .dosCaras .card-footer {
+      margin-top: 400px; } }
   @media only screen and (max-width: 500px) {
     main.noticias aside div.dias2 {
       display: block; }
@@ -512,7 +616,10 @@ nav.navbar {
   @media only screen and (max-width: 767px) {
     nav.navbar .navbar-nav .nav-item:after {
       background-image: linear-gradient(90deg, #b30404, #b30404);
-      width: 4px; }
+      width: 4px;
+      transition: all 0.25s; }
+    nav.navbar .navbar-nav .nav-item.activo:after {
+      width: 10px; }
     nav.navbar .navbar-nav .nav-item:hover:after {
       background-image: linear-gradient(90deg, #b30404, rgba(179, 4, 4, 0));
       width: 15rem; } }

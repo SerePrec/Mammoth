@@ -73,6 +73,10 @@ nav.navbar {
 				&:after {
 					background-image: linear-gradient(90deg, rgba($rojoMarca, 1), rgba($rojoMarca, 1));
 					width: 4px;
+					transition: all 0.25s;
+				}
+				&.activo:after {
+					width: 10px;
 				}
 				&:hover {
 					&:after {
