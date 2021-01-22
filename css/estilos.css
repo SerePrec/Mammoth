@@ -514,6 +514,7 @@ nav.navbar {
       background-image: linear-gradient(90deg, #b30404, #b30404);
       width: 4px; }
     nav.navbar .navbar-nav .nav-item:hover:after {
+      background-image: linear-gradient(90deg, #b30404, rgba(179, 4, 4, 0));
       width: 15rem; } }
 
 @media only screen and (max-width: 700px) and (orientation: landscape) {
