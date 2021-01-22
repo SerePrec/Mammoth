@@ -19,7 +19,7 @@ nav.navbar {
 				@include borde(izquierda, 4px, $rojoMarca);
 				margin: 0 1.25vw 0 0;
 				padding: 0 0.5rem; 
-				transition: all 0.75s;
+				transition: all 0.5s;
 				&.activo { 
 					color: white;
 					font-style: italic;
@@ -55,7 +55,7 @@ nav.navbar {
 				content: ' ';
 				width: 0;
 				height: 3px;
-				background: linear-gradient(90deg, rgba($rojoMarca, 1), rgba($rojoMarca, 0));
+				background-image: linear-gradient(90deg, rgba($rojoMarca, 1), rgba($rojoMarca, 0));
 				transition: all .4s ease;
 			} 
 		}
@@ -69,6 +69,10 @@ nav.navbar {
 	@include responsive(sm) {
 		.navbar-nav {
 			.nav-item {
+				&:after {
+				background-image: linear-gradient(90deg, rgba($rojoMarca, 1), rgba($rojoMarca, 1));
+						width: 4px;
+					}
 				&:hover {
 					&:after {
 						width: 15rem;

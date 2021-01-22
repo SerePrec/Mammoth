@@ -11,7 +11,7 @@
  	background-color: white;
  	text-align: center;
  	color: black;
- 	box-shadow: 2px 2px 20px 10px rgba($tonoMuyOscuro, 0.5);
+ 	@include sombraCaja(rgba($tonoMuyOscuro, 0.5));
  	transition: all 500ms ease-in-out; //transicion de todas las propiedades
 
  	.tarjeta__imagen {
@@ -23,11 +23,6 @@
  	}
 
  	.tarjeta__imagen--transformada {
- 		--card-img-hovered-overlay: linear-gradient(
- 			to bottom,
- 			rgba(0, 0, 0, 0),
- 			rgba(0, 0, 0, 0)
- 			);
  		transition: all 500ms ease-in-out;
  		@include cover();
  		width: 100%;
@@ -76,17 +71,12 @@
 
  	&:hover {
 		transform: scale(1.03, 1.03);
-		box-shadow: 2px 2px 20px 10px rgba($tonoMuyOscuro, 0.8);
+		@include sombraCaja(rgba($tonoMuyOscuro, 0.8));
 	}
 
  	&.activa {
  		cursor: pointer;
  		.tarjeta__imagen--transformada {
- 			--card-img-hovered-overlay: linear-gradient(
- 				to bottom,
- 				rgba(0, 0, 0, 0),
- 				rgba(0, 0, 0, 0.65)
- 				);
  			height: 100%;
  		}
 
@@ -94,6 +84,7 @@
  			position: absolute;
  			top: 1rem;
  		}
+
  		.tarjeta-creator {
  			.tarjeta__texto {
  				color: transparent;
@@ -163,46 +154,69 @@
 /********************** Tarjetas difusion **********************/
 .tarjeta.tarjeta--tercios {
 	width: 400px;
-	height: 450px;
+	height: 440px;
 	margin: 4vw 0;
-	background-color: white;
+	background-color: transparent;
+	box-shadow: none;
+
 	img {
 		width: 100%;
-		height: auto;
+		height: 64%;
+		object-fit: cover;
+		transition: all 0.5s;
 
 	}
+
 	h2 {
 		&.tarjeta__titulo {
-		@extend %tituloBoxClaro;
-		padding: .625rem 0;
+			@extend %tituloBoxClaro;
+			padding: .625rem 0;
+			font-size: 1.5rem;
+		}
 	}
-		font-size: 1.5rem;
-	}
+
 	p {
 		padding: 1rem 1.25rem 1rem 1.25rem;
 	}
-	// .prueba {
-	// 	width: 90%;
-	// 	position: relative;
-	// 	top: -20px;
-	// 	margin: auto;
-	// 	background-color: white;
-	// 	 	box-shadow: 2px 2px 10px 5px rgba($tonoMuyOscuro, 0.3);
 
-	// }
+	.tarjeta__box {
+		position: relative;
+		margin: 0%;
+		background-color: white;
+		width: 100%;
+		min-height: 36%;
+		transition: all 0.5s;
+	}
+
+	&:hover {
+		box-shadow: none;
+		background-color: transparent;
+		img {
+			height: 75%;
+		}
+		.tarjeta__box {
+			width: 90%;
+			margin: 5%;
+			transform: translateY(-7.5rem);
+			@include sombraCaja(rgba($tonoMuyOscuro, 0.6), $enfoque: 10px, $expansion: 5px);
+		}
+	}
 	@include responsive(xl) {
 		width: 350px;
-		height: 400px;
+		height: 500px;
 	}
 	@include responsive(lg) {
 		width: 420px;
-		height: 400px;
+		height: 420px;
 		&:nth-child(2) {
 			order:2;
 			width: 700px;
 			min-height: initial;
-			height: 390px;
 			margin: 4vw auto;
+			img {
+				height: 100%;
+
+			}
 			*:not(img) {
 				display:none;
 				margin: 0;
@@ -210,19 +224,19 @@
 		}
 	}
 	@include responsive(md) {
+		height: 450px;
 		&:nth-child(2) {
+			height: 420px;
 			max-width: 420px;
-			height: auto;
 		}
 		img {
 			width: 100%;
-			height: auto;
 		}
 	}
 	@include responsive(xs) {
 		&, &:nth-child(2) {
+			height: 380px;
 			width: 100%;
-			height: auto;
 			min-height: initial;
 			margin: 4vw 0;
 			max-width: initial;
@@ -231,4 +245,3 @@
 }
 /****************** Tarjetas Verticales - Fin ******************/
 /***************************************************************/
-
