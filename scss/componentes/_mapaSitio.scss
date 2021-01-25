@@ -1,0 +1,86 @@
+/*************************************************************/
+/********************* Mapa sitio - Inicio  ******************/
+.mapaSitio {
+	flex-basis: 80%;
+	@include flex($justificado: around, $wrap: wrap);
+	margin: 2rem auto 1rem auto;
+	padding: 1rem 0;
+	border-top: 1px solid rgba($rojoMarca, .4);
+	border-bottom: 1px solid rgba($rojoMarca, .4);
+	text-align: left;
+
+	div {
+		flex: 0 0 20%;
+		font-family: $fuente-secundaria;
+		padding: 0 1rem;
+
+		h5 {
+			font-size: 1.2rem;
+			font-weight: 500;
+			letter-spacing: .25rem;
+		}
+
+		ul {
+			list-style: none;
+			margin-bottom: 0;
+
+			li a {
+				color: rgba(white, .6);
+
+				&:hover {
+					color: white;
+				}
+			}
+
+		}
+	}
+
+	@include responsive(md) {
+		div {
+			&:nth-child(2), 
+			&:nth-child(4) {
+				flex: 0 0 50%;
+				padding: 2rem 15% 0 15%;
+				order: 1;
+			}
+		}
+	}
+
+	@include responsive(sm) {
+		flex-basis: 90%;
+
+		div {
+			&:nth-child(2), 
+			&:nth-child(4) {
+				padding: 2rem 10% 0 10%;
+			}
+		}
+	}
+
+	@include responsive(xs) {
+		div {
+			li {
+				padding-bottom: .5rem;
+			}
+		}
+	}
+
+	@include responsive(500px) {
+		justify-content: space-between;
+
+		div {
+			padding: 0;
+
+			h5 {
+				font-size: 1rem;
+			}
+			
+			&:nth-child(2), 
+			&:nth-child(4) {
+				padding: 2rem 8% 0 8%;
+			}
+		}
+	}
+}
+/********************* Mapa sitio - Fin  *********************/
+/*************************************************************/

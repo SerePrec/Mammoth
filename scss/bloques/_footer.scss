@@ -3,7 +3,7 @@
 /********************* Flexbox anidados row ********************/
 footer {
 	.contenidoFooter {
-		@include flex($justificado: between);
+		@include flex($justificado: between, $wrap: wrap);
 		background-color: $tonoOscuro;
 		color: white;
 		height: auto;

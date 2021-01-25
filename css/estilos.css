@@ -18,7 +18,7 @@ main.noticias .eventos h3, .tarjeta .tarjeta__info .tarjeta__titulo, .tarjeta.ta
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
-  letter-spacing: .5rem;
+  letter-spacing: .25rem;
   width: 90%;
   height: auto;
   text-transform: uppercase;
@@ -442,7 +442,7 @@ main.contacto .sucursales {
 footer .contenidoFooter {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: #212121;
   color: white;
@@ -1347,6 +1347,59 @@ article.bodyGeometry {
 
 /************************* Redes - Fin *************************/
 /***************************************************************/
+/*************************************************************/
+/********************* Mapa sitio - Inicio  ******************/
+.mapaSitio {
+  flex-basis: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 2rem auto 1rem auto;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(179, 4, 4, 0.4);
+  border-bottom: 1px solid rgba(179, 4, 4, 0.4);
+  text-align: left; }
+  .mapaSitio div {
+    flex: 0 0 20%;
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    padding: 0 1rem; }
+    .mapaSitio div h5 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: .25rem; }
+    .mapaSitio div ul {
+      list-style: none;
+      margin-bottom: 0; }
+      .mapaSitio div ul li a {
+        color: rgba(255, 255, 255, 0.6); }
+        .mapaSitio div ul li a:hover {
+          color: white; }
+  @media only screen and (max-width: 991px) {
+    .mapaSitio div:nth-child(2), .mapaSitio div:nth-child(4) {
+      flex: 0 0 50%;
+      padding: 2rem 15% 0 15%;
+      order: 1; } }
+  @media only screen and (max-width: 767px) {
+    .mapaSitio {
+      flex-basis: 90%; }
+      .mapaSitio div:nth-child(2), .mapaSitio div:nth-child(4) {
+        padding: 2rem 10% 0 10%; } }
+  @media only screen and (max-width: 575px) {
+    .mapaSitio div li {
+      padding-bottom: .5rem; } }
+  @media only screen and (max-width: 500px) {
+    .mapaSitio {
+      justify-content: space-between; }
+      .mapaSitio div {
+        padding: 0; }
+        .mapaSitio div h5 {
+          font-size: 1rem; }
+        .mapaSitio div:nth-child(2), .mapaSitio div:nth-child(4) {
+          padding: 2rem 8% 0 8%; } }
+
+/********************* Mapa sitio - Fin  *********************/
+/*************************************************************/
 .botonMenu {
   position: fixed;
   bottom: 1rem;
