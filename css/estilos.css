@@ -17,11 +17,12 @@ main.noticias .eventos h3, .tarjeta .tarjeta__info .tarjeta__titulo, .tarjeta.ta
 .newsletter .newsletter__titulo, .social .social__titulo {
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
   font-size: 1.2rem;
+  font-weight: 500;
   letter-spacing: .5rem;
   width: 90%;
   height: auto;
-  font-weight: 500;
   text-transform: uppercase;
+  border-radius: .25rem;
   margin: 0 auto 1rem auto; }
 
 .formulario form fieldset input[type="submit"], .formulario form fieldset input[type="reset"], .newsletter form .input-group input[type="submit"] {
@@ -41,7 +42,7 @@ main.inicio .imagenSecundaria, #sorteo.imagenPremio {
   width: 100%;
   height: 52vw; }
 
-main.inicio .imagenSecundaria, main.noticias .competencias .dosCaras .cara.caraFrontal .card-header, main.noticias .competencias .dosCaras .cara.caraTrasera .card-body.ruta, main.noticias .competencias .dosCaras .cara.caraTrasera .card-body.mtb, main.noticias .competencias .dosCaras .cara.caraTrasera .card-body.bmx, .formulario, .tarjeta .tarjeta__imagen, .tarjeta .tarjeta__imagen--transformada, .productos ul li div, #sorteo.imagenPremio, #modalTerminos .modal-content .modal-body .imagenTerminos {
+main.inicio .imagenSecundaria, .formulario, .tarjeta .tarjeta__imagen, .tarjeta .tarjeta__imagen--transformada, .competencias .dosCaras .cara.caraFrontal .card-header, .competencias .dosCaras .cara.caraTrasera .card-body.ruta, .competencias .dosCaras .cara.caraTrasera .card-body.mtb, .competencias .dosCaras .cara.caraTrasera .card-body.bmx, .productos ul li div, #sorteo.imagenPremio, #modalTerminos .modal-content .modal-body .imagenTerminos {
   background-size: cover;
   background-repeat: no-repeat; }
 
@@ -232,120 +233,9 @@ main.noticias {
     main.noticias .eventos p span img, main.noticias .competencias p span img, main.noticias .app p span img {
       margin-right: .3rem;
       vertical-align: bottom; }
-  main.noticias .card, main.noticias .card-footer {
-    background-color: transparent;
-    border-top-color: transparent;
-    border-radius: unset; }
   main.noticias .eventos h3 {
     text-align: center;
     font-weight: 500; }
-  main.noticias .eventos .dosCaras .card-body {
-    border: 0.5rem solid #b30404;
-    position: relative;
-    background: #b30404;
-    background-image: linear-gradient(135deg, #b30404 0%, #545454 100%); }
-    main.noticias .eventos .dosCaras .card-body.cara {
-      height: 250px;
-      -webkit-transition: all 0.8s ease;
-      transition: all 0.8s ease;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      overflow: hidden; }
-      main.noticias .eventos .dosCaras .card-body.cara.caraTrasera {
-        -webkit-transform: rotateY(180deg);
-        background-image: linear-gradient(135deg, #545454 0%, #b30404 100%);
-        transform: rotateY(180deg); }
-        main.noticias .eventos .dosCaras .card-body.cara.caraTrasera .btn {
-          margin-top: 50px;
-          padding: 8px 16px;
-          font-size: 20px; }
-        main.noticias .eventos .dosCaras .card-body.cara.caraTrasera strong {
-          font-size: 1.5rem; }
-    main.noticias .eventos .dosCaras .card-body h4 {
-      font-size: 1.5rem;
-      font-weight: 700; }
-    main.noticias .eventos .dosCaras .card-body strong {
-      position: absolute;
-      bottom: 1rem;
-      right: 1rem; }
-  main.noticias .eventos .dosCaras .card-footer {
-    margin-top: 250px; }
-  main.noticias .eventos .dosCaras:hover .card-body.cara.caraFrontal {
-    -webkit-transform: rotateY(-180deg);
-    transform: rotateY(-180deg); }
-  main.noticias .eventos .dosCaras:hover .card-body.cara.caraTrasera {
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0); }
-  main.noticias .competencias .dosCaras .cara {
-    height: 470px;
-    -webkit-transition: all 0.8s ease;
-    transition: all 0.8s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    overflow: hidden; }
-    main.noticias .competencias .dosCaras .cara.caraFrontal .card-header {
-      height: 40%; }
-      main.noticias .competencias .dosCaras .cara.caraFrontal .card-header.ruta {
-        background-image: url("../img/competencias_tarjeta_ruta.jpg"); }
-      main.noticias .competencias .dosCaras .cara.caraFrontal .card-header.mtb {
-        background-image: url("../img/competencias_tarjeta_mtb.jpg"); }
-      main.noticias .competencias .dosCaras .cara.caraFrontal .card-header.bmx {
-        background-image: url("../img/competencias_tarjeta_bmx.jpg"); }
-    main.noticias .competencias .dosCaras .cara.caraFrontal .card-body {
-      height: 60%;
-      background-image: linear-gradient(135deg, #b30404 0%, #545454 100%);
-      color: white; }
-    main.noticias .competencias .dosCaras .cara strong {
-      position: absolute;
-      bottom: 1rem;
-      right: 1rem; }
-    main.noticias .competencias .dosCaras .cara.caraTrasera {
-      -webkit-transform: rotateY(180deg);
-      transform: rotateY(180deg); }
-      main.noticias .competencias .dosCaras .cara.caraTrasera .card-body {
-        height: 100%;
-        color: white;
-        font-weight: 900;
-        letter-spacing: 0.1rem;
-        text-shadow: 3px 3px black; }
-        main.noticias .competencias .dosCaras .cara.caraTrasera .card-body.ruta {
-          background-image: url("../img/competencias_tarjeta_ruta.jpg");
-          background-position: center; }
-        main.noticias .competencias .dosCaras .cara.caraTrasera .card-body.mtb {
-          background-image: url("../img/competencias_tarjeta_mtb.jpg");
-          background-position: center; }
-        main.noticias .competencias .dosCaras .cara.caraTrasera .card-body.bmx {
-          background-image: url("../img/competencias_tarjeta_bmx.jpg");
-          background-position: center; }
-        main.noticias .competencias .dosCaras .cara.caraTrasera .card-body h4 {
-          font-size: 1.5rem;
-          font-weight: 900; }
-        main.noticias .competencias .dosCaras .cara.caraTrasera .card-body .btn {
-          margin-top: 180px;
-          background-color: #b30404;
-          padding: 8px 16px;
-          font-size: 20px;
-          text-shadow: none; }
-          main.noticias .competencias .dosCaras .cara.caraTrasera .card-body .btn:hover {
-            background-color: #810303; }
-        main.noticias .competencias .dosCaras .cara.caraTrasera .card-body strong {
-          font-size: 1.5rem; }
-  main.noticias .competencias .dosCaras .card-footer {
-    margin-top: 470px; }
-  main.noticias .competencias .dosCaras:hover .cara.caraFrontal {
-    -webkit-transform: rotateY(-180deg);
-    transform: rotateY(-180deg); }
-  main.noticias .competencias .dosCaras:hover .cara.caraTrasera {
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0); }
   main.noticias .app img {
     width: 100%;
     object-fit: cover; }
@@ -385,21 +275,7 @@ main.noticias {
     main.noticias h2 {
       font-size: 2rem; }
     main.noticias h4 {
-      font-size: 1.2rem; }
-    main.noticias .eventos .dosCaras .card-body.cara {
-      height: 210px; }
-      main.noticias .eventos .dosCaras .card-body.cara.caraTrasera .btn {
-        margin-top: 40px;
-        font-size: 16px; }
-      main.noticias .eventos .dosCaras .card-body.cara .card-footer {
-        margin-top: 210px; }
-    main.noticias .competencias .dosCaras .cara {
-      height: 400px; }
-      main.noticias .competencias .dosCaras .cara.caraTrasera .card-body .btn {
-        margin-top: 130px;
-        font-size: 16px; }
-    main.noticias .competencias .dosCaras .card-footer {
-      margin-top: 400px; } }
+      font-size: 1.2rem; } }
   @media only screen and (max-width: 500px) {
     main.noticias aside div.dias2 {
       display: block; }
@@ -428,21 +304,51 @@ main.contacto .sucursales {
   main.contacto .sucursales .marDelPlata {
     grid-area: marDelPlata; }
   main.contacto .sucursales .mapa {
-    grid-area: mapa; }
+    grid-area: mapa;
+    position: relative; }
+    main.contacto .sucursales .mapa iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    main.contacto .sucursales .mapa #mapa1 {
+      visibility: hidden; }
+      main.contacto .sucursales .mapa #mapa1.activo {
+        visibility: visible; }
+    main.contacto .sucursales .mapa #mapa2 {
+      visibility: hidden; }
+      main.contacto .sucursales .mapa #mapa2.activo {
+        visibility: visible; }
+    main.contacto .sucursales .mapa #mapa3 {
+      visibility: hidden; }
+      main.contacto .sucursales .mapa #mapa3.activo {
+        visibility: visible; }
   main.contacto .sucursales .localizacion {
     grid-area: localizacion;
     align-self: center;
     background-color: transparent; }
-    main.contacto .sucursales .localizacion * {
-      text-align: left;
-      padding: 0.3rem 0; }
-    main.contacto .sucursales .localizacion p span {
-      display: inline-block;
-      margin-right: .5rem; }
-      main.contacto .sucursales .localizacion p span img {
-        width: 1rem;
-        margin-right: .3rem;
-        vertical-align: bottom; }
+    main.contacto .sucursales .localizacion > div {
+      cursor: pointer;
+      text-align: left; }
+      main.contacto .sucursales .localizacion > div * {
+        padding: 0.3rem 0; }
+      main.contacto .sucursales .localizacion > div p span {
+        display: inline-block;
+        margin-right: .5rem; }
+        main.contacto .sucursales .localizacion > div p span img {
+          width: 1rem;
+          margin-right: .3rem;
+          vertical-align: bottom; }
+      main.contacto .sucursales .localizacion > div h4 {
+        background-color: #545454;
+        color: white;
+        padding: .5rem 1rem;
+        border-radius: .4rem; }
+      main.contacto .sucursales .localizacion > div:hover {
+        color: white; }
+        main.contacto .sucursales .localizacion > div:hover h4 {
+          background-color: #b30404; }
   main.contacto .sucursales div {
     text-align: center;
     position: relative; }
@@ -458,9 +364,6 @@ main.contacto .sucursales {
     transform: translate(-50%, -50%); }
   main.contacto .sucursales img {
     width: 100%; }
-  main.contacto .sucursales iframe {
-    width: 100%;
-    height: 100%; }
   @media only screen and (max-width: 1220px) {
     main.contacto .sucursales .sucursales__titulo {
       font-size: 1rem; } }
@@ -473,14 +376,15 @@ main.contacto .sucursales {
       main.contacto .sucursales .sucursales__titulo {
         font-size: 2rem;
         padding: 1rem; }
-      main.contacto .sucursales .localizacion p span {
+      main.contacto .sucursales .localizacion > div p span {
         width: 100%; } }
   @media only screen and (max-width: 500px) {
     main.contacto .sucursales {
       grid-template-rows: auto 1fr 1.5fr; }
-      main.contacto .sucursales .localizacion h4 {
-        font-size: 1.1rem; }
-      main.contacto .sucursales .localizacion p {
+      main.contacto .sucursales .localizacion > div h4 {
+        padding: .5rem;
+        font-size: .95rem; }
+      main.contacto .sucursales .localizacion > div p {
         font-size: .8rem; } }
 
 /**************** Main de contacto.html - Fin *****************/
@@ -581,15 +485,15 @@ nav.navbar {
       background-image: url("../img/iconred.png");
       background-size: cover; }
   nav.navbar .navbar-nav .nav-item .nav-link {
-    border-left: 4px solid #b30404;
+    border-left: 3px solid #b30404;
     margin: 0 1.25vw 0 0;
     padding: 0 0.5rem;
     transition: all 0.5s; }
     nav.navbar .navbar-nav .nav-item .nav-link.activo {
       color: white;
       font-style: italic;
-      border-radius: .625rem 0 0 0;
-      border-width: 10px; }
+      border-radius: .4rem 0 0 0;
+      border-width: 7px; }
   nav.navbar .navbar-nav .nav-item .dropdown-menu {
     background-color: rgba(84, 84, 84, 0.6); }
     nav.navbar .navbar-nav .nav-item .dropdown-menu a {
@@ -616,10 +520,10 @@ nav.navbar {
   @media only screen and (max-width: 767px) {
     nav.navbar .navbar-nav .nav-item:after {
       background-image: linear-gradient(90deg, #b30404, #b30404);
-      width: 4px;
+      width: 3px;
       transition: all 0.25s; }
     nav.navbar .navbar-nav .nav-item.activo:after {
-      width: 10px; }
+      width: 7px; }
     nav.navbar .navbar-nav .nav-item:hover:after {
       background-image: linear-gradient(90deg, #b30404, rgba(179, 4, 4, 0));
       width: 15rem; } }
@@ -910,6 +814,150 @@ nav.navbar {
 
 /****************** Tarjetas Verticales - Fin ******************/
 /***************************************************************/
+/*************************************************************/
+/*************** Tarjetas giratorias - Inicio ****************/
+main.noticias .card, main.noticias .card-footer {
+  background-color: transparent;
+  border-top-color: transparent;
+  border-radius: unset; }
+
+.eventos .dosCaras .card-body {
+  border: 0.5rem solid #b30404;
+  position: relative;
+  background: #b30404;
+  background-image: linear-gradient(135deg, #b30404 0%, #545454 100%); }
+  .eventos .dosCaras .card-body.cara {
+    height: 250px;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden; }
+    .eventos .dosCaras .card-body.cara.caraTrasera {
+      -webkit-transform: rotateY(180deg);
+      background-image: linear-gradient(135deg, #545454 0%, #b30404 100%);
+      transform: rotateY(180deg); }
+      .eventos .dosCaras .card-body.cara.caraTrasera .btn {
+        margin-top: 50px;
+        padding: 8px 16px;
+        font-size: 20px; }
+      .eventos .dosCaras .card-body.cara.caraTrasera strong {
+        font-size: 1.5rem; }
+  .eventos .dosCaras .card-body h4 {
+    font-size: 1.5rem;
+    font-weight: 700; }
+  .eventos .dosCaras .card-body strong {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem; }
+
+.eventos .dosCaras .card-footer {
+  margin-top: 250px; }
+
+.eventos .dosCaras:hover .card-body.cara.caraFrontal {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg); }
+
+.eventos .dosCaras:hover .card-body.cara.caraTrasera {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0); }
+
+@media only screen and (max-width: 575px) {
+  .eventos .dosCaras .card-body.cara {
+    height: 210px; }
+    .eventos .dosCaras .card-body.cara.caraTrasera .btn {
+      margin-top: 40px;
+      font-size: 16px; }
+    .eventos .dosCaras .card-body.cara .card-footer {
+      margin-top: 210px; } }
+
+.competencias .dosCaras .cara {
+  height: 470px;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden; }
+  .competencias .dosCaras .cara.caraFrontal .card-header {
+    height: 40%; }
+    .competencias .dosCaras .cara.caraFrontal .card-header.ruta {
+      background-image: url("../img/competencias_tarjeta_ruta.jpg"); }
+    .competencias .dosCaras .cara.caraFrontal .card-header.mtb {
+      background-image: url("../img/competencias_tarjeta_mtb.jpg"); }
+    .competencias .dosCaras .cara.caraFrontal .card-header.bmx {
+      background-image: url("../img/competencias_tarjeta_bmx.jpg"); }
+  .competencias .dosCaras .cara.caraFrontal .card-body {
+    height: 60%;
+    background-image: linear-gradient(135deg, #b30404 0%, #545454 100%);
+    color: white; }
+  .competencias .dosCaras .cara strong {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem; }
+  .competencias .dosCaras .cara.caraTrasera {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+    .competencias .dosCaras .cara.caraTrasera .card-body {
+      height: 100%;
+      color: white;
+      font-weight: 900;
+      letter-spacing: 0.1rem;
+      text-shadow: 3px 3px black; }
+      .competencias .dosCaras .cara.caraTrasera .card-body.ruta {
+        background-image: url("../img/competencias_tarjeta_ruta.jpg");
+        background-position: center; }
+      .competencias .dosCaras .cara.caraTrasera .card-body.mtb {
+        background-image: url("../img/competencias_tarjeta_mtb.jpg");
+        background-position: center; }
+      .competencias .dosCaras .cara.caraTrasera .card-body.bmx {
+        background-image: url("../img/competencias_tarjeta_bmx.jpg");
+        background-position: center; }
+      .competencias .dosCaras .cara.caraTrasera .card-body h4 {
+        font-size: 1.5rem;
+        font-weight: 900; }
+      .competencias .dosCaras .cara.caraTrasera .card-body .btn {
+        margin-top: 180px;
+        background-color: #b30404;
+        border-color: #b30404;
+        padding: 8px 16px;
+        font-size: 20px;
+        text-shadow: none; }
+        .competencias .dosCaras .cara.caraTrasera .card-body .btn:hover {
+          background-color: #810303;
+          border-color: #810303; }
+      .competencias .dosCaras .cara.caraTrasera .card-body strong {
+        font-size: 1.5rem; }
+
+.competencias .dosCaras .card-footer {
+  margin-top: 470px; }
+
+.competencias .dosCaras:hover .cara.caraFrontal {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg); }
+
+.competencias .dosCaras:hover .cara.caraTrasera {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0); }
+
+@media only screen and (max-width: 575px) {
+  .competencias .dosCaras .cara {
+    height: 400px; }
+    .competencias .dosCaras .cara.caraTrasera .card-body .btn {
+      margin-top: 130px;
+      font-size: 16px; }
+  .competencias .dosCaras .card-footer {
+    margin-top: 400px; } }
+
+/**************** Tarjetas giratorias - Fin ******************/
+/*************************************************************/
 /***************************************************************/
 /***************** Acordeon Productos - Inicio  ****************/
 .accordion {

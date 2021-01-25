@@ -16,11 +16,13 @@ main.contacto {
 		}
 		grid-gap: 1.5rem;
 		padding: 0 5vw 5vh 5vw;
+	
 		h2 {
 			grid-area: tituloSuc;
 			text-align: center;
 			padding-top: 1.5rem;
 		}
+		
 		.palermo {
 			grid-area: palermo;
 		}
@@ -32,31 +34,85 @@ main.contacto {
 		.marDelPlata {
 			grid-area: marDelPlata;
 		}
+		
 		.mapa {
 			grid-area: mapa;
+			position: relative;
+			iframe {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top:0;
+				left: 0;
+			}
+			
+			#mapa1 {
+				visibility: hidden;
+				&.activo {
+					visibility: visible;
+				}
+			}
+			
+			#mapa2 {
+				visibility: hidden;
+				&.activo {
+					visibility: visible;
+				}
+			}
+			
+			#mapa3 {
+				visibility: hidden;
+				&.activo {
+					visibility: visible;
+				}
+			}
 		}
+		
 		.localizacion {
 			grid-area: localizacion;
 			align-self: center; //este se alinea al centro a diferencia del resto
 			background-color: transparent;
-			* {
+
+			& > div {
+				cursor: pointer;
 				text-align: left;
-				padding: 0.3rem 0;
-			}
-			p span {
-				display: inline-block;
-				margin-right: .5rem;
-				img {
-					width: 1rem;
-					margin-right: .3rem;
-					vertical-align: bottom;
+
+				* {
+					padding: 0.3rem 0;
+				}
+				
+				p span {
+					display: inline-block;
+					margin-right: .5rem;
+
+					img {
+						width: 1rem;
+						margin-right: .3rem;
+						vertical-align: bottom;
+					}
+				}
+
+				h4 {
+					background-color: #545454;
+					color: white;
+					padding: .5rem 1rem;
+					border-radius: .4rem;
+				}
+
+				&:hover {
+					color: white;
+					h4 {
+						background-color: #b30404;
+					}
 				}
 			}
 		}
+		
 		div {
 			text-align: center;
 			position: relative;
 		}
+		
 		.sucursales__titulo {
 			background-color: rgba($tonoOscuro, .75);
 			font-weight: 500;
@@ -68,45 +124,55 @@ main.contacto {
 			left: 50%;
 			transform: translate(-50%,-50%);
 		}
+		
 		img {
 			width: 100%;
 		}
-		iframe {
-			width: 100%;
-			height: 100%;
-		}
+		
 		@include responsive(lg) {
 			.sucursales__titulo {
 				font-size: 1rem;
 			}
 		}
+		
 		@include responsive(md) {
 			grid-template-columns: 2fr 1fr;
 			grid-template-areas: 
 			"tituloSuc			tituloSuc"
 			"carouselSucursales	carouselSucursales"
 			"mapa				localizacion";
-			&>.palermo, &>.laPlata, &>.marDelPlata {
+			
+			& > .palermo, & > .laPlata, & > .marDelPlata {
 				display: none;
 			}
+			
 			.sucursales__titulo {
 				font-size: 2rem;
 				padding: 1rem; 
 			}
+			
 			.localizacion {
-				p span {
-					width: 100%;
+				& > div {
+					p span {
+						width: 100%;
+					}
 				}
 			}
 		}
+		
 		@include responsive(500px) {
 			grid-template-rows: auto 1fr 1.5fr;
+			
 			.localizacion {
-				h4 {
-					font-size: 1.1rem;
-				}
-				p {
-					font-size: .8rem;
+				& > div {
+					h4 {
+						padding: .5rem; 
+						font-size: .95rem;
+					}
+
+					p {
+						font-size: .8rem;
+					}
 				}
 			}
 		}
