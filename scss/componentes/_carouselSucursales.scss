@@ -4,7 +4,7 @@
 	display: none;
 	@include responsive(md) {
 		grid-area: carouselSucursales;
-		display: initial;
+		display: block;
 		width: 75%;
 		margin: auto;
 		margin-bottom: 2rem;

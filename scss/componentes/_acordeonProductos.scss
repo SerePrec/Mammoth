@@ -1,7 +1,7 @@
 /***************************************************************/
 /***************** Acordeon Productos - Inicio  ****************/
-.accordion {
-	width: 90vw;
+.productos__accordion {
+	width: 89.95vw; //Algo menos de 90 por redondeos distintos anchos provocan linea blanca
 	margin: auto;
 	.card-header {
 		background: {

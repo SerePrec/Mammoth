@@ -390,7 +390,8 @@
                     <a href="#"><img src="img/youtube.svg" alt="YouTube"></a>
                 </section>
                 <!---------- Seccion Sitemap -------------->
-                <section class="mapaSitio">
+                <!---------- Sitemap en listas ------------>
+                <section class="mapaSitioLista">
                     <div>
                         <h5>INICIO</h5>
                         <ul>
@@ -415,7 +416,6 @@
                             <li><a href="servicios.html">Reparaciones</a></li>
                             <li><a href="servicios.html#linkBodyGeometry">Body Geometry</a></li>
                             <li><a href="servicios.html#linkCapacitacion">Capacitación</a></li>
-
                         </ul>
                     </div>
                     <div>
@@ -427,7 +427,6 @@
                             <li><a href="noticias.html#linkApp">App</a></li>
                             <li><a href="noticias.html#linkSorteo">Sorteo Anual</a></li>
                         </ul>
-
                     </div>
                     <div>
                         <h5>CONTACTO</h5>
@@ -435,6 +434,93 @@
                             <li><a href="contacto.html">Formulario</a></li>
                             <li><a href="contacto.html#linkSucursales">Sucursales</a></li>
                         </ul>
+                    </div>
+                </section>
+                <!---------- Sitemap acordeón ------------>
+                <section class="mapaSitioAccordion">
+                    <div class="accordion mapaSitio__accordion" id="accordionSitemap">
+                        <div class="card border-0">
+                            <div class="card-header border-0" id="tituloInicio" data-toggle="collapse" data-target="#collapseInicio" aria-expanded="true" aria-controls="collapseInicio" onclick="document.getElementById('tituloInicio').classList.toggle('desplegado');">
+                                <h5 class="mb-0">INICIO</h5>
+                                <i class="fa fa-chevron-down"></i>
+                                <i class="fa fa-chevron-up"></i>
+                            </div>
+                            <div id="collapseInicio" class="collapse" aria-labelledby="tituloUno">
+                                <div class="card-body pt-0">
+                                    <ul>
+                                        <li><a href="index.html#linkDestacados">Destacados</a></li>
+                                        <li><a href="index.html#linkDifusion">Difusión</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border-0">
+                            <div class="card-header border-0" id="tituloProductos" data-toggle="collapse" data-target="#collapseProductos" aria-expanded="false" aria-controls="collapseProductos" onclick="document.getElementById('tituloProductos').classList.toggle('desplegado');">
+                                <h5 class="mb-0">PRODUCTOS</h5>
+                                <i class="fa fa-chevron-down"></i>
+                                <i class="fa fa-chevron-up"></i>
+                            </div>
+                            <div id="collapseProductos" class="collapse" aria-labelledby="tituloProductos">
+                                <div class="card-body pt-0">
+                                    <ul>
+                                        <li><a href="productos.html">Bicicletas</a></li>
+                                        <li><a href="productos.html#linkComp">Componentes</a></li>
+                                        <li><a href="productos.html#linkAcc">Accesorios</a></li>
+                                        <li><a href="productos.html#linkEquip">Equipamiento</a></li>
+                                        <li><a href="productos.html#linkIndu">Indumentaria</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border-0">
+                            <div class="card-header border-0" id="tituloServicios" data-toggle="collapse" data-target="#collapseServicios" aria-expanded="false" aria-controls="collapseServicios" onclick="document.getElementById('tituloServicios').classList.toggle('desplegado');">
+                                <h5 class="mb-0">SERVICIOS</h5>
+                                <i class="fa fa-chevron-down"></i>
+                                <i class="fa fa-chevron-up"></i>
+                            </div>
+                            <div id="collapseServicios" class="collapse" aria-labelledby="tituloServicios">
+                                <div class="card-body pt-0">
+                                    <ul>
+                                        <li><a href="servicios.html">Reparaciones</a></li>
+                                        <li><a href="servicios.html#linkBodyGeometry">Body Geometry</a></li>
+                                        <li><a href="servicios.html#linkCapacitacion">Capacitación</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border-0">
+                            <div class="card-header border-0" id="tituloNoticias" data-toggle="collapse" data-target="#collapseNoticias" aria-expanded="true" aria-controls="collapseNoticias" onclick="document.getElementById('tituloNoticias').classList.toggle('desplegado');">
+                                <h5 class="mb-0">NOTICIAS</h5>
+                                <i class="fa fa-chevron-down"></i>
+                                <i class="fa fa-chevron-up"></i>
+                            </div>
+                            <div id="collapseNoticias" class="collapse" aria-labelledby="tituloNoticias">
+                                <div class="card-body pt-0">
+                                    <ul>
+                                        <li><a href="noticias.html">Videos</a></li>
+                                        <li><a href="noticias.html#linkEventos">Eventos</a></li>
+                                        <li><a href="noticias.html#linkCompe">Competencias</a></li>
+                                        <li><a href="noticias.html#linkApp">App</a></li>
+                                        <li><a href="noticias.html#linkSorteo">Sorteo Anual</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border-0">
+                            <div class="card-header border-0" id="tituloContacto" data-toggle="collapse" data-target="#collapseContacto" aria-expanded="true" aria-controls="collapseContacto" onclick="document.getElementById('tituloContacto').classList.toggle('desplegado');">
+                                <h5 class="mb-0">CONTACTO</h5>
+                                <i class="fa fa-chevron-down"></i>
+                                <i class="fa fa-chevron-up"></i>
+                            </div>
+                            <div id="collapseContacto" class="collapse" aria-labelledby="tituloContacto">
+                                <div class="card-body pt-0">
+                                    <ul>
+                                        <li><a href="contacto.html">Formulario</a></li>
+                                        <li><a href="contacto.html#linkSucursales">Sucursales</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
