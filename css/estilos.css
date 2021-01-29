@@ -555,7 +555,7 @@ nav.navbar {
     height: .6rem;
     border-radius: 50%;
     margin: 0 .5rem;
-    opacity: .6;
+    opacity: .5;
     background-color: transparent;
     border: 0.3rem solid white; }
     #carouselPrincipal ol.carousel-indicators li.active {
@@ -585,6 +585,14 @@ nav.navbar {
 @media only screen and (max-width: 1399px) {
   #carouselPrincipal ol.carousel-indicators {
     margin-bottom: 2vw; } }
+
+@media only screen and (max-width: 991px) {
+  #carouselPrincipal ol.carousel-indicators li {
+    width: .4rem;
+    height: .4rem; }
+  #carouselPrincipal .carousel-control-next-icon, #carouselPrincipal .carousel-control-prev-icon {
+    width: 2rem;
+    height: 2rem; } }
 
 @media only screen and (max-width: 575px) {
   #carouselPrincipal img {
@@ -985,12 +993,14 @@ main.noticias .card, main.noticias .card-footer {
       background-color: rgba(179, 4, 4, 0.3); }
       .productos__accordion .card-header h2 .btn {
         color: white;
+        padding: 1rem 3rem;
         font-size: 4rem;
         font-weight: 700;
-        font-style: italic;
-        padding: 1rem 3rem; }
+        font-style: italic; }
+        .productos__accordion .card-header h2 .btn:hover, .productos__accordion .card-header h2 .btn.focus, .productos__accordion .card-header h2 .btn:focus {
+          background-color: #b30404; }
         .productos__accordion .card-header h2 .btn.focus, .productos__accordion .card-header h2 .btn:focus {
-          box-shadow: 0 0 0 0.2rem rgba(179, 4, 4, 0.5); }
+          box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5); }
   .productos__accordion .card:nth-child(1) .card-header {
     background-position: 0 0; }
   .productos__accordion .card:nth-child(2) .card-header {
@@ -1001,6 +1011,8 @@ main.noticias .card, main.noticias .card-footer {
     background-position: 0 -96vw; }
   .productos__accordion .card:nth-child(5) .card-header {
     background-position: 0 -128vw; }
+  .productos__accordion .card-body {
+    border-bottom: 0.5rem solid #b30404; }
   @media only screen and (max-width: 1220px) {
     .productos__accordion .card-header h2 {
       width: 35rem; }
@@ -1074,8 +1086,7 @@ main.noticias .card, main.noticias .card-footer {
   list-style-type: none;
   display: grid;
   align-items: stretch;
-  margin: 0;
-  border-bottom: 0.5rem solid #b30404; }
+  margin: 0; }
   .productos ul li {
     overflow: hidden;
     display: flex;

@@ -5,7 +5,6 @@
 	display: grid;
 	align-items: stretch;
 	margin: 0;
-	@include borde(abajo, .5rem, $rojoMarca);
 	li {
 		overflow: hidden;
 		display: flex;

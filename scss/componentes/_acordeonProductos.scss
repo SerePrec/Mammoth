@@ -16,14 +16,19 @@
 			background-color: rgba($rojoMarca, .3);
 			.btn {
 				color: white;
+				padding: 1rem 3rem;
 				font: {
 					size: 4rem;
 					weight: 700;
 					style: italic;
 				}
-				padding: 1rem 3rem;
+				
+				&:hover, &.focus, &:focus {
+					background-color: rgba($rojoMarca, 1);
+				}
+
 				&.focus, &:focus {
-					@include sombraCaja(rgba($rojoMarca, .5), 0, 0, 0, 0.2rem);
+					@include sombraCaja(rgba(white, .5), 0, 0, 0, 0.2rem);
 				}
 			}
 		}
@@ -47,6 +52,11 @@
 	.card:nth-child(5) .card-header {
 		background-position: 0 -128vw;
 	}
+	
+	.card-body {
+			@include borde(abajo, .5rem, $rojoMarca);
+	}
+	
 	@include responsive(lg) {
 		.card-header {
 			h2 {

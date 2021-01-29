@@ -8,7 +8,7 @@
 			height: .6rem;
 			border-radius: 50%;
 			margin: 0 .5rem;
-			opacity: .6;
+			opacity: .5;
 			background-color: transparent;
 			@include borde(todo, .3rem, white);
 			&.active {
@@ -41,6 +41,18 @@
 		ol.carousel-indicators {
 			margin-bottom: 2vw;
 		}	
+	}
+	@include responsive(md) {
+		ol.carousel-indicators {
+			li {
+				width: .4rem;
+				height: .4rem;
+			}
+		}
+		.carousel-control-next-icon, .carousel-control-prev-icon {
+			width: 2rem;
+			height: 2rem;
+		}
 	}
 	@include responsive(xs) {
 		img {
