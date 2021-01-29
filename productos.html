@@ -85,7 +85,7 @@
                 <div id="bicicletas" class="card border-0">
                     <div class="card-header m-0 p-0 border-0 d-flex" id="tituloBicicletas">
                         <h2 class="m-0">
-                            <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseBicicletas" aria-expanded="true" aria-controls="collapseBicicletas">BICICLETAS</button>
+                            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapseBicicletas" aria-expanded="true" aria-controls="collapseBicicletas" onclick="document.getElementById('tituloBicicletas').classList.add('elegido');document.getElementById('tituloComponentes').classList.remove('elegido'); document.getElementById('tituloAccesorios').classList.remove('elegido'); document.getElementById('tituloEquipamiento').classList.remove('elegido'); document.getElementById('tituloIndumentaria').classList.remove('elegido');">BICICLETAS</button>
                         </h2>
                         <a id="linkComp"></a>
                     </div>
@@ -105,7 +105,7 @@
                 <div id="componentes"class="card border-0">
                     <div class="card-header m-0 p-0 border-0 d-flex justify-content-end" id="tituloComponentes">
                         <h2 class="mb-0">
-                            <button class="btn btn-block text-right collapsed" type="button" data-toggle="collapse" data-target="#collapseComponentes" aria-expanded="false" aria-controls="collapseComponentes">COMPONENTES</button>
+                            <button class="btn btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseComponentes" aria-expanded="false" aria-controls="collapseComponentes" onclick="document.getElementById('tituloBicicletas').classList.remove('elegido');document.getElementById('tituloComponentes').classList.add('elegido'); document.getElementById('tituloAccesorios').classList.remove('elegido'); document.getElementById('tituloEquipamiento').classList.remove('elegido'); document.getElementById('tituloIndumentaria').classList.remove('elegido');">COMPONENTES</button>
                         </h2>
                         <a id="linkAcc"></a>
                     </div>
@@ -126,7 +126,7 @@
                 <div id="accesorios" class="card border-0">
                     <div class="card-header m-0 p-0 border-0 d-flex" id="tituloAccesorios">
                         <h2 class="mb-0">
-                            <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseAccesorios" aria-expanded="false" aria-controls="collapseAccesorios">ACCESORIOS</button>
+                            <button class="btn btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseAccesorios" aria-expanded="false" aria-controls="collapseAccesorios" onclick="document.getElementById('tituloBicicletas').classList.remove('elegido');document.getElementById('tituloComponentes').classList.remove('elegido'); document.getElementById('tituloAccesorios').classList.add('elegido'); document.getElementById('tituloEquipamiento').classList.remove('elegido'); document.getElementById('tituloIndumentaria').classList.remove('elegido');">ACCESORIOS</button>
                         </h2>
                         <a id="linkEquip"></a>
                     </div>
@@ -146,7 +146,7 @@
                 <div id="equipamiento" class="card border-0">
                     <div class="card-header m-0 p-0 border-0 d-flex justify-content-end" id="tituloEquipamiento">
                         <h2 class="mb-0">
-                            <button class="btn btn-block text-right collapsed" type="button" data-toggle="collapse" data-target="#collapseEquipamiento" aria-expanded="false" aria-controls="collapseEquipamiento">EQUIPAMIENTO</button>
+                            <button class="btn btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseEquipamiento" aria-expanded="false" aria-controls="collapseEquipamiento" onclick="document.getElementById('tituloBicicletas').classList.remove('elegido');document.getElementById('tituloComponentes').classList.remove('elegido'); document.getElementById('tituloAccesorios').classList.remove('elegido'); document.getElementById('tituloEquipamiento').classList.add('elegido'); document.getElementById('tituloIndumentaria').classList.remove('elegido');">EQUIPAMIENTO</button>
                         </h2>
                         <a id="linkIndu"></a>
                     </div>
@@ -165,7 +165,7 @@
                 <div id="indumentaria" class="card border-0">
                     <div class="card-header m-0 p-0 border-0 d-flex" id="tituloIndumentaria">
                         <h2 class="mb-0">
-                            <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseIndumentaria" aria-expanded="false" aria-controls="collapseIndumentaria">INDUMENTARIA</button>
+                            <button class="btn btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseIndumentaria" aria-expanded="false" aria-controls="collapseIndumentaria" onclick="document.getElementById('tituloBicicletas').classList.remove('elegido');document.getElementById('tituloComponentes').classList.remove('elegido'); document.getElementById('tituloAccesorios').classList.remove('elegido'); document.getElementById('tituloEquipamiento').classList.remove('elegido'); document.getElementById('tituloIndumentaria').classList.add('elegido');">INDUMENTARIA</button>
                         </h2>
                     </div>
                     <div id="collapseIndumentaria" class="collapse" aria-labelledby="tituloIndumentaria" data-parent="#accordionProductos">

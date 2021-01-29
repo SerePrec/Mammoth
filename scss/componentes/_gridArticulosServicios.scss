@@ -164,6 +164,32 @@ article {
 			}
 		} 
 	}
+
+	@include responsive(xs) {
+		&.reparaciones,
+		&.cursos,
+		&.bodyGeometry { 
+			.servicios__imagen {
+				padding-bottom: .5rem;
+				.servicios__link {
+					max-height: .5rem;
+					@include borde(arriba, .5rem, $rojoMarca);
+					
+					.btn {
+						@include sombraCaja(rgba(white, 0.25), $x:0, $y:0, $enfoque: 5px, $expansion: 3px);
+					} 
+				}
+			}
+		}
+		
+		&:hover {
+			.servicios__imagen {
+				.servicios__link {
+					max-height: 100%;
+				}
+			}
+		} 
+	}
 }
 /*************** Grid articulos servicios - Fin ****************/
 /***************************************************************/

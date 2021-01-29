@@ -989,18 +989,32 @@ main.noticias .card, main.noticias .card-footer {
     height: 32vw;
     align-items: center; }
     .productos__accordion .card-header h2 {
-      width: 40rem;
-      background-color: rgba(179, 4, 4, 0.3); }
+      width: 100%; }
       .productos__accordion .card-header h2 .btn {
+        background-color: rgba(179, 4, 4, 0.3);
+        width: 40rem;
         color: white;
+        text-align: center;
         padding: 1rem 3rem;
+        transition: all 1s;
         font-size: 4rem;
         font-weight: 700;
         font-style: italic; }
-        .productos__accordion .card-header h2 .btn:hover, .productos__accordion .card-header h2 .btn.focus, .productos__accordion .card-header h2 .btn:focus {
+        .productos__accordion .card-header h2 .btn:hover {
           background-color: #b30404; }
-        .productos__accordion .card-header h2 .btn.focus, .productos__accordion .card-header h2 .btn:focus {
-          box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5); }
+        .productos__accordion .card-header h2 .btn:focus {
+          box-shadow: none; }
+    .productos__accordion .card-header.elegido h2 .btn:not(.collapsed) {
+      box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+      background-color: #b30404;
+      width: 100%; }
+  .productos__accordion .card:nth-child(1) .card-header h2 .btn,
+  .productos__accordion .card:nth-child(3) .card-header h2 .btn,
+  .productos__accordion .card:nth-child(5) .card-header h2 .btn {
+    margin: 0 auto 0 0; }
+  .productos__accordion .card:nth-child(2) .card-header h2 .btn,
+  .productos__accordion .card:nth-child(4) .card-header h2 .btn {
+    margin: 0 0 0 auto; }
   .productos__accordion .card:nth-child(1) .card-header {
     background-position: 0 0; }
   .productos__accordion .card:nth-child(2) .card-header {
@@ -1014,22 +1028,19 @@ main.noticias .card, main.noticias .card-footer {
   .productos__accordion .card-body {
     border-bottom: 0.5rem solid #b30404; }
   @media only screen and (max-width: 1220px) {
-    .productos__accordion .card-header h2 {
-      width: 35rem; }
-      .productos__accordion .card-header h2 .btn {
-        font-size: 3rem; } }
+    .productos__accordion .card-header h2 .btn {
+      width: 35rem;
+      font-size: 3rem; } }
   @media only screen and (max-width: 991px) {
-    .productos__accordion .card-header h2 {
-      width: 28rem; }
-      .productos__accordion .card-header h2 .btn {
-        font-size: 2.5rem;
-        padding: 1rem 2rem; } }
+    .productos__accordion .card-header h2 .btn {
+      width: 28rem;
+      font-size: 2.5rem;
+      padding: 1rem 2rem; } }
   @media only screen and (max-width: 500px) {
-    .productos__accordion .card-header h2 {
-      width: 18rem; }
-      .productos__accordion .card-header h2 .btn {
-        font-size: 1.6rem;
-        padding: .8rem 1rem; } }
+    .productos__accordion .card-header h2 .btn {
+      width: 18rem;
+      font-size: 1.6rem;
+      padding: .8rem 1rem; } }
 
 /****************** Acordeon Productos - Fin  ******************/
 /***************************************************************/
@@ -1365,6 +1376,17 @@ article:hover .servicios__imagen .servicios__link {
           margin: 5vw 0; }
   article.bodyGeometry .servicios__imagen {
     order: 0; }
+  article:hover .servicios__imagen .servicios__link {
+    max-height: 100%; } }
+
+@media only screen and (max-width: 575px) {
+  article.reparaciones .servicios__imagen, article.cursos .servicios__imagen, article.bodyGeometry .servicios__imagen {
+    padding-bottom: .5rem; }
+    article.reparaciones .servicios__imagen .servicios__link, article.cursos .servicios__imagen .servicios__link, article.bodyGeometry .servicios__imagen .servicios__link {
+      max-height: .5rem;
+      border-top: 0.5rem solid #b30404; }
+      article.reparaciones .servicios__imagen .servicios__link .btn, article.cursos .servicios__imagen .servicios__link .btn, article.bodyGeometry .servicios__imagen .servicios__link .btn {
+        box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.25); }
   article:hover .servicios__imagen .servicios__link {
     max-height: 100%; } }
 
