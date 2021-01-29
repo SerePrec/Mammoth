@@ -13,6 +13,9 @@ main.noticias {
 //Tarjetas Eventos
 .eventos {
 	.dosCaras {
+		-webkit-perspective: 150rem;
+		perspective: 150rem;
+		-moz-perspective: 150rem;
 		.card-body {
 			@include borde(todo, .5rem, $rojoMarca);
 			position: relative;
@@ -39,7 +42,7 @@ main.noticias {
 						padding: 8px 16px;
 						font-size: 20px;
 					}
-					strong {
+					b {
 						font-size: 1.5rem;
 					}
 				}
@@ -50,7 +53,7 @@ main.noticias {
 				font-weight: 700;
 			}
 
-			strong {
+			b {
 				position: absolute;
 				bottom: 1rem;
 				right: 1rem;
@@ -99,6 +102,9 @@ main.noticias {
 //Tarjetas Competencias 
 .competencias {	
 	.dosCaras {
+		-webkit-perspective: 150rem;
+		perspective: 150rem;
+		-moz-perspective: 150rem;
 		.cara {
 			height: 470px;
 			-webkit-transition: all 0.8s ease;
@@ -132,7 +138,7 @@ main.noticias {
 					color: white;
 				}
 			}
-			strong {
+			b {
 				position: absolute;
 				bottom: 1rem;
 				right: 1rem;
@@ -173,7 +179,7 @@ main.noticias {
 							border-color: darken($rojoMarca, 10%);
 						}
 					}
-					strong {
+					b {
 						font-size: 1.5rem;
 					}
 				}

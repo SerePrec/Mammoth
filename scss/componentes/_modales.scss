@@ -7,6 +7,8 @@
 		background-color: $tonoClaro;
 		.modal-header {
 			h2 {
+				color: white;
+				font-weight: 700;
 				font-size: 1.5rem;
 			}
 		} 
@@ -53,6 +55,7 @@
 		.modal-header {
 			h3 {
 				font-size: 1.25rem;
+				font-weight: 700;
 			}
 		} 
 		.modal-body {
@@ -60,6 +63,16 @@
 			text-align: justify;
 			padding: 1.5rem 3rem;
 			color: white;
+			h5 {
+				font-size: 1.1rem;
+			}
+			p {
+				padding-bottom: 1rem;
+			}
+			li {
+				text-align: left;
+				padding-bottom: .5rem;
+			}
 		}
 	}
 }

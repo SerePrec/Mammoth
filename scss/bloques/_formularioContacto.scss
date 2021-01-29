@@ -7,6 +7,8 @@
 	text-shadow: 2px 2px 2px black;
 	font-size: 1.2rem;
 	form {
+		background-color: rgba(black, .2);
+		border-radius: 1rem;
 		width: 45%;
 		min-width: 39rem;
 		fieldset {
@@ -54,8 +56,8 @@
 		padding: 0;
 		form {
 			width: 100%;
-			min-width: unset;
-			background-color: rgba(155,155,155,0.4);	
+			min-width: initial;
+			background-color: rgba(black,0.4);	
 		}
 	}
 }
