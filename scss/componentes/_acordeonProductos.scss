@@ -38,7 +38,7 @@
 
 		&.elegido {
 			h2 {
-				.btn:not(.collapsed) {
+				.btn {
 					@include sombraCaja(rgba(white, .5), 0, 0, 0, 0.2rem);
 					background-color: rgba($rojoMarca, 1);
 					width: 100%;

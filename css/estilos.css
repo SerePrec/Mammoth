@@ -1004,7 +1004,7 @@ main.noticias .card, main.noticias .card-footer {
           background-color: #b30404; }
         .productos__accordion .card-header h2 .btn:focus {
           box-shadow: none; }
-    .productos__accordion .card-header.elegido h2 .btn:not(.collapsed) {
+    .productos__accordion .card-header.elegido h2 .btn {
       box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
       background-color: #b30404;
       width: 100%; }
