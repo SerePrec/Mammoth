@@ -10,7 +10,7 @@
 	align-items: center;
 	h2 {
 		color: white;
-		text-shadow: 5px 5px 10px black;
+		@include sombraTexto(black, 5px, 5px,10px);
 		animation: {
 			name: latido; // Animación "latido" 
 			duration: 1.2s;

@@ -16,9 +16,9 @@
 			align-items: center;
 			filter: grayscale(100%);
 			transition: filter 1.5s, transform 2.5s; /*transición de todas las propiedades*/
-			font-size: 2rem;
+			font-size: 2.4rem;
 			color: white;
-			text-shadow: 0px 0px 5px black;
+			@include sombraTextoTotal($tonoMuyOscuro);
 		}
 		&:hover div {
 			filter: initial;
@@ -26,10 +26,24 @@
 			cursor: pointer;
 		}
 	}
+	@include responsive(1300px) {
+		li {
+			div{
+				font-size: 2.6rem;
+			}
+		}
+	}
+	@include responsive(lg) {
+		li {
+			div{
+				font-size: 2.1rem;
+			}
+		}
+	}
 	@include responsive(md) {
 		li {
 			div{
-				font-size: 1.5rem;
+				font-size: 1.65rem;
 			}
 		}
 	}

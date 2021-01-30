@@ -5,6 +5,15 @@
 	box-shadow: $x $y $enfoque $expansion $color;
 }
 
+// Sombras Texto
+@mixin sombraTexto($color, $x, $y, $enfoque) {
+	text-shadow: $x $y $enfoque $color;
+}
+
+@mixin sombraTextoTotal($color, $x: 1px, $y: 1px, $enfoque: 7px) {
+	text-shadow: $x $y $enfoque $color, $x (-1*$y) $enfoque $color, (-1*$x) $y $enfoque $color, (-1*$x) (-1*$y) $enfoque $color;
+}
+
 // Bordes
 @mixin borde($zona, $espesor, $color) {
 	@if map-has-key($bordeZona, $zona) {

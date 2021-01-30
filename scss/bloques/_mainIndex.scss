@@ -5,11 +5,12 @@ main.inicio {
 	.destacados {
 		/********** Seccion destacados ***********/
 		@extend %fondoOscuro;
+		padding-bottom: 5rem;
 		/*********** Titulo destacados ***********/
 		h2 {
 			font-size: 4rem;
 			font-weight: 800;
-			padding-top: 2rem;
+			padding: 5rem 0 2rem 0;
 			background-color: $tonoMedio;
 			color: white;
 			font-style: italic;
@@ -31,7 +32,7 @@ main.inicio {
 	}
 	.difusion {
 		@include flex($wrap: wrap, $justificado: between);
-		padding: 0 5vw;
+		padding: 3rem 5vw;
 	}
 	@include responsive(md) {
 		.destacados h2 {
@@ -68,7 +69,16 @@ main.inicio {
 	}
 	@include responsive(xs) {
 		.destacados h2 {
-			font-size: 2.2rem;
+			font-size: 3.2rem;
+			padding: 3rem 0 1rem 0;
+		}
+		.imagenSecundaria {
+			height: 300px;
+		}
+	}
+	@include responsive(500px) {
+		.destacados h2 {
+			font-size: 2.6rem;
 		}
 		.imagenSecundaria {
 			height: 250px;

@@ -4,7 +4,7 @@
 	@include cover(contacto, 32%);
 	color: white;
 	padding: 0.625rem;
-	text-shadow: 2px 2px 2px black;
+	@include sombraTexto(black, 2px, 2px, 2px);
 	font-size: 1.2rem;
 	form {
 		background-color: rgba(black, .2);

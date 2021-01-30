@@ -149,9 +149,8 @@ main.noticias {
 				.card-body {
 					height: 100%;
 					color: white;
-					font-weight: 900;
 					letter-spacing: 0.1rem;
-					text-shadow: 3px 3px black;
+
 					&.ruta {
 						@include cover(competencias_tarjeta_ruta);
 					}
@@ -166,6 +165,7 @@ main.noticias {
 					h4 {
 						font-size: 1.5rem;
 						font-weight: 900;
+						@include sombraTextoTotal($rojoMarca, 1.5px, 1.5px, 1px);
 					}
 					.btn {
 						margin-top: 180px;
@@ -181,6 +181,7 @@ main.noticias {
 					}
 					b {
 						font-size: 1.5rem;
+						@include sombraTextoTotal($rojoMarca, 1px, 1px, 0);
 					}
 				}
 
