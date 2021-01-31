@@ -12,12 +12,20 @@ main.servicios { /*grid principal de 4 fila. Las 3 finales con altura mínima*/
 	}
 	grid-row-gap: 4vw;
 	padding: 3vw 5vw 3vw 5vw;
+	h2 {
+		@include sombraTexto(White, .1rem, .1rem, 2px);
+
+	}
 	.reparaciones {
 		grid-area: reparaciones;	
 	}
 	.bodyGeometry {
 		@extend %fondoOscuro;
-		grid-area: bodyGeometry;	
+		grid-area: bodyGeometry;
+		h2 {
+			@include sombraTexto($tonoOscuro, .1rem, .1rem, 2px);
+
+		}	
 	}
 	.cursos {
 		grid-area: cursos;	

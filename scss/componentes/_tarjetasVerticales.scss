@@ -6,8 +6,7 @@
  	position: relative;
  	overflow: hidden;
  	margin: 2vw;
- 	height: 38vw;
- 	max-height: 550px;
+ 	height: 90%;
  	background-color: white;
  	text-align: center;
  	color: black;
@@ -107,7 +106,6 @@
  			transform: translate(0,40px);
  			background-color: transparent;
  			letter-spacing: 2px;
- 			font-size: 2rem;
       		transition: all 1s ease-in-out; // transición aca para que vuelva al instante a su estado
       	}
     }
@@ -189,14 +187,16 @@
 	}
 
 	&:hover {
+		transform: scale(1.07, 1.07);
 		box-shadow: none;
 		background-color: transparent;
 		img {
 			height: 75%;
 		}
 		.tarjeta__box {
-			width: 90%;
-			margin: 5%;
+			width: 92%;
+			margin: 4%;
+			font-size: .91rem;
 			transform: translateY(-7.5rem);
 			@include sombraCaja(rgba($tonoMuyOscuro, 0.6), $enfoque: 10px, $expansion: 5px);
 		}

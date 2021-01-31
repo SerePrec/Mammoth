@@ -200,10 +200,14 @@ main.servicios {
   grid-template-areas: "reparaciones" "bodyGeometry" "cursos";
   grid-row-gap: 4vw;
   padding: 3vw 5vw 3vw 5vw; }
+  main.servicios h2 {
+    text-shadow: 0.1rem 0.1rem 2px White; }
   main.servicios .reparaciones {
     grid-area: reparaciones; }
   main.servicios .bodyGeometry {
     grid-area: bodyGeometry; }
+    main.servicios .bodyGeometry h2 {
+      text-shadow: 0.1rem 0.1rem 2px #212121; }
   main.servicios .cursos {
     grid-area: cursos; }
   @media only screen and (max-width: 1220px) {
@@ -222,6 +226,7 @@ main.noticias {
     font-size: 4rem;
     font-weight: 800;
     font-style: italic;
+    text-shadow: 0.15rem 0.15rem 2px #F0F0F0;
     margin-top: 2rem;
     border-bottom: 3px solid #b30404; }
   main.noticias .videos h4 {
@@ -235,6 +240,8 @@ main.noticias {
     padding: 3vw 5vw 4vw 5vw; }
     main.noticias #eventos > div, main.noticias #app > div {
       overflow: hidden; }
+      main.noticias #eventos > div h2, main.noticias #app > div h2 {
+        text-shadow: 0.15rem 0.15rem 2px #212121; }
   main.noticias .eventos p, main.noticias .competencias p, main.noticias .app p {
     margin: 1rem 0 1rem auto;
     text-align: justify; }
@@ -265,7 +272,8 @@ main.noticias {
         font-weight: 500;
         font-size: 0.75em;
         font-style: normal;
-        text-transform: lowercase; }
+        text-transform: lowercase;
+        text-shadow: 0.1rem 0.1rem 2px White; }
     main.noticias .premio div img {
       width: 100%;
       object-fit: cover; }
@@ -304,7 +312,10 @@ main.contacto .sucursales {
   main.contacto .sucursales h2 {
     grid-area: tituloSuc;
     text-align: center;
-    padding-top: 1.5rem; }
+    padding-top: 2rem;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0.15rem 0.15rem 2px #212121; }
   main.contacto .sucursales .palermo {
     grid-area: palermo; }
   main.contacto .sucursales .laPlata {
@@ -391,6 +402,8 @@ main.contacto .sucursales {
   @media only screen and (max-width: 500px) {
     main.contacto .sucursales {
       grid-template-rows: auto 1fr 1.5fr; }
+      main.contacto .sucursales h2 {
+        font-size: 2.5rem; }
       main.contacto .sucursales .localizacion > div h4 {
         padding: .5rem;
         font-size: .95rem; }
@@ -443,6 +456,7 @@ main.contacto .sucursales {
       padding: 0; }
       .formulario form {
         width: 100%;
+        border-radius: 0;
         min-width: initial;
         background-color: rgba(0, 0, 0, 0.4); } }
 
@@ -501,6 +515,8 @@ nav.navbar {
     nav.navbar .navbar-toggler .navbar-toggler-icon {
       background-image: url("../img/iconred.png");
       background-size: cover; }
+    nav.navbar .navbar-toggler:focus {
+      outline-color: black; }
   nav.navbar .navbar-nav .nav-item {
     padding-right: 2rem; }
     nav.navbar .navbar-nav .nav-item .nav-link {
@@ -541,9 +557,11 @@ nav.navbar {
   @media only screen and (max-width: 991px) {
     nav.navbar .navbar-nav .nav-item {
       padding-right: 0; }
-    nav.navbar a img {
+    nav.navbar .navbar-brand img {
       height: 58px; } }
   @media only screen and (max-width: 767px) {
+    nav.navbar .navbar-nav .nav-item .dropdown-menu {
+      width: 100%; }
     nav.navbar .navbar-nav .nav-item:after {
       background-image: linear-gradient(90deg, #b30404, #b30404);
       width: 3px;
@@ -555,11 +573,11 @@ nav.navbar {
       width: 15rem; } }
 
 @media only screen and (max-width: 700px) and (orientation: landscape) {
-  nav.navbar a img {
-    height: 35px; }
-  nav.navbar .navbar-toggler {
-    padding: 2px;
-    width: 35px; } }
+  nav.navbar .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0; }
+    nav.navbar .navbar-brand img {
+      height: 45px; } }
 
 /************************** Navbar - Fin ***********************/
 /***************************************************************/
@@ -681,8 +699,7 @@ nav.navbar {
   position: relative;
   overflow: hidden;
   margin: 2vw;
-  height: 38vw;
-  max-height: 550px;
+  height: 90%;
   background-color: white;
   text-align: center;
   color: black;
@@ -750,7 +767,6 @@ nav.navbar {
       transform: translate(0, 40px);
       background-color: transparent;
       letter-spacing: 2px;
-      font-size: 2rem;
       transition: all 1s ease-in-out; }
   @media only screen and (max-width: 1300px) {
     .tarjeta {
@@ -804,13 +820,15 @@ nav.navbar {
     min-height: 36%;
     transition: all 0.5s; }
   .tarjeta.tarjeta--tercios:hover {
+    transform: scale(1.07, 1.07);
     box-shadow: none;
     background-color: transparent; }
     .tarjeta.tarjeta--tercios:hover img {
       height: 75%; }
     .tarjeta.tarjeta--tercios:hover .tarjeta__box {
-      width: 90%;
-      margin: 5%;
+      width: 92%;
+      margin: 4%;
+      font-size: .91rem;
       transform: translateY(-7.5rem);
       box-shadow: 2px 2px 10px 5px rgba(6, 6, 6, 0.6); }
   @media only screen and (max-width: 1399px) {

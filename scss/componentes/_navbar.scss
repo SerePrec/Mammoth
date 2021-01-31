@@ -10,6 +10,10 @@ nav.navbar {
 			background-image: url("../img/iconred.png");
 			background-size: cover;
 		}
+
+		&:focus {
+			outline-color: black;
+		}
 	}
 
 	.navbar-nav {
@@ -78,7 +82,7 @@ nav.navbar {
 				padding-right: 0;
 			}
 		}
-		a img {
+		.navbar-brand img {
 			height: 58px;
 		}
 	}
@@ -86,6 +90,9 @@ nav.navbar {
 	@include responsive(sm) {
 		.navbar-nav {
 			.nav-item {
+				.dropdown-menu {
+					width: 100%;
+				}
 				&:after {
 					background-image: linear-gradient(90deg, rgba($rojoMarca, 1), rgba($rojoMarca, 1));
 					width: 3px;
@@ -106,12 +113,13 @@ nav.navbar {
 
 	@include responsive(700px) {
 		@media (orientation: landscape) {
-			a img {
-				height: 35px;
-			}
-			.navbar-toggler {
-				padding: 2px;
-				width: 35px;
+			.navbar-brand {
+				padding-top: 0;
+				padding-bottom: 0;
+
+				img {
+					height: 45px;
+				}
 			}
 		}
 	}  

@@ -11,6 +11,7 @@ main.noticias {
 			weight: 800;
 			style: italic;
 		}
+		@include sombraTexto(#F0F0F0, .15rem, .15rem, 2px);
 		margin-top: 2rem;
 		@include borde(abajo, 3px, $rojoMarca);
 	}
@@ -32,6 +33,9 @@ main.noticias {
 		@extend %fondoOscuro;
 		&>div {
 			overflow: hidden;
+			h2 {
+				@include sombraTexto($tonoOscuro, .15rem, .15rem, 2px);
+			}
 		}
 	}
 	.eventos, .competencias, .app {
@@ -88,6 +92,7 @@ main.noticias {
 				font-size: 0.75em;
 				font-style: normal;
 				text-transform: lowercase;
+				@include sombraTexto(White, .1rem, .1rem, 2px);
 			}
 		}
 		div img {

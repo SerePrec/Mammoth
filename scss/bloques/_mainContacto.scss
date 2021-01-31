@@ -20,7 +20,10 @@ main.contacto {
 		h2 {
 			grid-area: tituloSuc;
 			text-align: center;
-			padding-top: 1.5rem;
+			padding-top: 2rem;
+			font-size: 3rem;
+			color:white;
+			@include sombraTexto($tonoOscuro, .15rem, .15rem, 2px);
 		}
 		
 		.palermo {
@@ -143,7 +146,7 @@ main.contacto {
 			"tituloSuc			tituloSuc"
 			"carouselSucursales	carouselSucursales"
 			"mapa				localizacion";
-			
+
 			& > .palermo, & > .laPlata, & > .marDelPlata {
 				display: none;
 			}
@@ -164,6 +167,10 @@ main.contacto {
 		
 		@include responsive(500px) {
 			grid-template-rows: auto 1fr 1.5fr;
+
+			h2 {
+				font-size: 2.5rem;
+			}
 			
 			.localizacion {
 				& > div {
