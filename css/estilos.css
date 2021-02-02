@@ -248,9 +248,15 @@ main.noticias {
     main.noticias .eventos p span img, main.noticias .competencias p span img, main.noticias .app p span img {
       margin-right: .3rem;
       vertical-align: bottom; }
+  main.noticias .eventos > p {
+    width: 50%; }
   main.noticias .eventos h3 {
+    padding: .5rem 1rem;
+    border-radius: .35rem;
+    font-weight: 500;
     text-align: center;
-    font-weight: 500; }
+    text-transform: uppercase;
+    text-shadow: 0.05rem 0.05rem 3px #545454; }
   main.noticias .app img {
     width: 100%;
     object-fit: cover; }
@@ -280,6 +286,10 @@ main.noticias {
   @media only screen and (max-width: 991px) {
     main.noticias h2 {
       font-size: 3.5rem; }
+    main.noticias .eventos > p {
+      width: 100%; }
+    main.noticias .premio p {
+      text-align: justify; }
     main.noticias aside div.dias4 {
       display: block; }
     main.noticias aside div.dias7, main.noticias aside div.dias2 {
@@ -506,8 +516,8 @@ footer address {
 
 /************************ Footer - Fin  ************************/
 /***************************************************************/
-/*********** Menu de navegacion horizontal con Bootstrap *******/
-/************* para pisar a Bootstrap y personalizar ***********/
+/********** Menu de navegacion horizontal con Bootstrap *******/
+/************ para pisar a Bootstrap y personalizar ***********/
 nav.navbar {
   padding: 0 0.5rem; }
   nav.navbar .navbar-toggler {
@@ -579,8 +589,8 @@ nav.navbar {
     nav.navbar .navbar-brand img {
       height: 45px; } }
 
-/************************** Navbar - Fin ***********************/
-/***************************************************************/
+/************************* Navbar - Fin ***********************/
+/**************************************************************/
 /***************************************************************/
 /************* Carousel Principal Bootstrap - Inicio  **********/
 #carouselPrincipal ol.carousel-indicators {
@@ -692,9 +702,9 @@ nav.navbar {
 
 /********************* Banner marcas - Fin  ********************/
 /***************************************************************/
-/***************************************************************/
-/**************** Tarjetas Verticales - Inicio *****************/
-/********************* Tarjetas destacados *********************/
+/**************************************************************/
+/**************** Tarjetas Verticales - Inicio ****************/
+/********************* Tarjetas destacados ********************/
 .tarjeta {
   position: relative;
   overflow: hidden;
@@ -795,7 +805,7 @@ nav.navbar {
 .tarjeta--destacado2.activa .tarjeta__imagen--transformada {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.65)), url("../img/destacado2.jpg"); }
 
-/********************** Tarjetas difusion **********************/
+/********************** Tarjetas difusion *********************/
 .tarjeta.tarjeta--tercios {
   width: 400px;
   height: 440px;
@@ -865,8 +875,8 @@ nav.navbar {
       margin: 4vw 0;
       max-width: initial; } }
 
-/****************** Tarjetas Verticales - Fin ******************/
-/***************************************************************/
+/****************** Tarjetas Verticales - Fin *****************/
+/**************************************************************/
 /*************************************************************/
 /*************** Tarjetas giratorias - Inicio ****************/
 main.noticias .card, main.noticias .card-footer {
@@ -1013,8 +1023,8 @@ main.noticias .card, main.noticias .card-footer {
 
 /**************** Tarjetas giratorias - Fin ******************/
 /*************************************************************/
-/***************************************************************/
-/***************** Acordeon Productos - Inicio  ****************/
+/**************************************************************/
+/***************** Acordeon Productos - Inicio  ***************/
 .productos__accordion {
   width: 89.95vw;
   margin: auto; }
@@ -1078,8 +1088,8 @@ main.noticias .card, main.noticias .card-footer {
       font-size: 1.6rem;
       padding: .8rem 1rem; } }
 
-/****************** Acordeon Productos - Fin  ******************/
-/***************************************************************/
+/****************** Acordeon Productos - Fin  *****************/
+/**************************************************************/
 /*************************************************************/
 /***************** Acordeón Mapa sitio - Inicio **************/
 .mapaSitioAccordion {
@@ -1127,8 +1137,8 @@ main.noticias .card, main.noticias .card-footer {
 
 /******************* Acordeón Mapa sitio - Fin  **************/
 /*************************************************************/
-/***************************************************************/
-/************ Grids en Acordeon de Productos - Inicio  *********/
+/**************************************************************/
+/************ Grids en Acordeon de Productos - Inicio  ********/
 .productos ul {
   list-style-type: none;
   display: grid;
@@ -1306,10 +1316,10 @@ main.noticias .card, main.noticias .card-footer {
 #indumentaria li:nth-child(6) div {
   background-image: url("../img/indumentaria_complementos.jpg"); }
 
-/************** Grids en Acordeon de Productos - Fin  **********/
-/***************************************************************/
-/***************************************************************/
-/************** Grid articulos servicios - Inicio **************/
+/************** Grids en Acordeon de Productos - Fin  *********/
+/**************************************************************/
+/**************************************************************/
+/************** Grid articulos servicios - Inicio *************/
 article .servicios__imagen {
   width: 100%;
   position: relative;
@@ -1432,8 +1442,8 @@ article:hover .servicios__imagen .servicios__link {
   article:hover .servicios__imagen .servicios__link {
     max-height: 100%; } }
 
-/*************** Grid articulos servicios - Fin ****************/
-/***************************************************************/
+/*************** Grid articulos servicios - Fin ***************/
+/**************************************************************/
 /***************************************************************/
 /********************* Imagen Premio - Fin *********************/
 #sorteo.imagenPremio {
@@ -1549,7 +1559,7 @@ article:hover .servicios__imagen .servicios__link {
 /************************* Redes - Fin *************************/
 /***************************************************************/
 /*************************************************************/
-/******************* Mapa sitio Lista - Inicio **************/
+/******************* Mapa sitio Lista - Inicio ***************/
 .mapaSitioLista {
   flex-basis: 80%;
   display: flex;
@@ -1586,6 +1596,8 @@ article:hover .servicios__imagen .servicios__link {
 
 /********************* Mapa sitio Lista - Fin ****************/
 /*************************************************************/
+/***************************************************************/
+/********************* Botón fijo - Inicio  ********************/
 .botonMenu {
   position: fixed;
   bottom: 1rem;
@@ -1656,6 +1668,8 @@ article:hover .servicios__imagen .servicios__link {
     background-color: rgba(179, 4, 4, 0.4);
     transition: all .3s ease; }
 
+/*********************** Botón fijo - Fin **********************/
+/***************************************************************/
 /***************************************************************/
 /************************* Modal - Inicio **********************/
 #modalTerminos .modal-content {

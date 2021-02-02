@@ -1,4 +1,5 @@
-//**********  Mixins  **********
+// *************************************************************
+// ************************  Mixins  ***************************
 
 // Sombras de Caja
 @mixin sombraCaja($color, $x: 2px, $y: 2px, $enfoque: 20px, $expansion: 10px) {
@@ -23,7 +24,7 @@
 	}
 }
 
-// Imágen Cover
+// Imagen Cover
 @mixin cover($nombre: ninguno, $posicion: center) {
 	@if $nombre==ninguno {
 	} @else {
@@ -60,6 +61,10 @@
 		@error "No es valido el breakpoint ingresado, por favor asegúrate que está definido en el mapa '$mediaBreakpoints' o es un valor válido";
 	}
 }
+
+// ************************  Mixins  ***************************
+// *************************************************************
+
 
 
 	

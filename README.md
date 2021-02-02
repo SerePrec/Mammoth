@@ -1,3 +1,3 @@
-# CasiElefante
-## Trabajo Final 
-Este es mi sitio web que estoy desarrollando como trabajo final del curso Desarrollo Web. 
+# Mammoth
+## Trabajo Final  
+Este es el sitio web que desarrollé como trabajo final del curso Desarrollo Web en CoderHouse. 
